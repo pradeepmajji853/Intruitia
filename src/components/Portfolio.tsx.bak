@@ -1,0 +1,116 @@
+import { ExternalLink, Github } from 'lucide-react';
+
+const Portfolio = () => {
+  const projects = [
+    {
+      title: 'Modern Landing Page',
+      category: 'Web Development',
+      description: 'Responsive landing page with modern design principles and optimized performance.',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600',
+      tags: ['React', 'Tailwind CSS', 'Vite']
+    },
+    {
+      title: 'Portfolio Website',
+      category: 'Web Development',
+      description: 'Clean, professional portfolio website showcasing creative work and projects.',
+      image: 'https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=600',
+      tags: ['TypeScript', 'CSS3', 'Responsive']
+    },
+    {
+      title: 'Brand Identity Design',
+      category: 'Content Creation',
+      description: 'Complete brand identity package including logo, colors, and design guidelines.',
+      image: 'https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=600',
+      tags: ['Branding', 'Design', 'Graphics']
+    },
+    {
+      title: 'Social Media Content',
+      category: 'Content Creation',
+      description: 'Engaging social media graphics and video content for startup marketing campaigns.',
+      image: 'https://images.pexels.com/photos/267389/pexels-photo-267389.jpeg?auto=compress&cs=tinysrgb&w=600',
+      tags: ['Video Editing', 'Graphics', 'Social Media']
+    }
+  ];
+      title: 'Real Estate Platform',
+      category: 'Web Development',
+      description: 'Modern real estate platform with virtual tours and advanced property search.',
+      image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=600',
+      tags: ['React', 'Express', 'MongoDB']
+    }
+  ];
+
+  return (
+    <section id="portfolio" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+            Our Portfolio
+          </h2>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            Discover the innovative solutions we've built for startups across various industries
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-slate-100"
+            >
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                  <div className="flex gap-2">
+                    <button className="bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors">
+                      <ExternalLink className="w-4 h-4" />
+                    </button>
+                    <button className="bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors">
+                      <Github className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <div className="text-sm text-blue-600 font-medium mb-2">
+                  {project.category}
+                </div>
+                
+                <h3 className="text-xl font-bold text-slate-800 mb-3">
+                  {project.title}
+                </h3>
+                
+                <p className="text-slate-600 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-sm"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-blue-700 hover:to-cyan-600 transform hover:scale-105 transition-all shadow-lg">
+            View All Projects
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Portfolio;

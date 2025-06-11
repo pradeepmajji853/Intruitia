@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Users, Target, Lightbulb, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Target, Lightbulb, Sparkles, Zap, Rocket, CloudUpload, Palette, TrendingUp } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const Hero = () => {
@@ -32,13 +32,14 @@ const Hero = () => {
   }, []);
 
   const features = [
-    { icon: Lightbulb, text: 'Innovative Solutions', color: 'text-blue-600 bg-blue-100' },
-    { icon: Users, text: 'Expert Team', color: 'text-emerald-600 bg-emerald-100' },
-    { icon: Target, text: 'Results Driven', color: 'text-purple-600 bg-purple-100' }
+    { icon: Rocket, text: 'MVP-as-a-Service', color: 'text-blue-600 bg-blue-100' },
+    { icon: Palette, text: 'Brand-in-a-Week', color: 'text-emerald-600 bg-emerald-100' },
+    { icon: CloudUpload, text: 'Cloud Deployments', color: 'text-purple-600 bg-purple-100' },
+    { icon: TrendingUp, text: 'Content-to-Conversion', color: 'text-orange-600 bg-orange-100' }
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Sophisticated Background */}
       <div className="absolute inset-0">
         {/* Animated Gradient Background */}
@@ -70,12 +71,12 @@ const Hero = () => {
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-black text-slate-900 leading-tight mb-6">
-                Transforming Ideas Into
-                <span className="text-gradient block animate-gradient">Digital Excellence</span>
+                From Idea to Impact
+                <span className="text-gradient block animate-gradient">Tech, Content & Cloud in One Place</span>
               </h1>
               
               <p className="text-xl text-slate-600 leading-relaxed max-w-xl">
-                We help startups and businesses build exceptional digital experiences through innovative web development, strategic consulting, and creative solutions.
+                Your one-stop destination for MVP development, brand creation, cloud deployment, and content strategy — all delivered with next-gen precision and speed.
               </p>
             </div>
 

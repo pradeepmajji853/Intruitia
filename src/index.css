@@ -242,6 +242,91 @@
   }
 }
 
+/* Advanced Next-Gen Animations for Tech Agency */
+@keyframes floatAdvanced {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg) scale(1);
+    filter: blur(20px);
+  }
+  25% { 
+    transform: translateY(-15px) rotate(1deg) scale(1.02);
+    filter: blur(18px);
+  }
+  50% { 
+    transform: translateY(-30px) rotate(0deg) scale(1.05);
+    filter: blur(15px);
+  }
+  75% { 
+    transform: translateY(-15px) rotate(-1deg) scale(1.02);
+    filter: blur(18px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3), 0 0 40px rgba(14, 165, 233, 0.1);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.5), 0 0 60px rgba(14, 165, 233, 0.2);
+  }
+}
+
+@keyframes morphBackground {
+  0% { 
+    background: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+  }
+  25% { 
+    background: radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+  }
+  50% { 
+    background: radial-gradient(circle at 80% 80%, rgba(20, 184, 166, 0.1) 0%, transparent 50%);
+  }
+  75% { 
+    background: radial-gradient(circle at 20% 80%, rgba(245, 101, 101, 0.1) 0%, transparent 50%);
+  }
+  100% { 
+    background: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUpCenter {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes textShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
 /* Professional Animation Classes */
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
@@ -289,6 +374,39 @@
   background-size: 400% 400%;
   animation: gradientShift 6s ease infinite;
   will-change: background-position;
+}
+
+.animate-float-advanced {
+  animation: floatAdvanced 8s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.animate-morph-bg {
+  animation: morphBackground 15s ease-in-out infinite;
+}
+
+.animate-slide-left {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUpCenter 0.6s ease-out forwards;
+}
+
+.text-shimmer {
+  background: linear-gradient(90deg, #1e293b 25%, #0ea5e9 50%, #1e293b 75%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 3s linear infinite;
 }
 
 /* Enhanced Button System */

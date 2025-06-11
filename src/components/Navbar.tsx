@@ -40,15 +40,22 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {['Home', 'Services', 'Portfolio', 'Contact'].map((item) => (
+            {[
+              { name: 'Home', id: 'home' },
+              { name: 'Services', id: 'services' },
+              { name: 'Solutions', id: 'solutions', submenu: ['Brand Week', 'MVP Service', 'Cloud', 'Content'] },
+              { name: 'Portfolio', id: 'portfolio' },
+              { name: 'Coming Soon', id: 'coming-soon' },
+              { name: 'Contact', id: 'contact' }
+            ].map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
+                key={item.name}
+                onClick={() => scrollToSection(item.id)}
                 className={`font-semibold transition-all duration-200 hover:text-blue-600 hover:scale-105 ${
                   scrolled ? 'text-slate-700' : 'text-slate-700'
                 } relative group`}
               >
-                {item}
+                {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
               </button>
             ))}
@@ -68,13 +75,23 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-sm rounded-lg shadow-lg mt-2 py-4">
-            {['Home', 'Services', 'Portfolio', 'Contact'].map((item) => (
+            {[
+              { name: 'Home', id: 'home' },
+              { name: 'Services', id: 'services' },
+              { name: 'Brand Week', id: 'brand-week' },
+              { name: 'MVP Service', id: 'mvp-service' },
+              { name: 'Cloud Deploy', id: 'cloud-deploy' },
+              { name: 'Content Engine', id: 'content-engine' },
+              { name: 'Portfolio', id: 'portfolio' },
+              { name: 'Coming Soon', id: 'coming-soon' },
+              { name: 'Contact', id: 'contact' }
+            ].map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
+                key={item.name}
+                onClick={() => scrollToSection(item.id)}
                 className="block w-full text-left px-4 py-2 text-slate-700 font-medium hover:bg-blue-50 hover:text-blue-600 transition-colors"
               >
-                {item}
+                {item.name}
               </button>
             ))}
           </div>

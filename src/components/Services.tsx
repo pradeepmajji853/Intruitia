@@ -34,7 +34,6 @@ const Services = () => {
       description: 'Professional video content, social media graphics, and compelling brand stories that help your startup stand out and connect with your audience.',
       features: ['Professional Video Editing', 'Social Media Graphics', 'Brand Storytelling', 'Content Strategy'],
       stats: { projects: '150+', satisfaction: '98%', growth: '+250%' },
-      price: 'Starting at $2,999',
       color: 'from-blue-500 to-cyan-500',
       bgGradient: 'from-blue-50 to-cyan-50',
       highlight: 'Most Popular'
@@ -45,7 +44,6 @@ const Services = () => {
       description: 'Modern, responsive websites and web applications built with cutting-edge technologies to give your startup a competitive online presence.',
       features: ['Responsive Websites', 'Web Applications', 'Landing Pages', 'Performance Optimization'],
       stats: { projects: '200+', satisfaction: '99%', growth: '+180%' },
-      price: 'Starting at $4,999',
       color: 'from-purple-500 to-indigo-500',
       bgGradient: 'from-purple-50 to-indigo-50',
       highlight: 'Premium'
@@ -56,7 +54,6 @@ const Services = () => {
       description: 'Strategic guidance and digital transformation consulting to help entrepreneurs navigate the complexities of building a successful business.',
       features: ['Digital Strategy', 'Technology Consulting', 'Launch Planning', 'Growth Strategy'],
       stats: { projects: '100+', satisfaction: '97%', growth: '+300%' },
-      price: 'Starting at $1,999',
       color: 'from-emerald-500 to-teal-500',
       bgGradient: 'from-emerald-50 to-teal-50',
       highlight: 'Best Value'
@@ -183,16 +180,8 @@ const Services = () => {
                   </div>
                 </div>
 
-                {/* Price and CTA */}
+                {/* CTA Button */}
                 <div className="mt-auto">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-slate-900">{service.price}</span>
-                    <div className="flex items-center text-yellow-500">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-                    </div>
-                  </div>
                   <button className={`w-full btn-primary group-hover:bg-gradient-to-r group-hover:${service.color} transition-all duration-300`}>
                     Get Started
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

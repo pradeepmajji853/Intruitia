@@ -26,11 +26,10 @@ const Testimonials = () => {
       project: "Enterprise SaaS Platform",
       results: [
         "300% efficiency increase",
-        "50% cost reduction", 
+        "Operational optimization", 
         "99.9% uptime achieved"
       ],
-      clientSize: "500+ employees",
-      projectValue: "$150K"
+      clientSize: "500+ employees"
     },
     {
       name: "Michael Rodriguez", 
@@ -43,12 +42,11 @@ const Testimonials = () => {
       testimonial: "Working with Intruitia was a game-changer for our firm. They built a sophisticated trading platform that handles millions in transactions daily. Their security-first approach and regulatory compliance expertise were exceptional.",
       project: "Trading Platform Development",
       results: [
-        "$10M+ daily volume",
+        "High daily volume",
         "Zero security incidents",
         "95% user satisfaction"
       ],
-      clientSize: "200+ employees", 
-      projectValue: "$280K"
+      clientSize: "200+ employees"
     },
     {
       name: "Emily Watson",
@@ -65,8 +63,7 @@ const Testimonials = () => {
         "HIPAA compliant",
         "2x patient satisfaction"
       ],
-      clientSize: "100+ employees",
-      projectValue: "$95K"
+      clientSize: "100+ employees"
     },
     {
       name: "David Park",
@@ -83,8 +80,7 @@ const Testimonials = () => {
         "Real-time insights",
         "ROI in 3 months"
       ],
-      clientSize: "75+ employees",
-      projectValue: "$120K"
+      clientSize: "75+ employees"
     }
   ];
 
@@ -236,14 +232,10 @@ const Testimonials = () => {
                   </div>
 
                   <div className="border-t border-slate-200 pt-4">
-                    <div className="flex justify-between items-center">
-                      <div>
+                    <div className="flex justify-center items-center">
+                      <div className="text-center">
                         <p className="text-sm text-slate-500">Project</p>
                         <p className="font-semibold text-slate-800">{currentTestimonial.project}</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-sm text-slate-500">Investment</p>
-                        <p className="font-bold text-blue-600">{currentTestimonial.projectValue}</p>
                       </div>
                     </div>
                   </div>
@@ -284,14 +276,10 @@ const Testimonials = () => {
           </div>
 
           {/* Summary Stats */}
-          <div className="grid md:grid-cols-4 gap-6 animate-fade-in-up animate-delay-300">
+          <div className="grid md:grid-cols-3 gap-6 animate-fade-in-up animate-delay-300">
             <div className="glass-card p-6 text-center hover-lift">
               <div className="text-3xl font-bold text-blue-600 mb-2">12+</div>
               <div className="text-slate-600">Happy Clients</div>
-            </div>
-            <div className="glass-card p-6 text-center hover-lift">
-              <div className="text-3xl font-bold text-green-600 mb-2">$2M+</div>
-              <div className="text-slate-600">Revenue Generated</div>
             </div>
             <div className="glass-card p-6 text-center hover-lift">
               <div className="text-3xl font-bold text-purple-600 mb-2">99.9%</div>

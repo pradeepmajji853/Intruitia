@@ -87,7 +87,7 @@ const Portfolio = () => {
       client: 'PropInvest Pro',
       year: '2024',
       duration: '4 months',
-      results: '$2M+ invested via platform',
+      results: 'Platform successfully launched',
       rating: 4.9,
       testimonial: 'Outstanding platform with incredible ROI tracking'
     },
@@ -100,7 +100,7 @@ const Portfolio = () => {
       client: 'LogiFlow Systems',
       year: '2024',
       duration: '5 months',
-      results: '35% cost reduction',
+      results: '35% efficiency improvement',
       rating: 5.0,
       testimonial: 'Transformed our entire supply chain operations'
     }

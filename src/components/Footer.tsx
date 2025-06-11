@@ -87,9 +87,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact</h4>
             <div className="space-y-3 text-slate-400">
-              <p>hello@startuplab.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>support@intruitia.in</p>
+              <p>+91 8184889557</p>
+              <p>Hyderabad , India</p>
             </div>
           </div>
         </div>

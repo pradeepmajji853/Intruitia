@@ -58,20 +58,20 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'hello@intruitia.com',
+      value: 'support@intruitia.in',
       description: 'We respond within 24 hours'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri, 9:00 AM - 6:00 PM PST'
+      value: '+91 8184889557',
+      description: 'Mon-Fri, 9:00 AM - 6:00 PM IST'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Office',
-      value: 'San Francisco, CA',
-      description: 'Available for in-person meetings'
+      value: 'Hyderabad, India',
+      description: 'Available for remote & onsite work'
     }
   ];
 
@@ -190,7 +190,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 8184889557"
                     />
                   </div>
                 </div>

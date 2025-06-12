@@ -1,4 +1,5 @@
 import { Linkedin, Instagram, Youtube, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -87,27 +88,31 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact</h4>
             <div className="space-y-3 text-slate-400">
-              <p>support@intruitia.in</p>
+              <p>pradeepmajji853@gmail.com</p>
               <p>+91 8184889557</p>
-              <p>Hyderabad , India</p>
+              <p>Suraram, Hyderabad 500055</p>
+              <p>Telangana, India</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400 text-sm">
-            © 2024 StartupLab. All rights reserved.
+            © 2025 Intruitia. All rights reserved. | UDYAM-TS-20-0135173
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+            <Link to="/privacy-policy" className="text-slate-400 hover:text-white text-sm transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+            </Link>
+            <Link to="/terms-and-conditions" className="text-slate-400 hover:text-white text-sm transition-colors">
               Terms of Service
-            </a>
-            <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-              Cookie Policy
-            </a>
+            </Link>
+            <Link to="/refund-policy" className="text-slate-400 hover:text-white text-sm transition-colors">
+              Refund Policy
+            </Link>
+            <Link to="/about-us" className="text-slate-400 hover:text-white text-sm transition-colors">
+              About Us
+            </Link>
           </div>
         </div>
       </div>

@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +17,11 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    if (!isHomePage) {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+    
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -68,6 +76,7 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-sm rounded-lg shadow-lg mt-2 py-4">
+            {/* Main Navigation */}
             {['Home', 'Services', 'Portfolio', 'Contact'].map((item) => (
               <button
                 key={item}
@@ -77,6 +86,45 @@ const Navbar = () => {
                 {item}
               </button>
             ))}
+            
+            {/* Policy Pages */}
+            <div className="mt-2 pt-2 border-t border-slate-100">
+              <Link 
+                to="/pricing" 
+                className="block w-full text-left px-4 py-2 text-slate-700 font-medium hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Pricing
+              </Link>
+              <Link 
+                to="/about-us" 
+                className="block w-full text-left px-4 py-2 text-slate-700 font-medium hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                About Us
+              </Link>
+              <Link 
+                to="/privacy-policy" 
+                className="block w-full text-left px-4 py-2 text-slate-700 font-medium hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Privacy Policy
+              </Link>
+              <Link 
+                to="/terms-and-conditions" 
+                className="block w-full text-left px-4 py-2 text-slate-700 font-medium hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Terms & Conditions
+              </Link>
+              <Link 
+                to="/refund-policy" 
+                className="block w-full text-left px-4 py-2 text-slate-700 font-medium hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Refund Policy
+              </Link>
+            </div>
           </div>
         )}
       </div>

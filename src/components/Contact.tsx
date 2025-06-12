@@ -51,14 +51,14 @@ const Contact = () => {
     console.log('Form submitted:', formData);
     setFormData({ name: '', email: '', company: '', phone: '', message: '' });
     setIsSubmitting(false);
-    alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+    alert('Thank you for your message! We\'ll get back to you within 24 hours. If you don\'t receive a response, please contact us directly at pradeepmajji853@gmail.com');
   };
 
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'support@intruitia.in',
+      value: 'pradeepmajji853@gmail.com',
       description: 'We respond within 24 hours'
     },
     {
@@ -70,8 +70,8 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Office',
-      value: 'Hyderabad, India',
-      description: 'Available for remote & onsite work'
+      value: 'Suraram, Hyderabad 500055',
+      description: 'Telangana, India'
     }
   ];
 

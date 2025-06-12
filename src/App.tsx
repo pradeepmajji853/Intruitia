@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ClientScrollBar from './components/ClientScrollBar';
@@ -6,8 +7,13 @@ import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsAndConditions from './components/TermsAndConditions';
+import RefundPolicy from './components/RefundPolicy';
+import AboutUs from './components/AboutUs';
+import Pricing from './components/Pricing';
 
-function App() {
+function HomePage() {
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -19,6 +25,21 @@ function App() {
       <Contact />
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/pricing" element={<Pricing />} />
+      </Routes>
+    </Router>
   );
 }
 

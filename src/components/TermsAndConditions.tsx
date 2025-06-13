@@ -156,6 +156,8 @@ const TermsAndConditions = () => {
                   <li>You confirm that you are authorized to use the UPI ID provided for making payments.</li>
                   <li>UPI transactions are typically processed instantly, and service delivery will begin only after successful payment confirmation.</li>
                   <li>You must report any unauthorized transactions or discrepancies within 3 days of the transaction.</li>
+                  <li>You agree to comply with all applicable UPI regulations and guidelines issued by NPCI and RBI.</li>
+                  <li>You acknowledge that UPI transactions are final and cannot be cancelled once completed. For refunds, please refer to our Refund Policy.</li>
                 </ul>
                 <p className="text-slate-600 leading-relaxed">
                   Invoices are due upon receipt unless otherwise specified. Late payments may incur a late fee of 2% per month on the outstanding amount.

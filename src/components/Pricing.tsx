@@ -431,7 +431,7 @@ const Pricing = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-600 mr-2">•</span>
-                    <span>Please refer to our <a href="/refund-policy" className="text-blue-600 hover:underline">Refund & Cancellation Policy</a> for more details</span>
+                    <span>Please refer to our <a href="/refund-policy" className="text-blue-600 hover:underline">Refund Policy</a> and <a href="/cancellation-policy" className="text-blue-600 hover:underline">Cancellation Policy</a> for more details</span>
                   </li>
                 </ul>
               </div>

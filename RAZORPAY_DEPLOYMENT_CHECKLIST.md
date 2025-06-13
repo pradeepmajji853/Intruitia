@@ -14,7 +14,8 @@ This document outlines the key requirements to ensure your website receives Razo
 ### ✅ Required Legal Pages
 - **Privacy Policy**: `/privacy-policy` (implemented)
 - **Terms & Conditions**: `/terms-and-conditions` (implemented)
-- **Refund & Cancellation Policy**: `/refund-policy` (implemented)
+- **Refund Policy**: `/refund-policy` (implemented)
+- **Cancellation Policy**: `/cancellation-policy` (implemented)
 - **About Us / Business Information**: `/about-us` (implemented)
 - **Pricing Information**: `/pricing` (implemented)
 

@@ -9,7 +9,8 @@
 ## Mandatory Legal Pages
 ✅ Privacy Policy (including payment data handling)  
 ✅ Terms & Conditions  
-✅ Refund & Cancellation Policy  
+✅ Refund Policy  
+✅ Cancellation Policy  
 ✅ Contact Information (email, phone, address)  
 ✅ About Us / Business Information  
 

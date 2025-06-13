@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { RefreshCw, FileText, Clock } from 'lucide-react';
+import { RefreshCw, FileText } from 'lucide-react';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
@@ -34,7 +34,7 @@ const RefundPolicy = () => {
                 Payment Policies
               </div>
               <h1 className="text-4xl font-bold text-slate-900 mb-4">
-                Refund & Cancellation Policy
+                Refund Policy
               </h1>
             </div>
             <div className={`transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
@@ -70,13 +70,13 @@ const RefundPolicy = () => {
                   Introduction
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  At Intruitia, we are committed to providing high-quality digital services. This Refund and Cancellation Policy outlines our guidelines regarding refunds, cancellations, and project terminations, including all payment methods such as UPI, credit/debit cards, net banking, and other electronic payment methods processed through our payment gateway partner Razorpay.
+                  At Intruitia, we are committed to providing high-quality digital services. This Refund Policy outlines our guidelines regarding refunds for payments made through UPI, credit/debit cards, net banking, and other electronic payment methods processed through our payment gateway partner Razorpay.
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  This Refund and Cancellation Policy is governed by and complies with the applicable laws of India, including but not limited to the Information Technology Act, 2000, the Payment and Settlement Systems Act, 2007, and the guidelines issued by the Reserve Bank of India (RBI) and the National Payments Corporation of India (NPCI).
+                  This Refund Policy is governed by and complies with the applicable laws of India, including but not limited to the Information Technology Act, 2000, the Payment and Settlement Systems Act, 2007, and the guidelines issued by the Reserve Bank of India (RBI) and the National Payments Corporation of India (NPCI).
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  By engaging our services and making payments through our platform, you agree to the terms of this Refund and Cancellation Policy. This policy should be read in conjunction with our <a href="/terms-and-conditions" className="text-blue-600 hover:underline">Terms and Conditions</a> and <a href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</a>. Please read all documents carefully before making any payments.
+                  By engaging our services and making payments through our platform, you agree to the terms of this Refund Policy. This policy should be read in conjunction with our <a href="/terms-and-conditions" className="text-blue-600 hover:underline">Terms and Conditions</a>, <a href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</a>, and <a href="/cancellation-policy" className="text-blue-600 hover:underline">Cancellation Policy</a>. Please read all documents carefully before making any payments.
                 </p>
               </div>
 
@@ -99,6 +99,9 @@ const RefundPolicy = () => {
                   <RefreshCw className="w-6 h-6 mr-2 text-emerald-600" />
                   Refund Policy
                 </h2>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  For information on how to cancel your order or service, please refer to our separate <a href="/cancellation-policy" className="text-blue-600 hover:underline">Cancellation Policy</a>. The following sections detail our refund terms for different services after a cancellation has been approved.
+                </p>
                 <h3 className="text-xl font-semibold text-slate-800 mb-3 mt-6">
                   Web Development & Design Services
                 </h3>
@@ -128,69 +131,22 @@ const RefundPolicy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
-                  <Clock className="w-6 h-6 mr-2 text-amber-500" />
-                  Cancellation Policy
-                </h2>
-                <h3 className="text-xl font-semibold text-slate-800 mb-3 mt-6">
-                  Project Cancellation by Client
-                </h3>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  If you decide to cancel a project after it has begun:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-slate-600 mb-6">
-                  <li>You will be billed for all work completed up to the cancellation date.</li>
-                  <li>The initial deposit is non-refundable.</li>
-                  <li>A formal written notice of cancellation is required.</li>
-                  <li>Any licensed materials or third-party services already purchased for your project are non-refundable.</li>
-                </ul>
-
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">
-                  Project Cancellation by Intruitia
-                </h3>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  We reserve the right to cancel a project if:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-slate-600 mb-6">
-                  <li>Project requirements change significantly from the original scope.</li>
-                  <li>Necessary information or feedback is not provided within 30 days after request.</li>
-                  <li>Payment milestones are not met according to the agreed schedule.</li>
-                  <li>The working relationship becomes untenable due to communication issues or other problems.</li>
-                </ul>
-                <p className="text-slate-600 leading-relaxed mb-6">
-                  In such cases, you will be billed only for work completed, and any excess pre-payment will be refunded.
-                </p>
-
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">
-                  UPI Payment Cancellation
-                </h3>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  For payments made through UPI (Unified Payments Interface):
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-slate-600 mb-4">
-                  <li><span className="font-semibold">Immediate Cancellation:</span> UPI payments cannot be cancelled once initiated and completed successfully. If you wish to cancel a service paid for via UPI, you must follow our standard refund process.</li>
-                  <li><span className="font-semibold">Pending Transactions:</span> If a UPI transaction is pending, it will automatically expire after the timeout period (usually 2-5 minutes) if not completed.</li>
-                  <li><span className="font-semibold">Failed Transactions:</span> For failed UPI transactions where money was debited from your account, the amount will be automatically refunded to your account within 5 business days as per NPCI guidelines.</li>
-                  <li><span className="font-semibold">Duplicate Transactions:</span> In case of duplicate payments for the same service, the additional amount will be refunded automatically within 7 business days.</li>
-                  <li><span className="font-semibold">Order Cancellation Process:</span> To cancel an order or service paid via UPI, please email us at pradeepmajji853@gmail.com with your order reference and transaction ID within 48 hours of purchase. Cancellation requests are subject to our refund eligibility criteria outlined above.</li>
-                </ul>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  All UPI payment cancellations and refunds are processed in compliance with the guidelines set by the National Payments Corporation of India (NPCI) and the Reserve Bank of India (RBI).
-                </p>
-              </div>
-
-              <div>
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                  Subscription & Recurring Services
+                  How to Request a Refund
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  For ongoing services such as maintenance plans or retainer agreements:
+                  To request a refund, please follow these steps:
                 </p>
-                <ul className="list-disc pl-6 space-y-2 text-slate-600">
-                  <li>Cancellation requires a 30-day written notice.</li>
-                  <li>No refunds for partially used service periods.</li>
-                  <li>Pre-paid annual subscriptions may be eligible for a prorated refund of unused months, less a 15% administrative fee.</li>
-                </ul>
+                <ol className="list-decimal pl-6 space-y-2 text-slate-600 mb-4">
+                  <li>Send an email to pradeepmajji853@gmail.com with the subject line "Refund Request - [Your Name/Company Name]".</li>
+                  <li>Include your order details, project name, and reason for the refund request.</li>
+                  <li>For services paid via UPI, please include your UPI transaction reference ID and the date of the transaction.</li>
+                  <li>We will acknowledge your refund request within 24 hours.</li>
+                  <li>Our team will review your request and contact you to discuss the refund terms based on the project stage and our refund policy.</li>
+                </ol>
+                <p className="text-slate-600 leading-relaxed">
+                  All refund requests must be submitted in writing. Verbal refund requests will not be considered official until confirmed in writing.
+                </p>
               </div>
 
               <div>
@@ -200,12 +156,9 @@ const RefundPolicy = () => {
                 <p className="text-slate-600 leading-relaxed mb-4">
                   All payments are processed securely through Razorpay, our trusted payment gateway partner. Razorpay is a RBI-approved payment solution that complies with the Payment Card Industry Data Security Standard (PCI-DSS).
                 </p>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  When applicable, refunds will be processed as follows:
-                </p>
                 <ul className="list-disc pl-6 space-y-2 text-slate-600 mb-4">
                   <li><span className="font-semibold">Refund Processing:</span> Refunds will be issued through the original payment method used for the transaction.</li>
-                  <li><span className="font-semibold">Processing Time:</span> Processing time is typically 5-14 business days, depending on your bank or payment provider.</li>
+                  <li><span className="font-semibold">Processing Time:</span> Processing time is typically 5-7 business days, depending on your bank or payment provider.</li>
                   <li><span className="font-semibold">Transaction Fees:</span> Any transaction fees charged by Razorpay or your bank are non-refundable.</li>
                   <li><span className="font-semibold">Partial Refunds:</span> In certain cases, we may issue partial refunds based on the circumstances and the portion of services already rendered.</li>
                   <li><span className="font-semibold">Refund Confirmation:</span> Once a refund is processed, you will receive a confirmation email with the refund details.</li>
@@ -256,31 +209,32 @@ const RefundPolicy = () => {
                   <li>The amount will be automatically refunded to your payment instrument as per the timelines defined by the relevant regulatory authorities.</li>
                   <li>For UPI transactions, this is typically within 5 business days as per NPCI guidelines.</li>
                   <li>You will receive a notification from Razorpay and/or your bank regarding the refund.</li>
-                  <li>If you do not receive the refund within the stipulated time frame, please contact us with your transaction details.</li>
+                  <li>If you do not receive the refund within the stipulated time frame, please contact us with your transaction details within 7 days of the failed transaction.</li>
+                  <li>For UPI transactions, please provide the UPI transaction reference number, date and time of transaction, and your UPI ID.</li>
                 </ul>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                  Dispute Resolution
+                  Dispute Resolution for Refunds
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  If you are dissatisfied with our services or have any concerns regarding payments or refunds, please contact us directly at pradeepmajji853@gmail.com to discuss your concerns. We aim to resolve all issues promptly and fairly within 7 business days of receiving your complaint.
+                  If you are dissatisfied with our refund decision or have any concerns regarding payments or refunds, please contact us directly at pradeepmajji853@gmail.com to discuss your concerns. We aim to resolve all issues promptly and fairly within 7 business days of receiving your complaint.
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  For disputes related to payments processed through Razorpay:
+                  For disputes related to refunds for payments processed through Razorpay:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-slate-600 mb-4">
                   <li>Please provide your transaction ID, date of transaction, and detailed description of the issue.</li>
                   <li>Our team will coordinate with Razorpay to investigate and resolve the matter.</li>
-                  <li>For UPI-related disputes, we follow the dispute resolution process as per the NPCI guidelines.</li>
-                  <li>For card-related disputes, we follow the chargeback procedures established by the card networks and RBI regulations.</li>
+                  <li>For UPI-related refund disputes, we follow the dispute resolution process as per the NPCI guidelines.</li>
+                  <li>For card-related refund disputes, we follow the chargeback procedures established by the card networks and RBI regulations.</li>
                 </ul>
                 <p className="text-slate-600 leading-relaxed mb-4">
                   If we cannot reach an agreement through our standard dispute resolution process, disputes will be resolved according to the terms outlined in our Terms and Conditions.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  All payment disputes will be handled in accordance with the applicable Indian laws, including the Consumer Protection Act, 2019, the Information Technology Act, 2000, and the guidelines issued by the Reserve Bank of India.
+                  All payment and refund disputes will be handled in accordance with the applicable Indian laws, including the Consumer Protection Act, 2019, the Information Technology Act, 2000, and the guidelines issued by the Reserve Bank of India.
                 </p>
               </div>
 
@@ -318,7 +272,7 @@ const RefundPolicy = () => {
                   Changes to This Policy
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  We reserve the right to modify this Refund and Cancellation Policy at any time. Changes will be effective immediately upon posting on our website. Existing projects will follow the policy that was in effect at the time of contract signing.
+                  We reserve the right to modify this Refund Policy at any time. Changes will be effective immediately upon posting on our website. Existing projects will follow the policy that was in effect at the time of contract signing.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
                   In case of any material changes to this policy, especially those affecting UPI payments or other digital payment methods, we will notify users through email or prominently display a notice on our website at least 30 days before the changes take effect, as required by applicable regulations.
@@ -331,7 +285,7 @@ const RefundPolicy = () => {
                   Contact Us
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  If you have any questions about this Refund and Cancellation Policy, please contact us:
+                  If you have any questions about this Refund Policy, please contact us:
                 </p>
                 <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 mb-4">
                   <p className="font-semibold text-slate-900 mb-1">Intruitia</p>

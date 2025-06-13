@@ -100,7 +100,7 @@ const Footer = () => {
           <p className="text-slate-400 text-sm">
             © 2025 Intruitia. All rights reserved. | UDYAM-TS-20-0135173
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex flex-wrap space-x-4 md:space-x-6 mt-4 md:mt-0">
             <Link to="/privacy-policy" className="text-slate-400 hover:text-white text-sm transition-colors">
               Privacy Policy
             </Link>
@@ -109,6 +109,9 @@ const Footer = () => {
             </Link>
             <Link to="/refund-policy" className="text-slate-400 hover:text-white text-sm transition-colors">
               Refund Policy
+            </Link>
+            <Link to="/cancellation-policy" className="text-slate-400 hover:text-white text-sm transition-colors">
+              Cancellation Policy
             </Link>
             <Link to="/about-us" className="text-slate-400 hover:text-white text-sm transition-colors">
               About Us

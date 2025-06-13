@@ -139,9 +139,11 @@ const PrivacyPolicy = () => {
                   <li>We do not store your complete credit card details, CVV codes, UPI PINs, or banking passwords</li>
                   <li>Razorpay may collect additional information necessary to process your transaction in accordance with their privacy policy</li>
                   <li>Transactions are encrypted using industry-standard SSL technology</li>
-                  <li>For UPI payments, we may receive your UPI ID, transaction reference number, and payment status</li>
+                  <li>For UPI payments, we may receive your UPI ID (Virtual Payment Address), transaction reference number, payment status, and transaction timestamp</li>
+                  <li>We store transaction identifiers for accounting, customer support, and legal compliance purposes</li>
+                  <li>Your UPI transaction data is protected with the same level of security as other payment information</li>
                   <li>Payment information is only used to process your transactions and for record-keeping as required by law</li>
-                  <li>For information on refunds and cancellations of UPI payments, please refer to our <a href="/refund-policy" className="text-blue-600 hover:underline">Refund Policy</a></li>
+                  <li>For information on refunds and cancellations of UPI payments, please refer to our <a href="/refund-policy" className="text-blue-600 hover:underline">Refund Policy</a> and <a href="/cancellation-policy" className="text-blue-600 hover:underline">Cancellation Policy</a></li>
                 </ul>
                 <p className="text-slate-600 leading-relaxed mb-4">
                   For more information on how Razorpay processes your data, please refer to <a href="https://razorpay.com/privacy/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Razorpay's Privacy Policy</a>.

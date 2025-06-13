@@ -76,7 +76,7 @@ const RefundPolicy = () => {
                   This Refund and Cancellation Policy is governed by and complies with the applicable laws of India, including but not limited to the Information Technology Act, 2000, the Payment and Settlement Systems Act, 2007, and the guidelines issued by the Reserve Bank of India (RBI) and the National Payments Corporation of India (NPCI).
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  By engaging our services and making payments through our platform, you agree to the terms of this Refund and Cancellation Policy. Please read this document carefully before making any payments.
+                  By engaging our services and making payments through our platform, you agree to the terms of this Refund and Cancellation Policy. This policy should be read in conjunction with our <a href="/terms-and-conditions" className="text-blue-600 hover:underline">Terms and Conditions</a> and <a href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</a>. Please read all documents carefully before making any payments.
                 </p>
               </div>
 
@@ -350,7 +350,7 @@ const RefundPolicy = () => {
                 <div className="bg-slate-50 p-6 rounded-lg border border-slate-200">
                   <p className="font-semibold text-slate-900 mb-1">Grievance Officer</p>
                   <p className="text-slate-600">Name: Majji Pradeep Kumar</p>
-                  <p className="text-slate-600">Email: grievance.intruitia@gmail.com</p>
+                  <p className="text-slate-600">Email: pradeepmajji853@gmail.com</p>
                   <p className="text-slate-600">Phone: +91 8184889557</p>
                   <p className="text-slate-600">Address: Flat No. 2-90/9/2/1, Jeevan Jyothi Nagar, Suraram Colony, Hyderabad, Telangana 500055, India</p>
                   <p className="text-slate-600 mt-2">The Grievance Officer will acknowledge your complaint within 24 hours and resolve it within 7 business days from the date of receipt.</p>

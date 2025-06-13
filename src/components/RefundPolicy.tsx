@@ -44,6 +44,24 @@ const RefundPolicy = () => {
             </div>
           </div>
 
+          {/* Razorpay UPI Compliance Notice */}
+          <div className={`bg-blue-50 rounded-xl border border-blue-200 p-6 mb-8 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 bg-blue-100 rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-700" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-sm font-medium text-blue-800">Razorpay UPI Payment Information</h3>
+                <div className="mt-2 text-sm text-blue-700">
+                  <p>Intruitia uses Razorpay as our authorized payment gateway for all UPI transactions. All payments are processed securely and in compliance with RBI guidelines.</p>
+                  <p className="mt-1">For any UPI payment-related issues, please contact us at pradeepmajji853@gmail.com with your transaction reference number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className={`bg-white rounded-xl shadow-sm border border-slate-200 p-8 mb-8 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="space-y-8">
               <div>
@@ -154,6 +172,7 @@ const RefundPolicy = () => {
                   <li><span className="font-semibold">Pending Transactions:</span> If a UPI transaction is pending, it will automatically expire after the timeout period (usually 2-5 minutes) if not completed.</li>
                   <li><span className="font-semibold">Failed Transactions:</span> For failed UPI transactions where money was debited from your account, the amount will be automatically refunded to your account within 5 business days as per NPCI guidelines.</li>
                   <li><span className="font-semibold">Duplicate Transactions:</span> In case of duplicate payments for the same service, the additional amount will be refunded automatically within 7 business days.</li>
+                  <li><span className="font-semibold">Order Cancellation Process:</span> To cancel an order or service paid via UPI, please email us at pradeepmajji853@gmail.com with your order reference and transaction ID within 48 hours of purchase. Cancellation requests are subject to our refund eligibility criteria outlined above.</li>
                 </ul>
                 <p className="text-slate-600 leading-relaxed mb-4">
                   All UPI payment cancellations and refunds are processed in compliance with the guidelines set by the National Payments Corporation of India (NPCI) and the Reserve Bank of India (RBI).
@@ -205,6 +224,8 @@ const RefundPolicy = () => {
                   <li><span className="font-semibold">Refund Method:</span> Refunds for UPI payments will be processed back to the same UPI ID used for the original payment.</li>
                   <li><span className="font-semibold">Transaction Reference:</span> For any issues with UPI payments or refunds, please contact us with your UPI transaction reference number.</li>
                   <li><span className="font-semibold">Regulatory Compliance:</span> All UPI transactions and refunds are processed in accordance with the guidelines set by the National Payments Corporation of India (NPCI) and the Reserve Bank of India (RBI).</li>
+                  <li><span className="font-semibold">Instant Refunds:</span> For eligible transactions, we may offer instant refunds that will be credited to your UPI account within minutes. Eligibility for instant refunds is determined on a case-by-case basis.</li>
+                  <li><span className="font-semibold">Refund Cancellation:</span> Once a refund is initiated, it cannot be cancelled or reversed.</li>
                 </ul>
                 
                 <h4 className="text-lg font-semibold text-slate-800 mb-2">

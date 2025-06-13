@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { FileText, Scale, AlertTriangle } from 'lucide-react';
+import { FileText, Scale, AlertTriangle, CreditCard, Shield } from 'lucide-react';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
@@ -44,6 +44,22 @@ const TermsAndConditions = () => {
             </div>
           </div>
 
+          {/* Razorpay UPI Compliance Notice */}
+          <div className={`bg-blue-50 rounded-xl border border-blue-200 p-6 mb-8 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 bg-blue-100 rounded-full p-2">
+                <CreditCard className="h-5 w-5 text-blue-700" />
+              </div>
+              <div className="ml-3">
+                <h3 className="text-sm font-medium text-blue-800">Razorpay UPI Payment Information</h3>
+                <div className="mt-2 text-sm text-blue-700">
+                  <p>Intruitia uses Razorpay as our authorized payment gateway for UPI and other online transactions. All transactions are processed securely and in compliance with RBI guidelines.</p>
+                  <p className="mt-1">By using our services, you agree to the payment terms outlined in this document.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className={`bg-white rounded-xl shadow-sm border border-slate-200 p-8 mb-8 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="space-y-8">
               <div>
@@ -75,6 +91,8 @@ const TermsAndConditions = () => {
                   <li><span className="font-semibold">"Services"</span> refers to all services provided by Intruitia, including web development, content creation, and consulting services.</li>
                   <li><span className="font-semibold">"Website"</span> refers to intruitia.in and all associated content.</li>
                   <li><span className="font-semibold">"Platform"</span> refers to our Website, including the related mobile site and mobile application.</li>
+                  <li><span className="font-semibold">"UPI"</span> refers to Unified Payments Interface, a real-time payment system developed by the National Payments Corporation of India.</li>
+                  <li><span className="font-semibold">"Razorpay"</span> refers to our authorized payment gateway service provider for processing online payments, including UPI transactions.</li>
                 </ul>
               </div>
 
@@ -89,6 +107,8 @@ const TermsAndConditions = () => {
                   <li>Any terms and conditions proposed by you which are in addition to or which conflict with these Terms are expressly rejected by the Platform Owner and shall be of no force or effect.</li>
                   <li>These Terms can be modified at any time without assigning any reason. It is your responsibility to periodically review these Terms to stay informed of updates.</li>
                   <li>To access and use the Services, you agree to provide true, accurate and complete information to us during and after registration, and you shall be responsible for all acts done through the use of your registered account on the Platform.</li>
+                  <li>For payments made via UPI through Razorpay, you agree to comply with all applicable guidelines of NPCI and RBI, and you confirm that you are authorized to use the UPI ID provided for payment.</li>
+                  <li>You agree not to dispute UPI transactions without valid reasons and to report any payment discrepancies within 3 days of the transaction.</li>
                 </ul>
                 <p className="text-slate-600 leading-relaxed">
                   For the purpose of these Terms, wherever the context so requires 'you', 'your' or 'user' shall mean any natural or legal person who has agreed to become a user/buyer on the Platform.
@@ -128,6 +148,15 @@ const TermsAndConditions = () => {
                 <p className="text-slate-600 leading-relaxed mb-4">
                   For UPI payments, transactions are processed in accordance with the National Payments Corporation of India (NPCI) guidelines. UPI payments are secure, and your UPI PIN is never stored or accessible by us.
                 </p>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  When using UPI for payments:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-slate-600 mb-4">
+                  <li>You authorize Razorpay to debit the payment from your linked bank account.</li>
+                  <li>You confirm that you are authorized to use the UPI ID provided for making payments.</li>
+                  <li>UPI transactions are typically processed instantly, and service delivery will begin only after successful payment confirmation.</li>
+                  <li>You must report any unauthorized transactions or discrepancies within 3 days of the transaction.</li>
+                </ul>
                 <p className="text-slate-600 leading-relaxed">
                   Invoices are due upon receipt unless otherwise specified. Late payments may incur a late fee of 2% per month on the outstanding amount.
                 </p>
@@ -161,7 +190,11 @@ const TermsAndConditions = () => {
                   <li>Initial deposits are non-refundable as they cover initial consultations and project setup.</li>
                   <li>If you cancel a project after work has begun, you will be billed for all work completed up to the cancellation date.</li>
                   <li>For ongoing retainer services, cancellation requires a 30-day written notice.</li>
-                  <li>All refunds, when applicable, will be processed within 14 business days through the original payment method.</li>
+                  <li>All refunds, when applicable, will be processed within 5-7 business days through the original payment method.</li>
+                  <li>For UPI payments, refunds will be sent to the same UPI ID used for the original transaction within 2-5 business days.</li>
+                  <li>Once a refund is initiated, it cannot be canceled or reversed.</li>
+                  <li>For detailed information on refunds and cancellations, including UPI payment refunds, please refer to our <a href="/refund-policy" className="text-blue-600 hover:underline">Refund Policy</a>.</li>
+                  <li>For information on how we handle your payment data, please see our <a href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</a>.</li>
                 </ul>
               </div>
 
@@ -208,6 +241,25 @@ const TermsAndConditions = () => {
                   <p className="text-slate-600">Phone: +91 8184889557</p>
                   <p className="text-slate-600">Address: Flat No. 2-90/9/2/1, Jeevan Jyothi Nagar, Suraram Colony, Hyderabad, Telangana 500055, India</p>
                 </div>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
+                  <Scale className="w-6 h-6 mr-2 text-violet-600" />
+                  Dispute Resolution
+                </h2>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  If you have any issues with our services or payment processes, please contact us first to resolve the matter amicably:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-slate-600 mb-4">
+                  <li>For payment disputes, including UPI transactions, please email us at pradeepmajji853@gmail.com with your transaction ID and details of the issue.</li>
+                  <li>We aim to acknowledge all complaints within 24 hours and resolve them within 7 business days.</li>
+                  <li>For UPI-related disputes, we follow the dispute resolution process outlined by NPCI and RBI guidelines.</li>
+                  <li>In case of any discrepancy in payment, please report within 3 days of transaction for prompt resolution.</li>
+                </ul>
+                <p className="text-slate-600 leading-relaxed">
+                  If we cannot reach an amicable resolution, the dispute will be subject to the exclusive jurisdiction of the courts in Hyderabad, Telangana, India.
+                </p>
               </div>
             </div>
           </div>

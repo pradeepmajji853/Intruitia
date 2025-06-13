@@ -1,5 +1,6 @@
+
 import { useState, useEffect, useRef } from 'react';
-import { Shield, Lock, FileText } from 'lucide-react';
+import { Shield, Lock, FileText, CreditCard } from 'lucide-react';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
@@ -44,6 +45,22 @@ const PrivacyPolicy = () => {
             </div>
           </div>
 
+          {/* Razorpay UPI Compliance Notice */}
+          <div className={`bg-blue-50 rounded-xl border border-blue-200 p-6 mb-8 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 bg-blue-100 rounded-full p-2">
+                <CreditCard className="h-5 w-5 text-blue-700" />
+              </div>
+              <div className="ml-3">
+                <h3 className="text-sm font-medium text-blue-800">Payment Data Protection</h3>
+                <div className="mt-2 text-sm text-blue-700">
+                  <p>We use Razorpay as our payment processor. When making UPI payments, your data is handled securely in compliance with RBI and NPCI guidelines.</p>
+                  <p className="mt-1">We never store your UPI PIN, and your payment data is protected with industry-standard encryption.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className={`bg-white rounded-xl shadow-sm border border-slate-200 p-8 mb-8 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="space-y-8">
               <div>
@@ -75,7 +92,8 @@ const PrivacyPolicy = () => {
                   <li><span className="font-semibold">Usage Data:</span> Information about how you use our website and services</li>
                   <li><span className="font-semibold">Communication Data:</span> Preferences for receiving communications from us</li>
                   <li><span className="font-semibold">Payment Information:</span> When you make payments, we process transaction data via our secure payment processor (Razorpay)</li>
-                  <li><span className="font-semibold">Identification:</span> Some sensitive personal data may be collected with your consent, such as your bank account or credit/debit card or other payment instrument information</li>
+                  <li><span className="font-semibold">UPI-related Data:</span> For UPI transactions, we collect the VPA (Virtual Payment Address) you use for the payment, but not your UPI PIN or bank credentials</li>
+                  <li><span className="font-semibold">Transaction History:</span> Information about your payments including date, amount, and status of the transaction</li>
                 </ul>
                 <p className="text-slate-600 leading-relaxed mb-4">
                   You always have the option to not provide information by choosing not to use a particular service or feature on the Platform. We may track your behavior, preferences, and other information that you choose to provide on our Platform.
@@ -123,6 +141,7 @@ const PrivacyPolicy = () => {
                   <li>Transactions are encrypted using industry-standard SSL technology</li>
                   <li>For UPI payments, we may receive your UPI ID, transaction reference number, and payment status</li>
                   <li>Payment information is only used to process your transactions and for record-keeping as required by law</li>
+                  <li>For information on refunds and cancellations of UPI payments, please refer to our <a href="/refund-policy" className="text-blue-600 hover:underline">Refund Policy</a></li>
                 </ul>
                 <p className="text-slate-600 leading-relaxed mb-4">
                   For more information on how Razorpay processes your data, please refer to <a href="https://razorpay.com/privacy/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Razorpay's Privacy Policy</a>.
@@ -159,7 +178,7 @@ const PrivacyPolicy = () => {
                   We will retain your personal data only for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements. For payment data, we keep transaction records for a period of 7 years as required by Indian tax laws and accounting standards.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  You have an option to delete your account by contacting us. This action would result in you losing all information related to your account. You may write to us at the contact information provided below to assist you with these requests. We may, in the event of any pending grievance, claims, pending payments or any other services, refuse or delay deletion of the account. Once the account is deleted, you will lose access to the account.
+                  You have an option to delete your account by contacting us. This action would result in you losing all information related to your account. You may write to us at the contact information provided below to assist you with these requests. We may, in the event of any pending grievance, claims, pending payments or any other services, refuse or delay deletion of the account. Once the account is deleted, you will lose access to the account. For specific information about how we handle payment data including UPI transactions, please refer to our <a href="/terms-and-conditions" className="text-blue-600 hover:underline">Terms and Conditions</a>.
                 </p>
               </div>
 

@@ -1,7 +1,6 @@
-import { useState, FormEvent, useEffect } from 'react';
-import { Send, Type, Users, MessageSquare, Loader2, Copy, CheckCircle2, AlertCircle, Settings } from 'lucide-react';
+import { useState, FormEvent } from 'react';
+import { Send, Type, Users, MessageSquare, Loader2, Copy, CheckCircle2 } from 'lucide-react';
 import { geminiService } from '../services/geminiService';
-import ApiKeyModal from './ApiKeyModal';
 import ErrorDisplay from './ErrorDisplay';
 
 // Define the content types available
@@ -29,12 +28,6 @@ const ContentGenerator = () => {
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [copied, setCopied] = useState<boolean>(false);
-  const [showApiKeyModal, setShowApiKeyModal] = useState<boolean>(false);
-  const [isApiKeyConfigured, setIsApiKeyConfigured] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsApiKeyConfigured(geminiService.isConfigured());
-  }, []);
 
   // Handle form input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -47,11 +40,6 @@ const ContentGenerator = () => {
 
   // Generate content using Gemini
   const generateContent = async () => {
-    if (!geminiService.isConfigured()) {
-      setShowApiKeyModal(true);
-      return;
-    }
-
     setIsLoading(true);
     setError('');
     setGeneratedContent('');
@@ -139,19 +127,8 @@ const ContentGenerator = () => {
     }
   };
 
-  const handleApiKeySet = () => {
-    setIsApiKeyConfigured(true);
-  };
-
   return (
     <div className="min-h-screen bg-[#0e0e1a] text-white">
-      {/* API Key Modal */}
-      <ApiKeyModal 
-        isOpen={showApiKeyModal}
-        onClose={() => setShowApiKeyModal(false)}
-        onApiKeySet={handleApiKeySet}
-      />
-
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -175,15 +152,6 @@ const ContentGenerator = () => {
                 <MessageSquare className="w-6 h-6 mr-3 text-blue-400" />
                 Content Details
               </h2>
-              {!isApiKeyConfigured && (
-                <button
-                  onClick={() => setShowApiKeyModal(true)}
-                  className="flex items-center gap-2 px-3 py-1.5 bg-blue-600/20 text-blue-400 rounded-lg hover:bg-blue-600/30 transition-colors text-sm"
-                >
-                  <Settings className="w-4 h-4" />
-                  Setup API
-                </button>
-              )}
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -275,19 +243,6 @@ const ContentGenerator = () => {
                 )}
               </button>
             </form>
-
-            {/* API Key Status */}
-            {!isApiKeyConfigured && (
-              <div className="mt-6 p-4 bg-yellow-900/20 border border-yellow-600/30 rounded-lg">
-                <div className="flex items-start gap-3">
-                  <AlertCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-yellow-200 font-medium mb-1">API Key Required</p>
-                    <p className="text-yellow-300/80 text-sm">Configure your Gemini API key to enable AI content generation.</p>
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
 
           {/* Output */}
@@ -322,8 +277,6 @@ const ContentGenerator = () => {
                 <ErrorDisplay 
                   error={error}
                   onRetry={generateContent}
-                  showApiKeySetup={!isApiKeyConfigured}
-                  onApiKeySetup={() => setShowApiKeyModal(true)}
                 />
               )}
 

@@ -1,5 +1,6 @@
 import { Linkedin, Instagram, Youtube, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import IntruitiaLogo from './IntruitiaLogo';
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -16,9 +17,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">I</span>
-              </div>
+              <IntruitiaLogo 
+                size="small" 
+                variant="icon" 
+                className="mr-2"
+              />
               <span className="ml-2 text-xl font-bold">Intruitia</span>
             </div>
             <p className="text-slate-400 mb-6 leading-relaxed">

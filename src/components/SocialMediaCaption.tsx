@@ -1,7 +1,6 @@
-import { useState, FormEvent, useEffect } from 'react';
-import { Send, MessageCircle, Users, MessageSquare, Loader2, Copy, CheckCircle2, AlertCircle, Settings } from 'lucide-react';
+import { useState, FormEvent } from 'react';
+import { Send, MessageCircle, Users, MessageSquare, Loader2, Copy, CheckCircle2 } from 'lucide-react';
 import { geminiService } from '../services/geminiService';
-import ApiKeyModal from './ApiKeyModal';
 
 // Define the platforms available
 type Platform = 'Instagram' | 'Twitter' | 'LinkedIn' | 'Facebook' | 'TikTok' | 'General';
@@ -35,12 +34,6 @@ const SocialMediaCaption = () => {
   const [generatedCaption, setGeneratedCaption] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [copied, setCopied] = useState<boolean>(false);
-  const [showApiKeyModal, setShowApiKeyModal] = useState<boolean>(false);
-  const [isApiKeyConfigured, setIsApiKeyConfigured] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsApiKeyConfigured(geminiService.isConfigured());
-  }, []);
 
   // Handle form input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -62,11 +55,6 @@ const SocialMediaCaption = () => {
 
   // Generate caption using Gemini
   const generateCaption = async () => {
-    if (!geminiService.isConfigured()) {
-      setShowApiKeyModal(true);
-      return;
-    }
-
     if (!formData.topic.trim()) {
       setError('Please enter a topic for your caption');
       return;
@@ -117,11 +105,6 @@ const SocialMediaCaption = () => {
     }
   };
 
-  const handleApiKeySet = () => {
-    setIsApiKeyConfigured(true);
-    setShowApiKeyModal(false);
-  };
-
   // Get platform character limit info
   const getCharacterLimit = (platform: Platform): string => {
     switch (platform) {
@@ -146,23 +129,6 @@ const SocialMediaCaption = () => {
             Create engaging, platform-optimized captions that boost your social media presence and drive engagement
           </p>
           
-          {/* API Key Setup Button */}
-          {!isApiKeyConfigured && (
-            <div className="mt-6 p-4 bg-yellow-900/20 border border-yellow-700 rounded-lg max-w-md mx-auto">
-              <div className="flex items-center justify-center text-yellow-400 mb-2">
-                <AlertCircle className="w-5 h-5 mr-2" />
-                <span className="text-sm font-medium">Setup Required</span>
-              </div>
-              <p className="text-sm text-yellow-300 mb-3">Configure your Gemini API key to start generating captions</p>
-              <button
-                onClick={() => setShowApiKeyModal(true)}
-                className="flex items-center justify-center w-full bg-yellow-600 hover:bg-yellow-500 text-white px-4 py-2 rounded-lg transition-colors text-sm"
-              >
-                <Settings className="w-4 h-4 mr-2" />
-                Setup API Key
-              </button>
-            </div>
-          )}
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -298,7 +264,7 @@ const SocialMediaCaption = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={isLoading || !formData.topic.trim() || !isApiKeyConfigured}
+                disabled={isLoading || !formData.topic.trim()}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 disabled:from-gray-600 disabled:to-gray-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center"
               >
                 {isLoading ? (
@@ -334,7 +300,7 @@ const SocialMediaCaption = () => {
             {/* Error State */}
             {error && !isLoading && (
               <div className="bg-red-900/20 border-red-700 border rounded-lg p-4 flex items-start">
-                <AlertCircle className="w-5 h-5 mt-0.5 flex-shrink-0 text-red-400" />
+                <div className="w-5 h-5 mt-0.5 flex-shrink-0 text-red-400 font-bold">!</div>
                 <div className="ml-3">
                   <h3 className="text-sm font-medium text-red-400">Generation Failed</h3>
                   <p className="mt-1 text-sm text-red-300">{error}</p>
@@ -418,13 +384,6 @@ const SocialMediaCaption = () => {
           </div>
         </div>
       </div>
-
-      {/* API Key Modal */}
-      <ApiKeyModal
-        isOpen={showApiKeyModal}
-        onClose={() => setShowApiKeyModal(false)}
-        onApiKeySet={handleApiKeySet}
-      />
     </div>
   );
 };

@@ -1,6 +1,7 @@
-import { Linkedin, Instagram, Twitter, Mail, BrainCircuit, ArrowRight, CheckCircle, AlertCircle } from 'lucide-react';
+import { Linkedin, Instagram, Twitter, Mail, ArrowRight, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import IntruitiaLogo from './IntruitiaLogo';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -123,9 +124,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center">
-                <BrainCircuit className="w-5 h-5 text-white" />
-              </div>
+              <IntruitiaLogo 
+                size="small" 
+                variant="icon" 
+                className="mr-2"
+              />
               <span className="ml-2 text-xl font-bold">Intruitia</span>
             </div>
             <p className="text-indigo-200 mb-6 leading-relaxed">

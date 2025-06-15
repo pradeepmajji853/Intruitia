@@ -1,5 +1,5 @@
-import { BrainCircuit } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import IntruitiaLogo from './IntruitiaLogo';
 
 const Footer = () => {
   return (
@@ -8,9 +8,11 @@ const Footer = () => {
         {/* Simplified Company Info */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
-            <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center">
-              <BrainCircuit className="w-5 h-5 text-white" />
-            </div>
+            <IntruitiaLogo 
+              size="small" 
+              variant="icon" 
+              className="mr-2"
+            />
             <span className="ml-2 text-xl font-bold">Intruitia</span>
           </div>
           <p className="text-indigo-200 max-w-md mx-auto">

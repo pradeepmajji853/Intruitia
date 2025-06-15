@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Command, Twitter, Linkedin, Instagram, Github, Send } from 'lucide-react';
+import { Twitter, Linkedin, Instagram, Github, Send } from 'lucide-react';
+import IntruitiaLogo from './IntruitiaLogo';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -59,9 +60,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-violet-600 via-fuchsia-600 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg">
-                <Command className="w-6 h-6 text-white" />
-              </div>
+              <IntruitiaLogo 
+                size="medium" 
+                variant="icon" 
+                className="shadow-lg"
+              />
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">
                 Intruitia
               </span>

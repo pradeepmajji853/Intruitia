@@ -14,24 +14,22 @@ interface GeminiResponse {
 
 class GeminiService {
   private apiKey: string;
-  private baseUrl: string = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent';
+  private baseUrl: string = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 
   constructor() {
-    // Try to get API key from environment or localStorage
-    this.apiKey = import.meta.env.VITE_GEMINI_API_KEY || 
-                  localStorage.getItem('gemini_api_key') || 
-                  '';
+    // Use the provided API key directly - no need for users to configure
+    this.apiKey = 'AIzaSyD_RTZuh-ygB1FbOuu14i5LQcz-8w3MmRY';
   }
 
-  // Set API key at runtime
+  // Set API key at runtime (kept for compatibility but not needed)
   setApiKey(apiKey: string): void {
-    this.apiKey = apiKey;
-    localStorage.setItem('gemini_api_key', apiKey);
+    // API key is hardcoded, but keeping this method for backward compatibility
+    console.log('API key is already configured automatically');
   }
 
   // Check if API key is configured
   isConfigured(): boolean {
-    return !!this.apiKey;
+    return true; // Always configured since we have the hardcoded key
   }
 
   // Generate content using Gemini

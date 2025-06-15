@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ChevronDown, Command, Plus } from 'lucide-react';
+import { Menu, X, ChevronDown, Plus } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import IntruitiaLogo from './IntruitiaLogo';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,9 +85,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-violet-600 via-fuchsia-600 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-violet-500/20 transition-all duration-300">
-              <Command className="w-6 h-6 text-white" />
-            </div>
+            <IntruitiaLogo 
+              size="medium" 
+              variant="icon" 
+              className="group-hover:scale-105 transition-transform duration-300 group-hover:shadow-violet-500/20" 
+            />
             <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">
               Intruitia
             </span>

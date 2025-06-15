@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, BrainCircuit, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import IntruitiaLogo from './IntruitiaLogo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,9 +52,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center group">
-            <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 via-purple-600 to-violet-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-              <BrainCircuit className="w-6 h-6 text-white" />
-            </div>
+            <IntruitiaLogo 
+              size="medium" 
+              variant="icon" 
+              className="group-hover:scale-105 transition-all duration-300 group-hover:shadow-xl" 
+            />
             <span className="ml-3 text-2xl font-black bg-gradient-to-r from-indigo-800 to-purple-700 bg-clip-text text-transparent">
               Intruitia
             </span>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import IntruitiaLogo from './IntruitiaLogo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,9 +39,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center group">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-              <span className="text-white font-bold text-xl">I</span>
-            </div>
+            <IntruitiaLogo 
+              size="medium" 
+              variant="icon" 
+              className="group-hover:scale-105 transition-all duration-300 group-hover:shadow-xl"
+            />
             <span className="ml-3 text-2xl font-black bg-gradient-to-r from-slate-100 to-slate-300 bg-clip-text text-transparent">
               Intruitia
             </span>

@@ -1,0 +1,147 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="videoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#1d4ed8;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGradient)"/>
+  
+  <!-- Abstract particles -->
+  <circle cx="100" cy="80" r="2" fill="#3b82f6" opacity="0.4"/>
+  <circle cx="700" cy="120" r="1.5" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="150" cy="400" r="1" fill="#06b6d4" opacity="0.5"/>
+  <circle cx="680" cy="380" r="2.5" fill="#f59e0b" opacity="0.3"/>
+  <circle cx="50" cy="250" r="1.5" fill="#10b981" opacity="0.4"/>
+  
+  <!-- Main Monitor -->
+  <rect x="100" y="80" width="600" height="340" rx="15" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <rect x="110" y="90" width="580" height="300" rx="8" fill="url(#screenGradient)"/>
+  
+  <!-- Monitor Stand -->
+  <rect x="380" y="420" width="40" height="30" rx="5" fill="#374151"/>
+  <rect x="350" y="450" width="100" height="15" rx="8" fill="#4b5563"/>
+  
+  <!-- Video Workspace -->
+  <rect x="120" y="100" width="560" height="280" rx="6" fill="#0f172a"/>
+  
+  <!-- Timeline Track 1 -->
+  <rect x="130" y="320" width="540" height="25" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="135" y="335" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Video Track 1</text>
+  
+  <!-- Video Clips on Timeline -->
+  <rect x="180" y="322" width="80" height="21" rx="2" fill="url(#videoGradient)" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="270" y="322" width="120" height="21" rx="2" fill="url(#videoGradient)" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="400" y="322" width="90" height="21" rx="2" fill="url(#videoGradient)" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="500" y="322" width="100" height="21" rx="2" fill="url(#videoGradient)" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Timeline Track 2 -->
+  <rect x="130" y="350" width="540" height="25" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="135" y="365" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Audio Track</text>
+  
+  <!-- Audio Clips -->
+  <rect x="180" y="352" width="80" height="21" rx="2" fill="#10b981" opacity="0.7"/>
+  <rect x="270" y="352" width="120" height="21" rx="2" fill="#10b981" opacity="0.7"/>
+  <rect x="400" y="352" width="90" height="21" rx="2" fill="#10b981" opacity="0.7"/>
+  
+  <!-- Video Preview Area -->
+  <rect x="130" y="110" width="350" height="200" rx="6" fill="#000" stroke="#334155" stroke-width="1"/>
+  
+  <!-- Video Content -->
+  <rect x="140" y="120" width="330" height="180" rx="4" fill="#1e293b"/>
+  
+  <!-- Content Creator Elements -->
+  <circle cx="200" cy="170" r="15" fill="#f59e0b" opacity="0.8"/>
+  <text x="200" y="176" text-anchor="middle" fill="#000" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">👤</text>
+  
+  <!-- Video Elements -->
+  <rect x="250" y="140" width="180" height="80" rx="6" fill="#3b82f6" opacity="0.3"/>
+  <rect x="260" y="150" width="40" height="30" rx="3" fill="#8b5cf6" opacity="0.6"/>
+  <rect x="310" y="150" width="40" height="30" rx="3" fill="#06b6d4" opacity="0.6"/>
+  <rect x="360" y="150" width="40" height="30" rx="3" fill="#10b981" opacity="0.6"/>
+  
+  <!-- Text Elements -->
+  <rect x="260" y="190" width="120" height="8" rx="2" fill="#f1f5f9" opacity="0.8"/>
+  <rect x="260" y="205" width="80" height="6" rx="2" fill="#94a3b8" opacity="0.6"/>
+  
+  <!-- Tools Panel -->
+  <rect x="490" y="110" width="180" height="200" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="580" y="130" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="12" font-weight="600">AI Tools</text>
+  
+  <!-- Tool Icons -->
+  <rect x="500" y="140" width="30" height="30" rx="6" fill="#3b82f6" opacity="0.8"/>
+  <circle cx="515" cy="155" r="8" fill="#fff"/>
+  <text x="515" y="159" text-anchor="middle" fill="#3b82f6" font-family="system-ui, sans-serif" font-size="8">✂️</text>
+  <text x="540" y="159" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="10">Smart Cut</text>
+  
+  <rect x="500" y="180" width="30" height="30" rx="6" fill="#8b5cf6" opacity="0.8"/>
+  <circle cx="515" cy="195" r="8" fill="#fff"/>
+  <text x="515" y="199" text-anchor="middle" fill="#8b5cf6" font-family="system-ui, sans-serif" font-size="8">🎨</text>
+  <text x="540" y="199" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="10">Color Grade</text>
+  
+  <rect x="500" y="220" width="30" height="30" rx="6" fill="#06b6d4" opacity="0.8"/>
+  <circle cx="515" cy="235" r="8" fill="#fff"/>
+  <text x="515" y="239" text-anchor="middle" fill="#06b6d4" font-family="system-ui, sans-serif" font-size="8">🎵</text>
+  <text x="540" y="239" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="10">Audio Sync</text>
+  
+  <rect x="500" y="260" width="30" height="30" rx="6" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="515" cy="275" r="8" fill="#fff"/>
+  <text x="515" y="279" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="8">✨</text>
+  <text x="540" y="279" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="10">AI Effects</text>
+  
+  <!-- Progress Bar -->
+  <rect x="130" y="290" width="350" height="6" rx="3" fill="#1e293b"/>
+  <rect x="130" y="290" width="150" height="6" rx="3" fill="#3b82f6"/>
+  <circle cx="280" cy="293" r="4" fill="#3b82f6" filter="url(#glow)"/>
+  
+  <!-- Time Display -->
+  <text x="490" y="296" fill="#f1f5f9" font-family="monospace" font-size="12">02:45 / 06:30</text>
+  
+  <!-- Content Elements Floating Around -->
+  <circle cx="50" cy="150" r="20" fill="#8b5cf6" opacity="0.3" filter="url(#blur)"/>
+  <rect x="40" y="140" width="20" height="20" rx="3" fill="#f1f5f9" opacity="0.8"/>
+  <text x="50" y="152" text-anchor="middle" fill="#8b5cf6" font-family="system-ui, sans-serif" font-size="10">📹</text>
+  
+  <circle cx="750" cy="200" r="25" fill="#06b6d4" opacity="0.3" filter="url(#blur)"/>
+  <rect x="735" y="185" width="30" height="30" rx="4" fill="#f1f5f9" opacity="0.8"/>
+  <text x="750" y="203" text-anchor="middle" fill="#06b6d4" font-family="system-ui, sans-serif" font-size="12">🎬</text>
+  
+  <circle cx="80" cy="350" r="18" fill="#10b981" opacity="0.3" filter="url(#blur)"/>
+  <rect x="68" y="338" width="24" height="24" rx="3" fill="#f1f5f9" opacity="0.8"/>
+  <text x="80" y="352" text-anchor="middle" fill="#10b981" font-family="system-ui, sans-serif" font-size="10">🎭</text>
+  
+  <!-- Top Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">
+    Content Creation Studio
+  </text>
+  <text x="400" y="65" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14">
+    Professional video editing workspace
+  </text>
+  
+  <!-- Bottom Stats -->
+  <rect x="200" y="470" width="400" height="20" rx="10" fill="#1e293b" opacity="0.8"/>
+  <text x="400" y="483" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">
+    4K Resolution • 60 FPS • Multi-track Editing • Real-time Preview
+  </text>
+</svg>

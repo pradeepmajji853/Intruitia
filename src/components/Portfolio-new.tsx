@@ -1,29 +1,31 @@
 import { ExternalLink, Github, Eye, CheckCircle, Calendar, Award } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-  const [visibleProjects, setVisibleProjects] = useState<number[]>([]);
   const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = parseInt(entry.target.getAttribute('data-index') || '0');
-            setVisibleProjects(prev => [...prev, index]);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const projects = document.querySelectorAll('.portfolio-card');
-    projects.forEach(project => observer.observe(project));
-
-    return () => observer.disconnect();
+    // Add any initialization code here if needed
   }, []);
+
+  // Animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 60 },
+    visible: { opacity: 1, y: 0 }
+  };
+  
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
 
   const projects = [
     {
@@ -82,7 +84,7 @@ const Portfolio = () => {
     <section 
       ref={sectionRef}
       id="portfolio" 
-      className="py-20 bg-white relative"
+      className="py-20 bg-[#0e0e1a]"
     >
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -93,52 +95,63 @@ const Portfolio = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Professional Header */}
-        <div className="text-center mb-16">
-          <div className="animate-fadeInUp">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+        <motion.div 
+          variants={staggerContainer}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="text-center mb-16"
+        >
+          <motion.div variants={fadeInUp}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our 
-              <span className="gradient-text-professional"> Portfolio</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-violet-500"> Portfolio</span>
             </h2>
-          </div>
-          <div className="animate-slideInLeft" style={{ animationDelay: '0.2s' }}>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-12">
+          </motion.div>
+          <motion.div variants={fadeInUp}>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-12">
               Showcasing successful projects that demonstrate our expertise in delivering 
               high-quality solutions that drive real business results.
             </p>
-          </div>
+          </motion.div>
 
           {/* Professional Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            {categories.map((category, index) => (
-              <button
+          <motion.div 
+            variants={staggerContainer}
+            className="flex flex-wrap justify-center gap-4 mb-16"
+          >
+            {categories.map((category) => (
+              <motion.button
                 key={category}
+                variants={fadeInUp}
                 onClick={() => setActiveFilter(category)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeFilter === category
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                    ? 'bg-gradient-to-r from-blue-600 to-violet-600 text-white shadow-md hover:shadow-blue-500/25'
+                    : 'bg-slate-800/70 text-slate-300 hover:bg-slate-700/80 border border-transparent'
                 }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {category}
-              </button>
+              </motion.button>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Professional Project Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <motion.div 
+          variants={staggerContainer}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="grid md:grid-cols-2 gap-8 mb-16"
+        >
           {filteredProjects.map((project, index) => (
-            <div
+            <motion.div
               key={`${project.title}-${activeFilter}`}
+              variants={fadeInUp}
               data-index={index}
-              className={`portfolio-card card-professional hover-lift ${
-                visibleProjects.includes(index) ? 'animate-fadeInUp' : 'opacity-0'
-              }`}
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`portfolio-card hover-lift bg-slate-800/90 border border-gray-700/50 rounded-lg shadow-md hover:shadow-xl transition-all duration-300`}
             >
               {/* Image Section */}
-              <div className="relative overflow-hidden rounded-lg mb-6">
+              <div className="relative overflow-hidden rounded-t-lg mb-6">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -166,36 +179,36 @@ const Portfolio = () => {
               {/* Content Section */}
               <div className="p-6">
                 {/* Category Badge */}
-                <div className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                <div className="inline-block bg-blue-900/70 text-blue-200 px-3 py-1 rounded-full text-sm font-medium mb-4">
                   {project.category}
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                <h3 className="text-2xl font-bold text-white mb-3">
                   {project.title}
                 </h3>
                 
                 {/* Description */}
-                <p className="text-slate-600 mb-6 leading-relaxed">
+                <p className="text-slate-300 mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
                 {/* Project Details */}
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
-                  <div className="flex items-center text-slate-600">
-                    <CheckCircle className="w-4 h-4 text-blue-600 mr-2" />
+                  <div className="flex items-center text-slate-300">
+                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
                     <span><strong>Client:</strong> {project.client}</span>
                   </div>
-                  <div className="flex items-center text-slate-600">
-                    <Calendar className="w-4 h-4 text-blue-600 mr-2" />
+                  <div className="flex items-center text-slate-300">
+                    <Calendar className="w-4 h-4 text-blue-400 mr-2" />
                     <span><strong>Year:</strong> {project.year}</span>
                   </div>
-                  <div className="flex items-center text-slate-600">
-                    <Award className="w-4 h-4 text-blue-600 mr-2" />
+                  <div className="flex items-center text-slate-300">
+                    <Award className="w-4 h-4 text-blue-400 mr-2" />
                     <span><strong>Duration:</strong> {project.duration}</span>
                   </div>
-                  <div className="flex items-center text-slate-600">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
+                  <div className="flex items-center text-slate-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     <span><strong>Result:</strong> {project.results}</span>
                   </div>
                 </div>
@@ -205,7 +218,7 @@ const Portfolio = () => {
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="bg-slate-100 text-slate-700 px-3 py-1 rounded-md text-sm font-medium"
+                      className="bg-slate-700/70 text-slate-300 px-3 py-1 rounded-md text-sm font-medium"
                     >
                       {tag}
                     </span>
@@ -213,40 +226,43 @@ const Portfolio = () => {
                 </div>
 
                 {/* Professional CTA */}
-                <button className="btn-professional w-full">
+                <button className="w-full text-white bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-blue-500/25 flex items-center justify-center">
                   View Case Study
                   <ExternalLink className="w-4 h-4 ml-2" />
                 </button>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Professional CTA Section */}
-        <div className="text-center">
-          <div className="animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-12 max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-slate-900 mb-6">
-                Ready to Start Your Next Project?
-              </h3>
-              <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Let's collaborate to bring your vision to life with proven expertise, 
-                cutting-edge technology, and a commitment to excellence.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="btn-professional">
-                  View All Projects
-                  <Eye className="w-5 h-5 ml-2" />
-                </button>
-                <button className="btn-secondary">
-                  Request Quote
-                  <ExternalLink className="w-5 h-5 ml-2" />  
-                </button>
-              </div>
+        <motion.div 
+          variants={fadeInUp}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="text-center"
+        >
+          <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-12 max-w-4xl mx-auto shadow-md hover:shadow-lg transition-all duration-300">
+            <h3 className="text-3xl font-bold text-white mb-6">
+              Ready to Start Your Next Project?
+            </h3>
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Let's collaborate to bring your vision to life with proven expertise, 
+              cutting-edge technology, and a commitment to excellence.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="text-white bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-blue-500/25 flex items-center justify-center">
+                View All Projects
+                <Eye className="w-5 h-5 ml-2" />
+              </button>
+              <button className="text-blue-400 bg-blue-900/20 hover:bg-blue-900/30 px-6 py-3 rounded-lg font-medium border border-blue-800/50 transition-colors duration-300 flex items-center justify-center">
+                Request Quote
+                <ExternalLink className="w-5 h-5 ml-2" />  
+              </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

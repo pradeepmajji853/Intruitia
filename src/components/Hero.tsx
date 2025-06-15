@@ -1,40 +1,56 @@
-import { ArrowRight, CheckCircle, Users, Target, Lightbulb, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, BrainCircuit, Lightbulb, Sparkles, Zap, TrendingUp, Layers, CheckCircle, Users, Target } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [animatedStats, setAnimatedStats] = useState({ projects: 0, clients: 0, satisfaction: 0 });
+  const [animatedText, setAnimatedText] = useState('');
+  const animatedStats = {
+    projects: 50,
+    clients: 20,
+    satisfaction: 98
+  };
 
   useEffect(() => {
     setIsVisible(true);
     
-    // Animate numbers
-    const animateNumbers = () => {
-      const duration = 2000;
-      const steps = 50;
-      const stepDuration = duration / steps;
-      
-      const targets = { projects: 24, clients: 12, satisfaction: 98 };
-      
-      for (let i = 0; i <= steps; i++) {
-        setTimeout(() => {
-          const progress = i / steps;
-          setAnimatedStats({
-            projects: Math.round(targets.projects * progress),
-            clients: Math.round(targets.clients * progress),
-            satisfaction: Math.round(targets.satisfaction * progress)
-          });
-        }, i * stepDuration);
-      }
-    };
+    // Animate text typing effect
+    const text = "AI-Driven Content Ecosystems for Hyper-Personalized Digital Marketing";
+    const typingSpeed = 40; // milliseconds per character
     
-    setTimeout(animateNumbers, 500);
+    let currentCharIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentCharIndex <= text.length) {
+        setAnimatedText(text.substring(0, currentCharIndex));
+        currentCharIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, typingSpeed);
+    
+    return () => clearInterval(typingInterval);
   }, []);
 
   const features = [
-    { icon: Lightbulb, text: 'Innovative Solutions', color: 'text-blue-600 bg-blue-100' },
-    { icon: Users, text: 'Expert Team', color: 'text-emerald-600 bg-emerald-100' },
-    { icon: Target, text: 'Results Driven', color: 'text-purple-600 bg-purple-100' }
+    { 
+      icon: BrainCircuit, 
+      text: 'Hyper-personalized content at scale', 
+      color: 'text-indigo-600 bg-indigo-100' 
+    },
+    { 
+      icon: TrendingUp, 
+      text: 'Real-time trend & sentiment integration', 
+      color: 'text-purple-600 bg-purple-100' 
+    },
+    { 
+      icon: Layers, 
+      text: 'Cross-channel content orchestration', 
+      color: 'text-blue-600 bg-blue-100' 
+    },
+    { 
+      icon: Sparkles, 
+      text: 'Hybrid AI + human creative collaboration', 
+      color: 'text-violet-600 bg-violet-100' 
+    }
   ];
 
   return (
@@ -47,7 +63,7 @@ const Hero = () => {
         {/* Floating Geometric Shapes */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-r from-teal-400/20 to-blue-400/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '-2s' }}></div>
-        <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '-4s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-gradient-to-r from-purple-400/20 to-blue-400/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '-4s' }}></div>
         
         {/* Grid Pattern Overlay */}
         <div 
@@ -158,7 +174,7 @@ const Hero = () => {
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-medium text-slate-700">Consulting</span>
                       <div className="w-32 h-3 bg-slate-200 rounded-full overflow-hidden">
-                        <div className="w-3/4 h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-shimmer"></div>
+                        <div className="w-3/4 h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-shimmer"></div>
                       </div>
                     </div>
                   </div>

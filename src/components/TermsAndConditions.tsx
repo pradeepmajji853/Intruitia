@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { FileText, Scale, AlertTriangle, CreditCard, Shield } from 'lucide-react';
-import Footer from './Footer';
-import Navbar from './Navbar';
+import Footer from './Footer-ai';
+import Navbar from './Navbar-ai';
 
 const TermsAndConditions = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -239,7 +239,7 @@ const TermsAndConditions = () => {
                 <div className="bg-slate-50 p-6 rounded-lg border border-slate-200">
                   <p className="font-semibold text-slate-900 mb-1">Intruitia</p>
                   <p className="text-slate-600">Owner: Majji Pradeep Kumar</p>
-                  <p className="text-slate-600">Email: pradeepmajji853@gmail.com</p>
+                  <p className="text-slate-600">Email: support@intruitia.in</p>
                   <p className="text-slate-600">Phone: +91 8184889557</p>
                   <p className="text-slate-600">Address: Flat No. 2-90/9/2/1, Jeevan Jyothi Nagar, Suraram Colony, Hyderabad, Telangana 500055, India</p>
                 </div>
@@ -254,7 +254,7 @@ const TermsAndConditions = () => {
                   If you have any issues with our services or payment processes, please contact us first to resolve the matter amicably:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-slate-600 mb-4">
-                  <li>For payment disputes, including UPI transactions, please email us at pradeepmajji853@gmail.com with your transaction ID and details of the issue.</li>
+                  <li>For payment disputes, including UPI transactions, please email us at support@intruitia.in with your transaction ID and details of the issue.</li>
                   <li>We aim to acknowledge all complaints within 24 hours and resolve them within 7 business days.</li>
                   <li>For UPI-related disputes, we follow the dispute resolution process outlined by NPCI and RBI guidelines.</li>
                   <li>In case of any discrepancy in payment, please report within 3 days of transaction for prompt resolution.</li>

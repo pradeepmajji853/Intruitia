@@ -1,0 +1,62 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bg)"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b">
+    AI Video Editor Workflow
+  </text>
+  
+  <!-- Step 1: Upload -->
+  <g transform="translate(100, 150)">
+    <rect width="80" height="60" rx="8" fill="url(#primary)" opacity="0.1" stroke="url(#primary)" stroke-width="2"/>
+    <circle cx="40" cy="30" r="15" fill="url(#primary)"/>
+    <path d="M35,35 L40,25 L45,35 M40,25 L40,45" stroke="white" stroke-width="2" fill="none"/>
+    <text x="40" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Upload</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <path d="M190,180 L230,180" stroke="url(#primary)" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Step 2: Process -->
+  <g transform="translate(250, 150)">
+    <rect width="80" height="60" rx="8" fill="url(#primary)" opacity="0.1" stroke="url(#primary)" stroke-width="2"/>
+    <circle cx="40" cy="30" r="15" fill="url(#primary)"/>
+    <path d="M35,25 Q40,20 45,25 Q40,35 35,30 Q40,20 45,25" stroke="white" stroke-width="2" fill="none"/>
+    <text x="40" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">AI Process</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <path d="M340,180 L380,180" stroke="url(#primary)" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Step 3: Output -->
+  <g transform="translate(400, 150)">
+    <rect width="80" height="60" rx="8" fill="url(#primary)" opacity="0.1" stroke="url(#primary)" stroke-width="2"/>
+    <circle cx="40" cy="30" r="15" fill="url(#primary)"/>
+    <rect x="32" y="22" width="16" height="16" rx="2" fill="white"/>
+    <polygon points="38,30 42,27 42,33" fill="url(#primary)"/>
+    <text x="40" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Final Video</text>
+  </g>
+  
+  <!-- Features -->
+  <text x="400" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">
+    AI Features: Smart Cuts • Auto Music • Scene Detection • Color Grading
+  </text>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="url(#primary)"/>
+    </marker>
+  </defs>
+</svg>

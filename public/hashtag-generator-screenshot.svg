@@ -1,0 +1,113 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hashtagBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#064e3b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f23;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hashtagCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#374151;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1f2937;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="greenGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#hashtagBg)"/>
+  
+  <!-- Main Interface -->
+  <rect x="40" y="60" width="720" height="480" rx="16" fill="url(#hashtagCard)" stroke="#10b981" stroke-width="1" opacity="0.9"/>
+  
+  <!-- Header -->
+  <rect x="60" y="80" width="680" height="60" rx="8" fill="#1f2937" stroke="#374151" stroke-width="1"/>
+  <rect x="80" y="95" width="12" height="12" fill="#10b981"/>
+  <rect x="96" y="95" width="12" height="12" fill="#10b981"/>
+  <rect x="112" y="95" width="12" height="12" fill="#10b981"/>
+  <text x="140" y="115" fill="#e5e7eb" font-family="Arial" font-size="16" font-weight="bold"># Hashtag Generator</text>
+  <rect x="650" y="95" width="80" height="30" rx="15" fill="#10b981" filter="url(#greenGlow)"/>
+  <text x="690" y="115" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Generate</text>
+  
+  <!-- Input Section -->
+  <rect x="60" y="160" width="340" height="360" rx="12" fill="#111827" stroke="#374151" stroke-width="1"/>
+  <text x="80" y="190" fill="#e5e7eb" font-family="Arial" font-size="14" font-weight="bold">Content Description</text>
+  <rect x="80" y="200" width="300" height="80" rx="6" fill="#374151" stroke="#6b7280" stroke-width="1"/>
+  <text x="90" y="220" fill="#9ca3af" font-family="Arial" font-size="12">Travel photography from Bali sunset...</text>
+  <text x="90" y="240" fill="#6b7280" font-family="Arial" font-size="12">Beautiful beach resort with amazing views</text>
+  <text x="90" y="260" fill="#6b7280" font-family="Arial" font-size="12">Perfect vacation destination</text>
+  
+  <!-- Platform Selection -->
+  <text x="80" y="310" fill="#e5e7eb" font-family="Arial" font-size="14" font-weight="bold">Platform</text>
+  <rect x="80" y="320" width="80" height="30" rx="15" fill="#10b981" stroke="#059669" stroke-width="1"/>
+  <text x="120" y="340" fill="#ffffff" font-family="Arial" font-size="12" text-anchor="middle">Instagram</text>
+  
+  <rect x="170" y="320" width="80" height="30" rx="15" fill="#374151" stroke="#6b7280" stroke-width="1"/>
+  <text x="210" y="340" fill="#9ca3af" font-family="Arial" font-size="12" text-anchor="middle">Twitter</text>
+  
+  <rect x="260" y="320" width="80" height="30" rx="15" fill="#374151" stroke="#6b7280" stroke-width="1"/>
+  <text x="300" y="340" fill="#9ca3af" font-family="Arial" font-size="12" text-anchor="middle">TikTok</text>
+  
+  <!-- Niche Selection -->
+  <text x="80" y="380" fill="#e5e7eb" font-family="Arial" font-size="14" font-weight="bold">Niche</text>
+  <rect x="80" y="390" width="120" height="30" rx="15" fill="#10b981" stroke="#059669" stroke-width="1"/>
+  <text x="140" y="410" fill="#ffffff" font-family="Arial" font-size="12" text-anchor="middle">Travel & Lifestyle</text>
+  
+  <rect x="210" y="390" width="80" height="30" rx="15" fill="#374151" stroke="#6b7280" stroke-width="1"/>
+  <text x="250" y="410" fill="#9ca3af" font-family="Arial" font-size="12" text-anchor="middle">Fashion</text>
+  
+  <!-- Count Slider -->
+  <text x="80" y="450" fill="#e5e7eb" font-family="Arial" font-size="14" font-weight="bold">Hashtag Count: 15</text>
+  <rect x="80" y="460" width="200" height="4" rx="2" fill="#374151"/>
+  <rect x="80" y="460" width="120" height="4" rx="2" fill="#10b981"/>
+  <circle cx="200" cy="462" r="6" fill="#10b981" filter="url(#greenGlow)"/>
+  
+  <!-- Generated Hashtags -->
+  <rect x="420" y="160" width="320" height="360" rx="12" fill="#111827" stroke="#374151" stroke-width="1"/>
+  <text x="440" y="190" fill="#e5e7eb" font-family="Arial" font-size="14" font-weight="bold">Generated Hashtags</text>
+  
+  <!-- Hashtag Categories -->
+  <text x="440" y="220" fill="#10b981" font-family="Arial" font-size="12" font-weight="bold">🔥 Trending (5)</text>
+  <rect x="440" y="225" width="280" height="60" rx="6" fill="#1f2937" stroke="#374151" stroke-width="1"/>
+  <text x="450" y="245" fill="#10b981" font-family="Arial" font-size="11">#bali #sunset #travel #wanderlust #paradise</text>
+  <text x="450" y="260" fill="#10b981" font-family="Arial" font-size="11">#beachvibes #tropicalvibes #vacationmode</text>
+  <text x="450" y="275" fill="#10b981" font-family="Arial" font-size="11">#islandlife #balibible</text>
+  
+  <text x="440" y="305" fill="#f59e0b" font-family="Arial" font-size="12" font-weight="bold">📈 High Engagement (5)</text>
+  <rect x="440" y="310" width="280" height="60" rx="6" fill="#1f2937" stroke="#374151" stroke-width="1"/>
+  <text x="450" y="330" fill="#f59e0b" font-family="Arial" font-size="11">#photography #nature #beautiful #amazing</text>
+  <text x="450" y="345" fill="#f59e0b" font-family="Arial" font-size="11">#photooftheday #instagood #love #happy</text>
+  <text x="450" y="360" fill="#f59e0b" font-family="Arial" font-size="11">#blessed</text>
+  
+  <text x="440" y="390" fill="#8b5cf6" font-family="Arial" font-size="12" font-weight="bold">🎯 Niche Specific (5)</text>
+  <rect x="440" y="395" width="280" height="60" rx="6" fill="#1f2937" stroke="#374151" stroke-width="1"/>
+  <text x="450" y="415" fill="#8b5cf6" font-family="Arial" font-size="11">#luxurytravel #resort #honeymoon #couple</text>
+  <text x="450" y="430" fill="#8b5cf6" font-family="Arial" font-size="11">#romanticgetaway #beachresort #villa</text>
+  <text x="450" y="445" fill="#8b5cf6" font-family="Arial" font-size="11">#dreamdestination</text>
+  
+  <!-- Action Buttons -->
+  <rect x="440" y="470" width="80" height="35" rx="18" fill="#10b981" filter="url(#greenGlow)"/>
+  <text x="480" y="492" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Copy All</text>
+  
+  <rect x="540" y="470" width="80" height="35" rx="18" fill="#6366f1" filter="url(#greenGlow)"/>
+  <text x="580" y="492" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Select</text>
+  
+  <rect x="640" y="470" width="80" height="35" rx="18" fill="#8b5cf6" filter="url(#greenGlow)"/>
+  <text x="680" y="492" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Refresh</text>
+  
+  <!-- Floating hashtag symbols -->
+  <text x="150" y="140" fill="#10b981" font-family="Arial" font-size="20" opacity="0.6">#</text>
+  <text x="600" y="130" fill="#10b981" font-family="Arial" font-size="16" opacity="0.4">#</text>
+  <text x="700" y="150" fill="#10b981" font-family="Arial" font-size="24" opacity="0.3">#</text>
+  
+  <!-- Animated elements -->
+  <circle cx="350" cy="140" r="2" fill="#10b981" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="500" cy="130" r="3" fill="#f59e0b" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

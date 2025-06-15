@@ -1,0 +1,34 @@
+<!-- Client Logos Grid -->
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200" fill="none">
+  <!-- Client Logo 1 -->
+  <rect x="50" y="50" width="100" height="100" rx="10" fill="#1F2937" />
+  <circle cx="100" cy="80" r="20" fill="#8B5CF6" opacity="0.8" />
+  <rect x="70" y="110" width="60" height="8" rx="4" fill="white" opacity="0.8" />
+  <rect x="80" y="125" width="40" height="6" rx="3" fill="white" opacity="0.5" />
+  
+  <!-- Client Logo 2 -->
+  <rect x="200" y="50" width="100" height="100" rx="10" fill="#1F2937" />
+  <rect x="220" y="70" width="60" height="60" rx="5" fill="#10B981" opacity="0.8" />
+  <rect x="230" y="110" width="40" height="8" rx="4" fill="white" opacity="0.8" />
+  <rect x="220" y="125" width="60" height="6" rx="3" fill="white" opacity="0.5" />
+  
+  <!-- Client Logo 3 -->
+  <rect x="350" y="50" width="100" height="100" rx="10" fill="#1F2937" />
+  <path d="M400 70L420 100L400 130L380 100L400 70Z" fill="#3B82F6" opacity="0.8" />
+  <rect x="380" y="110" width="40" height="8" rx="4" fill="white" opacity="0.8" />
+  <rect x="370" y="125" width="60" height="6" rx="3" fill="white" opacity="0.5" />
+  
+  <!-- Client Logo 4 -->
+  <rect x="500" y="50" width="100" height="100" rx="10" fill="#1F2937" />
+  <path d="M550 70C561.046 70 570 78.9543 570 90C570 101.046 561.046 110 550 110C538.954 110 530 101.046 530 90C530 78.9543 538.954 70 550 70Z" fill="#F59E0B" opacity="0.8" />
+  <rect x="530" y="110" width="40" height="8" rx="4" fill="white" opacity="0.8" />
+  <rect x="520" y="125" width="60" height="6" rx="3" fill="white" opacity="0.5" />
+  
+  <!-- Client Logo 5 -->
+  <rect x="650" y="50" width="100" height="100" rx="10" fill="#1F2937" />
+  <rect x="670" y="70" width="20" height="40" rx="5" fill="#EC4899" opacity="0.8" />
+  <rect x="700" y="70" width="20" height="40" rx="5" fill="#EC4899" opacity="0.8" />
+  <rect x="670" y="70" width="50" height="15" rx="5" fill="#EC4899" opacity="0.8" />
+  <rect x="680" y="110" width="40" height="8" rx="4" fill="white" opacity="0.8" />
+  <rect x="670" y="125" width="60" height="6" rx="3" fill="white" opacity="0.5" />
+</svg>

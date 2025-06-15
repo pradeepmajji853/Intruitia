@@ -1,0 +1,162 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c4a6e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#075985;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0369a1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGradient)"/>
+  
+  <!-- Background Pattern -->
+  <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+    <circle cx="20" cy="20" r="1" fill="#ffffff" opacity="0.1"/>
+  </pattern>
+  <rect width="800" height="500" fill="url(#dots)"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">
+    AI-Powered Mobile Editing
+  </text>
+  <text x="400" y="75" text-anchor="middle" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="16">
+    Create professional content on any device
+  </text>
+  
+  <!-- Phone 1 - Video Editor -->
+  <rect x="120" y="120" width="160" height="280" rx="20" fill="url(#phoneGradient)" stroke="#475569" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="130" y="140" width="140" height="240" rx="12" fill="#000"/>
+  
+  <!-- Video editing interface -->
+  <rect x="140" y="150" width="120" height="80" rx="6" fill="#1e40af" opacity="0.8"/>
+  <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">📹 Video</text>
+  
+  <!-- Timeline -->
+  <rect x="140" y="240" width="120" height="20" rx="4" fill="#1e293b"/>
+  <rect x="145" y="245" width="30" height="10" rx="2" fill="#3b82f6"/>
+  <rect x="180" y="245" width="40" height="10" rx="2" fill="#8b5cf6"/>
+  <rect x="225" y="245" width="25" height="10" rx="2" fill="#06b6d4"/>
+  
+  <!-- Tools -->
+  <circle cx="160" cy="280" r="12" fill="#3b82f6"/>
+  <text x="160" y="285" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="8">✂️</text>
+  
+  <circle cx="200" cy="280" r="12" fill="#8b5cf6"/>
+  <text x="200" y="285" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="8">🎨</text>
+  
+  <circle cx="240" cy="280" r="12" fill="#06b6d4"/>
+  <text x="240" y="285" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="8">🎵</text>
+  
+  <!-- Export button -->
+  <rect x="150" y="320" width="100" height="30" rx="15" fill="#10b981"/>
+  <text x="200" y="338" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Export HD</text>
+  
+  <!-- Phone 2 - Social Media -->
+  <rect x="320" y="120" width="160" height="280" rx="20" fill="url(#phoneGradient)" stroke="#475569" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="330" y="140" width="140" height="240" rx="12" fill="#000"/>
+  
+  <!-- Social media feed -->
+  <rect x="340" y="150" width="120" height="60" rx="6" fill="#1e40af" opacity="0.3"/>
+  <circle cx="360" cy="170" r="8" fill="#f59e0b"/>
+  <rect x="375" y="165" width="70" height="4" rx="2" fill="#ffffff" opacity="0.8"/>
+  <rect x="375" y="175" width="50" height="3" rx="1" fill="#94a3b8"/>
+  
+  <rect x="340" y="220" width="120" height="60" rx="6" fill="#8b5cf6" opacity="0.3"/>
+  <circle cx="360" cy="240" r="8" fill="#10b981"/>
+  <rect x="375" y="235" width="70" height="4" rx="2" fill="#ffffff" opacity="0.8"/>
+  <rect x="375" y="245" width="50" height="3" rx="1" fill="#94a3b8"/>
+  
+  <!-- Story indicators -->
+  <circle cx="350" cy="300" r="6" fill="#f59e0b" opacity="0.6"/>
+  <circle cx="370" cy="300" r="6" fill="#06b6d4" opacity="0.6"/>
+  <circle cx="390" cy="300" r="6" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="410" cy="300" r="6" fill="#10b981" opacity="0.6"/>
+  <circle cx="430" cy="300" r="6" fill="#f43f5e" opacity="0.6"/>
+  
+  <!-- Create button -->
+  <rect x="350" y="320" width="100" height="30" rx="15" fill="#f43f5e"/>
+  <text x="400" y="338" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">+ Create</text>
+  
+  <!-- Central AI Processing -->
+  <circle cx="400" cy="250" r="50" fill="url(#aiGradient)" filter="url(#glow)"/>
+  <circle cx="400" cy="250" r="30" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+  <circle cx="400" cy="250" r="15" fill="#ffffff"/>
+  <text x="400" y="255" text-anchor="middle" fill="#8b5cf6" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">AI</text>
+  
+  <!-- Connection Lines -->
+  <path d="M 280 250 Q 340 230 350 250" fill="none" stroke="#8b5cf6" stroke-width="3" opacity="0.6"/>
+  <path d="M 450 250 Q 490 270 520 250" fill="none" stroke="#8b5cf6" stroke-width="3" opacity="0.6"/>
+  
+  <!-- Phone 3 - Analytics -->
+  <rect x="520" y="120" width="160" height="280" rx="20" fill="url(#phoneGradient)" stroke="#475569" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="530" y="140" width="140" height="240" rx="12" fill="#000"/>
+  
+  <!-- Analytics dashboard -->
+  <text x="600" y="165" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Analytics</text>
+  
+  <!-- Charts -->
+  <rect x="540" y="175" width="50" height="30" rx="4" fill="#10b981" opacity="0.3"/>
+  <rect x="540" y="190" width="35" height="15" rx="2" fill="#10b981"/>
+  <text x="565" y="201" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="8">Views</text>
+  
+  <rect x="600" y="175" width="50" height="30" rx="4" fill="#f59e0b" opacity="0.3"/>
+  <rect x="600" y="180" width="40" height="25" rx="2" fill="#f59e0b"/>
+  <text x="620" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="8">Likes</text>
+  
+  <!-- Performance metrics -->
+  <rect x="540" y="215" width="110" height="4" rx="2" fill="#1e293b"/>
+  <rect x="540" y="215" width="85" height="4" rx="2" fill="#3b82f6"/>
+  <text x="595" y="230" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="8">Engagement: 8.5%</text>
+  
+  <rect x="540" y="240" width="110" height="4" rx="2" fill="#1e293b"/>
+  <rect x="540" y="240" width="70" height="4" rx="2" fill="#10b981"/>
+  <text x="595" y="255" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="8">Reach: 12.4K</text>
+  
+  <!-- Growth indicator -->
+  <circle cx="580" cy="280" r="15" fill="#10b981" opacity="0.2"/>
+  <path d="M 570 285 L 580 275 L 590 285" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+  <text x="580" y="305" text-anchor="middle" fill="#10b981" font-family="system-ui, sans-serif" font-size="10" font-weight="600">+24%</text>
+  
+  <!-- Feature Labels -->
+  <text x="200" y="430" text-anchor="middle" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Smart Editing</text>
+  <text x="400" y="430" text-anchor="middle" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Social Publishing</text>
+  <text x="600" y="430" text-anchor="middle" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Performance Tracking</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="465" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="600">
+    Create • Edit • Share • Analyze
+  </text>
+  <text x="400" y="485" text-anchor="middle" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="12">
+    All-in-one mobile content creation platform
+  </text>
+  
+  <!-- Floating Elements -->
+  <circle cx="80" cy="180" r="3" fill="#8b5cf6" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="720" cy="320" r="2" fill="#06b6d4" opacity="0.5">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50" cy="350" r="2.5" fill="#f59e0b" opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.7;0.2" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

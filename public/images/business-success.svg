@@ -1,0 +1,168 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#064e3b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#065f46;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="successGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGradient)"/>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#10b981" stroke-width="0.5" opacity="0.3"/>
+  </pattern>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#f0fdf4" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">
+    Business Success Analytics
+  </text>
+  <text x="400" y="75" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="16">
+    Tracking growth and performance metrics
+  </text>
+  
+  <!-- Main Dashboard -->
+  <rect x="50" y="100" width="700" height="350" rx="16" fill="#022c22" stroke="#10b981" stroke-width="2"/>
+  
+  <!-- Key Metrics Section -->
+  <text x="70" y="130" fill="#f0fdf4" font-family="system-ui, sans-serif" font-size="18" font-weight="600">Performance Overview</text>
+  
+  <!-- Metric Cards -->
+  <rect x="70" y="140" width="150" height="80" rx="8" fill="url(#successGradient)" filter="url(#glow)"/>
+  <text x="85" y="160" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Revenue Growth</text>
+  <text x="85" y="185" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">+247%</text>
+  <text x="85" y="205" fill="#dcfce7" font-family="system-ui, sans-serif" font-size="10">vs last quarter</text>
+  
+  <rect x="240" y="140" width="150" height="80" rx="8" fill="#3b82f6" opacity="0.9"/>
+  <text x="255" y="160" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">User Acquisition</text>
+  <text x="255" y="185" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">15.2K</text>
+  <text x="255" y="205" fill="#dbeafe" font-family="system-ui, sans-serif" font-size="10">new users/month</text>
+  
+  <rect x="410" y="140" width="150" height="80" rx="8" fill="#8b5cf6" opacity="0.9"/>
+  <text x="425" y="160" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Conversion Rate</text>
+  <text x="425" y="185" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">12.8%</text>
+  <text x="425" y="205" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="10">+3.2% improvement</text>
+  
+  <rect x="580" y="140" width="150" height="80" rx="8" fill="#f59e0b" opacity="0.9"/>
+  <text x="595" y="160" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Customer Satisfaction</text>
+  <text x="595" y="185" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">96.5%</text>
+  <text x="595" y="205" fill="#fef3c7" font-family="system-ui, sans-serif" font-size="10">5-star rating</text>
+  
+  <!-- Chart Section -->
+  <text x="70" y="260" fill="#f0fdf4" font-family="system-ui, sans-serif" font-size="18" font-weight="600">Growth Trajectory</text>
+  
+  <!-- Growth Chart -->
+  <rect x="70" y="270" width="500" height="150" rx="8" fill="#064e3b"/>
+  
+  <!-- Chart Grid -->
+  <path d="M 80 280 L 80 410" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+  <path d="M 180 280 L 180 410" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+  <path d="M 280 280 L 280 410" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+  <path d="M 380 280 L 380 410" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+  <path d="M 480 280 L 480 410" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+  <path d="M 560 280 L 560 410" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Growth Line -->
+  <path d="M 80 400 Q 130 380 180 350 Q 230 320 280 290 Q 330 270 380 250 Q 430 230 480 210 Q 530 190 560 180" 
+        fill="none" stroke="url(#successGradient)" stroke-width="4" filter="url(#glow)"/>
+  
+  <!-- Data Points -->
+  <circle cx="80" cy="400" r="4" fill="#10b981"/>
+  <circle cx="180" cy="350" r="4" fill="#10b981"/>
+  <circle cx="280" cy="290" r="4" fill="#10b981"/>
+  <circle cx="380" cy="250" r="4" fill="#10b981"/>
+  <circle cx="480" cy="210" r="4" fill="#10b981"/>
+  <circle cx="560" cy="180" r="4" fill="#10b981"/>
+  
+  <!-- Chart Labels -->
+  <text x="80" y="430" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="10">Jan</text>
+  <text x="180" y="430" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="10">Feb</text>
+  <text x="280" y="430" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="10">Mar</text>
+  <text x="380" y="430" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="10">Apr</text>
+  <text x="480" y="430" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="10">May</text>
+  <text x="560" y="430" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="10">Jun</text>
+  
+  <!-- Side Panel - Key Achievements -->
+  <rect x="590" y="270" width="140" height="150" rx="8" fill="#064e3b"/>
+  <text x="600" y="290" fill="#f0fdf4" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Achievements</text>
+  
+  <!-- Achievement Items -->
+  <circle cx="610" cy="305" r="4" fill="#10b981"/>
+  <text x="620" y="309" fill="#f0fdf4" font-family="system-ui, sans-serif" font-size="10">Product Launch</text>
+  <text x="620" y="320" fill="#86efac" font-family="system-ui, sans-serif" font-size="9">AI Video Editor Beta</text>
+  
+  <circle cx="610" cy="335" r="4" fill="#3b82f6"/>
+  <text x="620" y="339" fill="#f0fdf4" font-family="system-ui, sans-serif" font-size="10">Funding Round</text>
+  <text x="620" y="350" fill="#86efac" font-family="system-ui, sans-serif" font-size="9">Series A Completed</text>
+  
+  <circle cx="610" cy="365" r="4" fill="#8b5cf6"/>
+  <text x="620" y="369" fill="#f0fdf4" font-family="system-ui, sans-serif" font-size="10">Team Growth</text>
+  <text x="620" y="380" fill="#86efac" font-family="system-ui, sans-serif" font-size="9">15 New Hires</text>
+  
+  <circle cx="610" cy="395" r="4" fill="#f59e0b"/>
+  <text x="620" y="399" fill="#f0fdf4" font-family="system-ui, sans-serif" font-size="10">Market Expansion</text>
+  <text x="620" y="410" fill="#86efac" font-family="system-ui, sans-serif" font-size="9">5 New Countries</text>
+  
+  <!-- Success Indicators -->
+  <circle cx="100" cy="100" r="8" fill="#10b981">
+    <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="100" y="106" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">✓</text>
+  
+  <circle cx="700" cy="120" r="6" fill="#3b82f6">
+    <animate attributeName="r" values="6;10;6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="700" y="125" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="8">📈</text>
+  
+  <circle cx="750" cy="350" r="7" fill="#8b5cf6">
+    <animate attributeName="r" values="7;11;7" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="750" y="355" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9">🎯</text>
+  
+  <!-- Progress Indicators -->
+  <rect x="70" y="460" width="660" height="6" rx="3" fill="#064e3b"/>
+  <rect x="70" y="460" width="528" height="6" rx="3" fill="url(#successGradient)"/>
+  <text x="400" y="485" text-anchor="middle" fill="#f0fdf4" font-family="system-ui, sans-serif" font-size="12">
+    Q2 Goals: 80% Complete
+  </text>
+  
+  <!-- Floating Success Elements -->
+  <circle cx="50" cy="300" r="15" fill="#10b981" opacity="0.6">
+    <animate attributeName="cy" values="300;280;300" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="50" y="307" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12">🏆</text>
+  
+  <circle cx="770" cy="200" r="12" fill="#f59e0b" opacity="0.7">
+    <animate attributeName="cy" values="200;180;200" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="770" y="206" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">⭐</text>
+  
+  <!-- Data Particles -->
+  <circle cx="150" cy="130" r="2" fill="#10b981" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="320" cy="160" r="1.5" fill="#3b82f6" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="520" cy="180" r="2.5" fill="#8b5cf6" opacity="0.6">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

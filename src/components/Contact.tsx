@@ -10,6 +10,8 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -44,21 +46,41 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', company: '', phone: '', message: '' });
-    setIsSubmitting(false);
-    alert('Thank you for your message! We\'ll get back to you within 24 hours. If you don\'t receive a response, please contact us directly at pradeepmajji853@gmail.com');
+    try {
+      const response = await fetch('http://localhost:3001/api/contact/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to submit form');
+      }
+      
+      console.log('Form submitted successfully:', data);
+      setFormData({ name: '', email: '', company: '', phone: '', message: '' });
+      setSubmitStatus('success');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'An unexpected error occurred');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'pradeepmajji853@gmail.com',
+      value: 'support@intruitia.in',
       description: 'We respond within 24 hours'
     },
     {
@@ -229,6 +251,35 @@ const Contact = () => {
                   )}
                 </button>
               </form>
+
+              {/* Success Message */}
+              {submitStatus === 'success' && (
+                <div className="mt-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <div className="ml-3">
+                    <h3 className="text-sm font-medium text-green-800">Message Sent Successfully</h3>
+                    <p className="mt-1 text-sm text-green-700">
+                      Thank you for your message! We'll get back to you within 24 hours. If you don't receive a response, 
+                      please contact us directly at support@intruitia.in
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Error Message */}
+              {submitStatus === 'error' && (
+                <div className="mt-6 bg-red-50 border border-red-200 rounded-lg p-4 flex items-start">
+                  <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                  </svg>
+                  <div className="ml-3">
+                    <h3 className="text-sm font-medium text-red-800">Error Sending Message</h3>
+                    <p className="mt-1 text-sm text-red-700">
+                      {errorMessage || "We couldn't send your message. Please try again or contact us directly at support@intruitia.in"}
+                    </p>
+                  </div>
+                </div>
+              )}
 
               {/* Features */}
               <div className="mt-8 pt-6 border-t border-slate-200">

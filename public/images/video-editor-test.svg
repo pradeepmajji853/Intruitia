@@ -1,0 +1,33 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple test SVG for video editing interface -->
+  <rect width="800" height="600" fill="#2a2a2a"/>
+  
+  <!-- Header -->
+  <rect width="800" height="40" fill="#323232"/>
+  <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="white">Intruitia Video Editor</text>
+  
+  <!-- Tools panel -->
+  <rect x="0" y="40" width="60" height="560" fill="#3a3a3a"/>
+  
+  <!-- Preview area -->
+  <rect x="60" y="40" width="480" height="300" fill="#1a1a1a"/>
+  <rect x="80" y="60" width="440" height="260" fill="#000"/>
+  
+  <!-- Play button -->
+  <circle cx="300" cy="190" r="30" fill="#5865f2"/>
+  <polygon points="290,180 320,190 290,200" fill="white"/>
+  
+  <!-- Timeline -->
+  <rect x="0" y="350" width="800" height="250" fill="#242424"/>
+  <text x="20" y="375" font-family="Arial, sans-serif" font-size="12" fill="#ddd">Timeline</text>
+  
+  <!-- Track -->
+  <rect x="60" y="400" width="700" height="40" fill="#1a1a1a"/>
+  <rect x="80" y="410" width="200" height="20" fill="#5865f2"/>
+  <text x="85" y="423" font-family="Arial, sans-serif" font-size="10" fill="white">video_clip.mp4</text>
+  
+  <!-- Audio track -->
+  <rect x="60" y="450" width="700" height="40" fill="#1a1a1a"/>
+  <rect x="80" y="460" width="300" height="20" fill="#57f287"/>
+  <text x="85" y="473" font-family="Arial, sans-serif" font-size="10" fill="white">audio_track.wav</text>
+</svg>

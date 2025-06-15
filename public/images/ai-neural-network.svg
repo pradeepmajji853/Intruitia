@@ -1,0 +1,229 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="neuralGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.4" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="pulse">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGradient)"/>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+  </pattern>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">
+    AI Neural Processing Network
+  </text>
+  <text x="400" y="75" text-anchor="middle" fill="#a78bfa" font-family="system-ui, sans-serif" font-size="16">
+    Next-generation video analysis and enhancement
+  </text>
+  
+  <!-- Central AI Brain -->
+  <circle cx="400" cy="250" r="80" fill="url(#neuralGradient)" filter="url(#glow)"/>
+  <circle cx="400" cy="250" r="60" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.6"/>
+  <circle cx="400" cy="250" r="40" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.4"/>
+  <circle cx="400" cy="250" r="20" fill="#f1f5f9"/>
+  
+  <!-- AI Icon -->
+  <text x="400" y="260" text-anchor="middle" fill="#8b5cf6" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">AI</text>
+  
+  <!-- Neural Network Nodes -->
+  <!-- Layer 1 (Input) -->
+  <circle cx="150" cy="150" r="12" fill="#3b82f6" filter="url(#pulse)">
+    <animate attributeName="r" values="12;16;12" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="150" y="130" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Video Input</text>
+  
+  <circle cx="150" cy="200" r="12" fill="#06b6d4" filter="url(#pulse)">
+    <animate attributeName="r" values="12;16;12" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="150" y="225" text-anchor="middle" fill="#22d3ee" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Audio Data</text>
+  
+  <circle cx="150" cy="300" r="12" fill="#10b981" filter="url(#pulse)">
+    <animate attributeName="r" values="12;16;12" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="150" y="325" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Metadata</text>
+  
+  <circle cx="150" cy="350" r="12" fill="#f59e0b" filter="url(#pulse)">
+    <animate attributeName="r" values="12;16;12" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="150" y="375" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Context</text>
+  
+  <!-- Layer 2 (Processing) -->
+  <circle cx="280" cy="180" r="10" fill="#8b5cf6" opacity="0.8">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="280" cy="220" r="10" fill="#a855f7" opacity="0.8">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="280" cy="280" r="10" fill="#c084fc" opacity="0.8">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.9s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="280" cy="320" r="10" fill="#d8b4fe" opacity="0.8">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Layer 3 (Output) -->
+  <circle cx="650" cy="150" r="12" fill="#ef4444" filter="url(#pulse)">
+    <animate attributeName="r" values="12;16;12" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="650" y="130" text-anchor="middle" fill="#f87171" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Enhanced Video</text>
+  
+  <circle cx="650" cy="200" r="12" fill="#8b5cf6" filter="url(#pulse)">
+    <animate attributeName="r" values="12;16;12" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="650" y="225" text-anchor="middle" fill="#a78bfa" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Smart Cuts</text>
+  
+  <circle cx="650" cy="300" r="12" fill="#06b6d4" filter="url(#pulse)">
+    <animate attributeName="r" values="12;16;12" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="650" y="325" text-anchor="middle" fill="#22d3ee" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Color Grade</text>
+  
+  <circle cx="650" cy="350" r="12" fill="#10b981" filter="url(#pulse)">
+    <animate attributeName="r" values="12;16;12" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="650" y="375" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Audio Sync</text>
+  
+  <!-- Connection Lines with Animation -->
+  <path d="M 162 150 Q 220 165 268 180" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 162 200 Q 220 210 268 220" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 162 300 Q 220 290 268 280" fill="none" stroke="#10b981" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 162 350 Q 220 335 268 320" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- To Central AI -->
+  <path d="M 290 180 Q 340 215 350 250" fill="none" stroke="#8b5cf6" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 290 220 Q 340 235 350 250" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 290 280 Q 340 265 350 250" fill="none" stroke="#c084fc" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.9s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 290 320 Q 340 285 350 250" fill="none" stroke="#d8b4fe" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.3s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- From Central AI to Output -->
+  <path d="M 450 250 Q 550 215 638 150" fill="none" stroke="#ef4444" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 450 250 Q 550 225 638 200" fill="none" stroke="#8b5cf6" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 450 250 Q 550 275 638 300" fill="none" stroke="#06b6d4" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 450 250 Q 550 285 638 350" fill="none" stroke="#10b981" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Data Flow Indicators -->
+  <circle cx="200" cy="165" r="3" fill="#3b82f6">
+    <animateMotion dur="2s" repeatCount="indefinite">
+      <mpath href="#path1"/>
+    </animateMotion>
+  </circle>
+  <path id="path1" d="M 0 0 Q 60 15 108 30" fill="none" opacity="0"/>
+  
+  <circle cx="200" cy="215" r="3" fill="#06b6d4">
+    <animateMotion dur="2.5s" repeatCount="indefinite">
+      <mpath href="#path2"/>
+    </animateMotion>
+  </circle>
+  <path id="path2" d="M 0 0 Q 60 10 108 20" fill="none" opacity="0"/>
+  
+  <!-- Processing Status -->
+  <rect x="300" y="100" width="200" height="80" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1" opacity="0.9"/>
+  <text x="400" y="125" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="600">AI Processing Status</text>
+  
+  <text x="320" y="145" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Scene Detection:</text>
+  <rect x="420" y="140" width="60" height="6" rx="3" fill="#1e293b"/>
+  <rect x="420" y="140" width="45" height="6" rx="3" fill="#10b981"/>
+  <text x="485" y="146" fill="#10b981" font-family="system-ui, sans-serif" font-size="9">75%</text>
+  
+  <text x="320" y="160" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Object Tracking:</text>
+  <rect x="420" y="155" width="60" height="6" rx="3" fill="#1e293b"/>
+  <rect x="420" y="155" width="54" height="6" rx="3" fill="#3b82f6"/>
+  <text x="485" y="161" fill="#3b82f6" font-family="system-ui, sans-serif" font-size="9">90%</text>
+  
+  <text x="320" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Enhancement:</text>
+  <rect x="420" y="170" width="60" height="6" rx="3" fill="#1e293b"/>
+  <rect x="420" y="170" width="36" height="6" rx="3" fill="#8b5cf6"/>
+  <text x="485" y="176" fill="#8b5cf6" font-family="system-ui, sans-serif" font-size="9">60%</text>
+  
+  <!-- Performance Metrics -->
+  <rect x="300" y="380" width="200" height="80" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1" opacity="0.9"/>
+  <text x="400" y="405" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Performance Metrics</text>
+  
+  <text x="320" y="425" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Processing Speed:</text>
+  <text x="460" y="425" fill="#10b981" font-family="system-ui, sans-serif" font-size="10" font-weight="600">4.2x realtime</text>
+  
+  <text x="320" y="440" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">GPU Utilization:</text>
+  <text x="460" y="440" fill="#3b82f6" font-family="system-ui, sans-serif" font-size="10" font-weight="600">87%</text>
+  
+  <text x="320" y="455" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Memory Usage:</text>
+  <text x="460" y="455" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">2.1 GB</text>
+  
+  <!-- Floating Particles -->
+  <circle cx="100" cy="100" r="2" fill="#8b5cf6" opacity="0.6">
+    <animate attributeName="cy" values="100;80;100" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="700" cy="100" r="1.5" fill="#06b6d4" opacity="0.5">
+    <animate attributeName="cy" values="100;120;100" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="750" cy="400" r="2.5" fill="#10b981" opacity="0.4">
+    <animate attributeName="cy" values="400;380;400" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.7;0.2" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="50" cy="400" r="2" fill="#f59e0b" opacity="0.5">
+    <animate attributeName="cy" values="400;420;400" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

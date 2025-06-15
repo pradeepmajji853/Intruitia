@@ -1,4 +1,4 @@
-import { ExternalLink, Eye, Calendar, Star, TrendingUp } from 'lucide-react';
+import { ExternalLink, Eye, Calendar, CheckCircle, Star } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
 const Portfolio = () => {
@@ -29,15 +29,11 @@ const Portfolio = () => {
     {
       title: 'FinTech Dashboard Platform',
       category: 'Web Development',
-      description: 'Advanced financial analytics dashboard with real-time trading data, portfolio management, and AI-powered insights for institutional investors.',
+      description: 'Advanced financial analytics dashboard with real-time data, portfolio management, and AI-powered insights.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
       tags: ['React', 'TypeScript', 'D3.js', 'WebSocket'],
-      client: 'Apex Capital',
-      year: '2024',
-      duration: '4 months',
-      results: '+250% user engagement',
-      rating: 5.0,
-      testimonial: 'Exceeded all expectations with outstanding performance'
+      duration: 'Short-term',
+      features: ['User-friendly interface', 'Real-time updates', 'Customizable widgets']
     },
     {
       title: 'E-Commerce Marketplace',
@@ -45,12 +41,8 @@ const Portfolio = () => {
       description: 'Multi-vendor marketplace platform with advanced search, payment processing, inventory management, and vendor analytics dashboard.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
       tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
-      client: 'MarketHub Pro',
-      year: '2024',
-      duration: '5 months', 
-      results: '+180% sales conversion',
-      rating: 4.9,
-      testimonial: 'Revolutionary platform that transformed our business'
+      duration: 'Medium-term', 
+      features: ['Secure payments', 'Multi-vendor support', 'Mobile responsive']
     },
     {
       title: 'Healthcare Management System',
@@ -58,12 +50,8 @@ const Portfolio = () => {
       description: 'Comprehensive healthcare platform with patient records, appointment scheduling, telemedicine integration, and compliance management.',
       image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80',
       tags: ['React', 'Express', 'MongoDB', 'HIPAA'],
-      client: 'MedTech Solutions',
-      year: '2024',
-      duration: '6 months',
-      results: '99.9% uptime achieved',
-      rating: 5.0,
-      testimonial: 'Flawless execution with exceptional attention to detail'
+      duration: 'Medium-term',
+      features: ['Secure data handling', 'Compliance-focused', 'Intuitive scheduling']
     },
     {
       title: 'AI Content Management Platform',
@@ -71,25 +59,17 @@ const Portfolio = () => {
       description: 'AI-powered content creation and management platform with automated writing, SEO optimization, and multi-channel publishing capabilities.',
       image: 'https://images.unsplash.com/photo-1677442136019-162d119a5639?auto=format&fit=crop&w=800&q=80',
       tags: ['Python', 'TensorFlow', 'React', 'OpenAI'],
-      client: 'ContentMax AI',
-      year: '2024',
-      duration: '3 months',
-      results: '+300% content efficiency',
-      rating: 4.8,
-      testimonial: 'Game-changing solution for content creation'
+      duration: 'Short-term',
+      features: ['Automated content generation', 'SEO optimization', 'Multi-channel publishing']
     },
     {
       title: 'Real Estate Investment Platform',
       category: 'FinTech',
-      description: 'Investment platform for real estate crowdfunding with property analytics, investment tracking, and automated portfolio management.',
+      description: 'Investment platform for real estate with property analytics, investment tracking, and automated portfolio management.',
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
       tags: ['Vue.js', 'Laravel', 'MySQL', 'Blockchain'],
-      client: 'PropInvest Pro',
-      year: '2024',
-      duration: '4 months',
-      results: 'Platform successfully launched',
-      rating: 4.9,
-      testimonial: 'Outstanding platform with incredible ROI tracking'
+      duration: 'Medium-term',
+      features: ['Investment tracking', 'Analytics dashboard', 'Secure transactions']
     },
     {
       title: 'Supply Chain Analytics',
@@ -99,10 +79,8 @@ const Portfolio = () => {
       tags: ['Python', 'Apache Spark', 'React', 'AWS'],
       client: 'LogiFlow Systems',
       year: '2024',
-      duration: '5 months',
-      results: '35% efficiency improvement',
-      rating: 5.0,
-      testimonial: 'Transformed our entire supply chain operations'
+      duration: 'Medium-term',
+      features: ['Supply chain optimization', 'Predictive analytics', 'Real-time tracking']
     }
   ];
 
@@ -220,26 +198,10 @@ const Portfolio = () => {
                     {project.category}
                   </span>
                 </div>
-
-                {/* Rating Badge */}
-                <div className="absolute top-4 right-4">
-                  <div className="flex items-center glass-card px-3 py-2 rounded-full">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
-                    <span className="text-sm font-bold text-white">{project.rating}</span>
-                  </div>
-                </div>
               </div>
 
               {/* Enhanced Project Content */}
               <div className="p-8">
-                {/* Client & Year */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-semibold text-primary-600 uppercase tracking-wider">
-                    {project.client}
-                  </span>
-                  <span className="text-sm text-slate-500 font-medium">{project.year}</span>
-                </div>
-
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-gradient transition-all duration-300">
                   {project.title}
                 </h3>
@@ -249,19 +211,12 @@ const Portfolio = () => {
                 </p>
 
                 {/* Enhanced Project Stats */}
-                <div className="grid grid-cols-2 gap-4 mb-6 p-4 glass-card rounded-xl">
+                <div className="grid grid-cols-1 gap-4 mb-6 p-4 glass-card rounded-xl">
                   <div className="flex items-center gap-3">
                     <Calendar className="w-5 h-5 text-primary-500" />
                     <div>
-                      <span className="text-xs text-slate-500 block">Duration</span>
+                      <span className="text-xs text-slate-500 block">Timeline</span>
                       <span className="text-sm font-semibold text-slate-700">{project.duration}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <TrendingUp className="w-5 h-5 text-green-500" />
-                    <div>
-                      <span className="text-xs text-slate-500 block">Result</span>
-                      <span className="text-sm font-bold text-green-600">{project.results}</span>
                     </div>
                   </div>
                 </div>
@@ -278,34 +233,17 @@ const Portfolio = () => {
                   ))}
                 </div>
 
-                {/* Enhanced Client Testimonial */}
+                {/* Key Features */}
                 <div className="border-t border-slate-200/50 pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-bold">
-                          {project.client.charAt(0)}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-sm text-slate-600 italic leading-relaxed">
-                        "{project.testimonial}"
-                      </p>
-                      <div className="flex items-center gap-1 mt-2">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-4 h-4 ${
-                              i < Math.floor(project.rating)
-                                ? 'text-yellow-400 fill-current'
-                                : 'text-slate-300'
-                            }`}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+                  <h4 className="text-sm font-semibold text-slate-800 mb-3">Key Features</h4>
+                  <ul className="space-y-2">
+                    {project.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                        <span className="text-sm text-slate-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>

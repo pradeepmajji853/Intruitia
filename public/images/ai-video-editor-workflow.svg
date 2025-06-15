@@ -1,0 +1,416 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+    
+    <linearGradient id="secondary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#0891b2"/>
+    </linearGradient>
+
+    <linearGradient id="neural" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.1"/>
+    </filter>
+
+    <!-- Patterns -->
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#3b82f6" opacity="0.1"/>
+    </pattern>
+
+    <!-- Animations -->
+    <style>
+      .pulse {
+        animation: pulse 2s ease-in-out infinite;
+      }
+      
+      .float {
+        animation: float 3s ease-in-out infinite;
+      }
+      
+      .flow {
+        animation: flow 4s linear infinite;
+      }
+      
+      .process {
+        animation: process 3s ease-in-out infinite;
+      }
+      
+      .sparkle {
+        animation: sparkle 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.05); }
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      @keyframes flow {
+        0% { stroke-dashoffset: 20; }
+        100% { stroke-dashoffset: 0; }
+      }
+      
+      @keyframes process {
+        0% { transform: scale(1); opacity: 0.7; }
+        50% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); opacity: 0.7; }
+      }
+
+      @keyframes sparkle {
+        0%, 100% { opacity: 0; transform: scale(0); }
+        50% { opacity: 1; transform: scale(1); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#dots)" opacity="0.5"/>
+  
+  <!-- Main Container -->
+  <rect x="50" y="50" width="1100" height="700" rx="20" fill="white" filter="url(#shadow)" opacity="0.95"/>
+
+  <!-- Title -->
+  <text x="600" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#1e293b">
+    AI Video Editor Workflow
+  </text>
+  
+  <text x="600" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#64748b">
+    How our neural network processes and enhances your content
+  </text>
+
+  <!-- Step 1: Upload -->
+  <g id="upload-section">
+    <!-- Upload Box -->
+    <rect x="80" y="180" width="200" height="150" rx="15" fill="url(#primary)" opacity="0.1" stroke="url(#primary)" stroke-width="2" stroke-dasharray="5,5" class="pulse"/>
+    
+    <!-- Upload Icon -->
+    <g transform="translate(180, 230)">
+      <circle r="25" fill="url(#primary)" class="float"/>
+      <path d="M-10,5 L0,-10 L10,5 M0,-10 L0,15" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    
+    <text x="180" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">
+      1. Upload Video
+    </text>
+    <text x="180" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">
+      Raw footage
+    </text>
+    
+    <!-- Video Files -->
+    <g class="float">
+      <rect x="120" y="350" width="40" height="25" rx="3" fill="#f3f4f6" stroke="#d1d5db"/>
+      <text x="140" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">MP4</text>
+      
+      <rect x="170" y="350" width="40" height="25" rx="3" fill="#f3f4f6" stroke="#d1d5db"/>
+      <text x="190" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">MOV</text>
+      
+      <rect x="220" y="350" width="40" height="25" rx="3" fill="#f3f4f6" stroke="#d1d5db"/>
+      <text x="240" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">AVI</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow 1 -->
+  <g>
+    <path d="M290,255 Q350,255 350,255 L380,255" stroke="url(#primary)" stroke-width="3" fill="none" marker-end="url(#arrowhead)" class="flow" stroke-dasharray="5,5"/>
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="url(#primary)"/>
+      </marker>
+    </defs>
+  </g>
+
+  <!-- Step 2: AI Analysis -->
+  <g id="ai-analysis-section">
+    <!-- AI Brain -->
+    <rect x="380" y="180" width="200" height="150" rx="15" fill="url(#neural)" opacity="0.1" stroke="url(#neural)" stroke-width="2"/>
+    
+    <!-- Neural Network Visualization -->
+    <g transform="translate(480, 255)">
+      <!-- Central Hub -->
+      <circle r="20" fill="url(#neural)" class="process"/>
+      
+      <!-- Neurons -->
+      <g class="sparkle">
+        <circle cx="-40" cy="-30" r="6" fill="url(#secondary)"/>
+        <circle cx="-40" cy="0" r="6" fill="url(#secondary)"/>
+        <circle cx="-40" cy="30" r="6" fill="url(#secondary)"/>
+        
+        <circle cx="40" cy="-30" r="6" fill="url(#accent)"/>
+        <circle cx="40" cy="0" r="6" fill="url(#accent)"/>
+        <circle cx="40" cy="30" r="6" fill="url(#accent)"/>
+      </g>
+      
+      <!-- Connections -->
+      <g stroke="#8b5cf6" stroke-width="2" opacity="0.6" class="pulse">
+        <line x1="-34" y1="-30" x2="-20" y2="-10"/>
+        <line x1="-34" y1="0" x2="-20" y2="0"/>
+        <line x1="-34" y1="30" x2="-20" y2="10"/>
+        
+        <line x1="20" y1="-10" x2="34" y2="-30"/>
+        <line x1="20" y1="0" x2="34" y2="0"/>
+        <line x1="20" y1="10" x2="34" y2="30"/>
+      </g>
+      
+      <!-- Brain Icon -->
+      <path d="M-8,-8 Q-8,-15 0,-15 Q8,-15 8,-8 Q8,0 8,8 Q0,8 0,8 Q-8,8 -8,0 Z" fill="white" opacity="0.9"/>
+    </g>
+    
+    <text x="480" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">
+      2. AI Analysis
+    </text>
+    <text x="480" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">
+      Content understanding
+    </text>
+    
+    <!-- Analysis Features -->
+    <g class="float" transform="translate(410, 350)">
+      <rect width="140" height="20" rx="10" fill="#fef3c7" stroke="#f59e0b"/>
+      <text x="70" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#92400e">
+        Scene Detection
+      </text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow 2 -->
+  <path d="M590,255 Q650,255 650,255 L680,255" stroke="url(#neural)" stroke-width="3" fill="none" marker-end="url(#arrowhead2)" class="flow" stroke-dasharray="5,5"/>
+  <defs>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="url(#neural)"/>
+    </marker>
+  </defs>
+
+  <!-- Step 3: Style Selection -->
+  <g id="style-selection">
+    <rect x="680" y="180" width="200" height="150" rx="15" fill="url(#secondary)" opacity="0.1" stroke="url(#secondary)" stroke-width="2"/>
+    
+    <!-- Style Icons -->
+    <g transform="translate(780, 240)">
+      <!-- Professional -->
+      <g class="float">
+        <rect x="-60" y="-20" width="30" height="20" rx="3" fill="url(#primary)" opacity="0.8"/>
+        <text x="-45" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">PRO</text>
+      </g>
+      
+      <!-- Trending -->
+      <g class="float" style="animation-delay: 0.5s">
+        <polygon points="-15,-20 0,-35 15,-20 0,-5" fill="url(#accent)" opacity="0.8"/>
+        <text x="0" y="-15" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">📈</text>
+      </g>
+      
+      <!-- Meme -->
+      <g class="float" style="animation-delay: 1s">
+        <circle cx="45" r="15" fill="url(#neural)" opacity="0.8"/>
+        <text x="45" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">😂</text>
+      </g>
+    </g>
+    
+    <text x="780" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">
+      3. Style Selection
+    </text>
+    <text x="780" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">
+      Choose editing style
+    </text>
+    
+    <!-- Style Options -->
+    <g transform="translate(720, 350)">
+      <rect width="40" height="20" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+      <text x="20" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1d4ed8">Pro</text>
+      
+      <rect x="50" width="50" height="20" rx="10" fill="#ecfdf5" stroke="#10b981"/>
+      <text x="75" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#047857">Trend</text>
+      
+      <rect x="110" width="40" height="20" rx="10" fill="#fef2f2" stroke="#ef4444"/>
+      <text x="130" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">Fun</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow 3 -->
+  <path d="M780,340 Q780,380 780,420 L600,420 Q600,460 600,460" stroke="url(#secondary)" stroke-width="3" fill="none" marker-end="url(#arrowhead3)" class="flow" stroke-dasharray="5,5"/>
+  <defs>
+    <marker id="arrowhead3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="url(#secondary)"/>
+    </marker>
+  </defs>
+
+  <!-- Step 4: AI Processing -->
+  <g id="ai-processing">
+    <rect x="500" y="460" width="200" height="150" rx="15" fill="url(#accent)" opacity="0.1" stroke="url(#accent)" stroke-width="2"/>
+    
+    <!-- Processing Animation -->
+    <g transform="translate(600, 535)">
+      <!-- Processing Core -->
+      <circle r="30" fill="url(#accent)" opacity="0.2" class="pulse"/>
+      <circle r="20" fill="url(#accent)" class="process"/>
+      
+      <!-- Processing Indicators -->
+      <g class="sparkle">
+        <rect x="-50" y="-5" width="20" height="3" rx="1.5" fill="url(#primary)"/>
+        <rect x="-50" y="0" width="15" height="3" rx="1.5" fill="url(#secondary)"/>
+        <rect x="-50" y="5" width="25" height="3" rx="1.5" fill="url(#neural)"/>
+        
+        <rect x="30" y="-5" width="20" height="3" rx="1.5" fill="url(#primary)"/>
+        <rect x="35" y="0" width="15" height="3" rx="1.5" fill="url(#secondary)"/>
+        <rect x="25" y="5" width="25" height="3" rx="1.5" fill="url(#neural)"/>
+      </g>
+      
+      <!-- Gear Icon -->
+      <path d="M-6,-6 L6,-6 L6,6 L-6,6 Z M-8,0 L8,0 M0,-8 L0,8" stroke="white" stroke-width="2" fill="none" opacity="0.9"/>
+    </g>
+    
+    <text x="600" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">
+      4. AI Processing
+    </text>
+    <text x="600" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">
+      Smart cuts & effects
+    </text>
+    
+    <!-- Processing Steps -->
+    <g transform="translate(520, 630)">
+      <rect width="160" height="15" rx="7" fill="#f3f4f6" stroke="#d1d5db"/>
+      <rect width="120" height="15" rx="7" fill="url(#accent)" class="pulse"/>
+      <text x="80" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#64748b">
+        Processing: 75%
+      </text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow 4 -->
+  <path d="M720,535 Q760,535 760,535 L790,535" stroke="url(#accent)" stroke-width="3" fill="none" marker-end="url(#arrowhead4)" class="flow" stroke-dasharray="5,5"/>
+  <defs>
+    <marker id="arrowhead4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="url(#accent)"/>
+    </marker>
+  </defs>
+
+  <!-- Step 5: Final Output -->
+  <g id="final-output">
+    <rect x="820" y="460" width="200" height="150" rx="15" fill="url(#primary)" opacity="0.1" stroke="url(#primary)" stroke-width="2"/>
+    
+    <!-- Video Player -->
+    <g transform="translate(920, 535)">
+      <!-- Screen -->
+      <rect x="-40" y="-25" width="80" height="50" rx="5" fill="url(#primary)" opacity="0.8"/>
+      <rect x="-35" y="-20" width="70" height="40" rx="3" fill="#1e293b"/>
+      
+      <!-- Play Button -->
+      <polygon points="-10,0 10,-8 10,8" fill="white" class="pulse"/>
+      
+      <!-- Quality Indicators -->
+      <g class="sparkle">
+        <circle cx="-50" cy="-35" r="3" fill="#10b981"/>
+        <text x="-50" y="-42" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#10b981">HD</text>
+        
+        <circle cx="50" cy="-35" r="3" fill="#f59e0b"/>
+        <text x="50" y="-42" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#f59e0b">AI</text>
+      </g>
+    </g>
+    
+    <text x="920" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">
+      5. Final Video
+    </text>
+    <text x="920" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">
+      Professional quality
+    </text>
+    
+    <!-- Output Formats -->
+    <g transform="translate(850, 630)">
+      <rect width="30" height="15" rx="3" fill="#dbeafe" stroke="#3b82f6"/>
+      <text x="15" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1d4ed8">MP4</text>
+      
+      <rect x="40" width="30" height="15" rx="3" fill="#dcfce7" stroke="#22c55e"/>
+      <text x="55" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#15803d">HD</text>
+      
+      <rect x="80" width="30" height="15" rx="3" fill="#fef3c7" stroke="#f59e0b"/>
+      <text x="95" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#92400e">4K</text>
+    </g>
+  </g>
+
+  <!-- AI Features Sidebar -->
+  <g id="features-sidebar" transform="translate(100, 420)">
+    <rect width="200" height="300" rx="15" fill="white" filter="url(#shadow)" opacity="0.95"/>
+    
+    <text x="100" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">
+      AI Features
+    </text>
+    
+    <!-- Feature List -->
+    <g transform="translate(20, 50)">
+      <!-- Smart Cuts -->
+      <g class="float">
+        <circle cx="10" cy="20" r="6" fill="url(#primary)"/>
+        <path d="M6,20 L8,22 L14,16" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <text x="25" y="25" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Smart Cuts</text>
+      </g>
+      
+      <!-- Auto Music -->
+      <g class="float" style="animation-delay: 0.3s" transform="translate(0, 40)">
+        <circle cx="10" cy="20" r="6" fill="url(#secondary)"/>
+        <text x="10" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">♪</text>
+        <text x="25" y="25" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Auto Music</text>
+      </g>
+      
+      <!-- Scene Detection -->
+      <g class="float" style="animation-delay: 0.6s" transform="translate(0, 80)">
+        <circle cx="10" cy="20" r="6" fill="url(#accent)"/>
+        <text x="10" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">👁</text>
+        <text x="25" y="25" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Scene Detection</text>
+      </g>
+      
+      <!-- Color Grading -->
+      <g class="float" style="animation-delay: 0.9s" transform="translate(0, 120)">
+        <circle cx="10" cy="20" r="6" fill="url(#neural)"/>
+        <text x="10" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">🎨</text>
+        <text x="25" y="25" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Color Grading</text>
+      </g>
+      
+      <!-- Motion Tracking -->
+      <g class="float" style="animation-delay: 1.2s" transform="translate(0, 160)">
+        <circle cx="10" cy="20" r="6" fill="#22c55e"/>
+        <text x="10" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">📍</text>
+        <text x="25" y="25" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Motion Tracking</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Data Flow Visualization -->
+  <g id="data-flow" opacity="0.3">
+    <!-- Floating data particles -->
+    <g class="flow">
+      <circle cx="300" cy="200" r="2" fill="url(#primary)" class="sparkle"/>
+      <circle cx="320" cy="180" r="2" fill="url(#secondary)" class="sparkle" style="animation-delay: 0.5s"/>
+      <circle cx="340" cy="220" r="2" fill="url(#accent)" class="sparkle" style="animation-delay: 1s"/>
+    </g>
+    
+    <g class="flow" style="animation-delay: 2s">
+      <circle cx="600" cy="200" r="2" fill="url(#primary)" class="sparkle"/>
+      <circle cx="620" cy="180" r="2" fill="url(#secondary)" class="sparkle" style="animation-delay: 0.5s"/>
+      <circle cx="640" cy="220" r="2" fill="url(#accent)" class="sparkle" style="animation-delay: 1s"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,141 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#475569;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#64748b;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGradient)"/>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#475569" stroke-width="0.5" opacity="0.3"/>
+  </pattern>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  
+  <!-- Main Title -->
+  <text x="400" y="60" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="bold">
+    Professional Editing Software Suite
+  </text>
+  <text x="400" y="90" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="16">
+    Industry-standard tools for content creation
+  </text>
+  
+  <!-- Adobe Photoshop Card -->
+  <rect x="50" y="130" width="150" height="120" rx="12" fill="url(#cardGradient)" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="60" y="140" width="40" height="40" rx="6" fill="#001e36"/>
+  <text x="80" y="168" text-anchor="middle" fill="#31c5f0" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Ps</text>
+  <text x="110" y="155" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Adobe Photoshop</text>
+  <text x="110" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Photo Editing</text>
+  <rect x="60" y="190" width="130" height="4" rx="2" fill="#1e293b"/>
+  <rect x="60" y="190" width="90" height="4" rx="2" fill="#3b82f6"/>
+  <text x="110" y="215" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Industry Standard</text>
+  
+  <!-- Adobe Premiere Pro Card -->
+  <rect x="220" y="130" width="150" height="120" rx="12" fill="url(#cardGradient)" stroke="#9333ea" stroke-width="2"/>
+  <rect x="230" y="140" width="40" height="40" rx="6" fill="#00005b"/>
+  <text x="250" y="168" text-anchor="middle" fill="#9999ff" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Pr</text>
+  <text x="280" y="155" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Adobe Premiere</text>
+  <text x="280" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Video Editing</text>
+  <rect x="230" y="190" width="130" height="4" rx="2" fill="#1e293b"/>
+  <rect x="230" y="190" width="100" height="4" rx="2" fill="#9333ea"/>
+  <text x="280" y="215" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Professional</text>
+  
+  <!-- Adobe After Effects Card -->
+  <rect x="390" y="130" width="150" height="120" rx="12" fill="url(#cardGradient)" stroke="#db2777" stroke-width="2"/>
+  <rect x="400" y="140" width="40" height="40" rx="6" fill="#00005b"/>
+  <text x="420" y="168" text-anchor="middle" fill="#cf4afd" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Ae</text>
+  <text x="450" y="155" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="600">After Effects</text>
+  <text x="450" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Motion Graphics</text>
+  <rect x="400" y="190" width="130" height="4" rx="2" fill="#1e293b"/>
+  <rect x="400" y="190" width="110" height="4" rx="2" fill="#db2777"/>
+  <text x="450" y="215" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Animation</text>
+  
+  <!-- DaVinci Resolve Card -->
+  <rect x="560" y="130" width="150" height="120" rx="12" fill="url(#cardGradient)" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="570" y="140" width="40" height="40" rx="6" fill="#1f1f1f"/>
+  <circle cx="590" cy="160" r="12" fill="none" stroke="#f59e0b" stroke-width="3"/>
+  <circle cx="590" cy="160" r="6" fill="#f59e0b"/>
+  <text x="620" y="155" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="600">DaVinci Resolve</text>
+  <text x="620" y="175" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Color Grading</text>
+  <rect x="570" y="190" width="130" height="4" rx="2" fill="#1e293b"/>
+  <rect x="570" y="190" width="85" height="4" rx="2" fill="#f59e0b"/>
+  <text x="620" y="215" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Free & Pro</text>
+  
+  <!-- Final Cut Pro Card -->
+  <rect x="50" y="270" width="150" height="120" rx="12" fill="url(#cardGradient)" stroke="#10b981" stroke-width="2"/>
+  <rect x="60" y="280" width="40" height="40" rx="6" fill="#000"/>
+  <path d="M 70 290 L 90 305 L 70 320 Z" fill="#10b981"/>
+  <rect x="85" y="295" width="10" height="20" fill="#10b981"/>
+  <text x="110" y="295" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Final Cut Pro</text>
+  <text x="110" y="315" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Mac Video Editor</text>
+  <rect x="60" y="330" width="130" height="4" rx="2" fill="#1e293b"/>
+  <rect x="60" y="330" width="95" height="4" rx="2" fill="#10b981"/>
+  <text x="110" y="355" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Apple Ecosystem</text>
+  
+  <!-- Figma Card -->
+  <rect x="220" y="270" width="150" height="120" rx="12" fill="url(#cardGradient)" stroke="#f43f5e" stroke-width="2"/>
+  <rect x="230" y="280" width="40" height="40" rx="6" fill="#0d1117"/>
+  <circle cx="240" cy="295" r="4" fill="#f43f5e"/>
+  <circle cx="250" cy="285" r="4" fill="#a855f7"/>
+  <circle cx="260" cy="295" r="4" fill="#06b6d4"/>
+  <circle cx="250" cy="305" r="4" fill="#10b981"/>
+  <text x="280" y="295" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Figma</text>
+  <text x="280" y="315" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">UI/UX Design</text>
+  <rect x="230" y="330" width="130" height="4" rx="2" fill="#1e293b"/>
+  <rect x="230" y="330" width="105" height="4" rx="2" fill="#f43f5e"/>
+  <text x="280" y="355" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Collaborative</text>
+  
+  <!-- Canva Card -->
+  <rect x="390" y="270" width="150" height="120" rx="12" fill="url(#cardGradient)" stroke="#06b6d4" stroke-width="2"/>
+  <rect x="400" y="280" width="40" height="40" rx="6" fill="#fff"/>
+  <circle cx="420" cy="300" r="8" fill="#06b6d4"/>
+  <path d="M 415 295 L 420 300 L 415 305 L 425 305 L 425 295 Z" fill="#fff"/>
+  <text x="450" y="295" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Canva</text>
+  <text x="450" y="315" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Design Platform</text>
+  <rect x="400" y="330" width="130" height="4" rx="2" fill="#1e293b"/>
+  <rect x="400" y="330" width="75" height="4" rx="2" fill="#06b6d4"/>
+  <text x="450" y="355" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">User-Friendly</text>
+  
+  <!-- AI-Powered Tools Card -->
+  <rect x="560" y="270" width="150" height="120" rx="12" fill="url(#cardGradient)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
+  <rect x="570" y="280" width="40" height="40" rx="6" fill="#1e1b4b"/>
+  <circle cx="590" cy="300" r="10" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+  <circle cx="585" cy="295" r="2" fill="#8b5cf6"/>
+  <circle cx="595" cy="295" r="2" fill="#8b5cf6"/>
+  <circle cx="590" cy="305" r="2" fill="#8b5cf6"/>
+  <text x="620" y="295" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="600">AI Tools</text>
+  <text x="620" y="315" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Smart Editing</text>
+  <rect x="570" y="330" width="130" height="4" rx="2" fill="#1e293b"/>
+  <rect x="570" y="330" width="120" height="4" rx="2" fill="#8b5cf6"/>
+  <text x="620" y="355" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Next Generation</text>
+  
+  <!-- Connection Lines -->
+  <path d="M 200 190 Q 400 120 600 190" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.3" stroke-dasharray="5,5"/>
+  <path d="M 125 270 Q 400 250 635 270" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.3" stroke-dasharray="5,5"/>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="440" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="14">
+    Seamlessly integrate with industry-leading editing software
+  </text>
+  <text x="400" y="465" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="12">
+    Compatible • Efficient • Professional
+  </text>
+</svg>

@@ -1,8 +1,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Shield, Lock, FileText, CreditCard } from 'lucide-react';
-import Footer from './Footer';
-import Navbar from './Navbar';
+import Footer from './Footer-ai';
+import Navbar from './Navbar-ai';
 
 const PrivacyPolicy = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -199,7 +199,7 @@ const PrivacyPolicy = () => {
                   <li>The right to data portability</li>
                 </ul>
                 <p className="text-slate-600 leading-relaxed">
-                  To exercise any of these rights, please contact us at pradeepmajji853@gmail.com.
+                  To exercise any of these rights, please contact us at support@intruitia.in.
                 </p>
               </div>
 
@@ -265,7 +265,7 @@ const PrivacyPolicy = () => {
                 <div className="bg-slate-50 p-6 rounded-lg border border-slate-200">
                   <p className="font-semibold text-slate-900 mb-1">Intruitia</p>
                   <p className="text-slate-600">Grievance Officer: Majji Pradeep Kumar</p>
-                  <p className="text-slate-600">Email: pradeepmajji853@gmail.com</p>
+                  <p className="text-slate-600">Email: support@intruitia.in</p>
                   <p className="text-slate-600">Phone: +91 8184889557 (Monday - Friday, 9:00 - 18:00)</p>
                   <p className="text-slate-600">Address: Flat No. 2-90/9/2/1, Jeevan Jyothi Nagar, Suraram Colony, Hyderabad, Telangana 500055, India</p>
                 </div>

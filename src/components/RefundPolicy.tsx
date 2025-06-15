@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { RefreshCw, FileText } from 'lucide-react';
-import Footer from './Footer';
-import Navbar from './Navbar';
+import Footer from './Footer-ai';
+import Navbar from './Navbar-ai';
 
 const RefundPolicy = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -56,7 +56,7 @@ const RefundPolicy = () => {
                 <h3 className="text-sm font-medium text-blue-800">Razorpay UPI Payment Information</h3>
                 <div className="mt-2 text-sm text-blue-700">
                   <p>Intruitia uses Razorpay as our authorized payment gateway for all UPI transactions. All payments are processed securely and in compliance with RBI guidelines.</p>
-                  <p className="mt-1">For any UPI payment-related issues, please contact us at pradeepmajji853@gmail.com with your transaction reference number.</p>
+                  <p className="mt-1">For any UPI payment-related issues, please contact us at support@intruitia.in with your transaction reference number.</p>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@ const RefundPolicy = () => {
                   To request a refund, please follow these steps:
                 </p>
                 <ol className="list-decimal pl-6 space-y-2 text-slate-600 mb-4">
-                  <li>Send an email to pradeepmajji853@gmail.com with the subject line "Refund Request - [Your Name/Company Name]".</li>
+                  <li>Send an email to support@intruitia.in with the subject line "Refund Request - [Your Name/Company Name]".</li>
                   <li>Include your order details, project name, and reason for the refund request.</li>
                   <li>For services paid via UPI, please include your UPI transaction reference ID and the date of the transaction.</li>
                   <li>We will acknowledge your refund request within 24 hours.</li>
@@ -219,7 +219,7 @@ const RefundPolicy = () => {
                   Dispute Resolution for Refunds
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  If you are dissatisfied with our refund decision or have any concerns regarding payments or refunds, please contact us directly at pradeepmajji853@gmail.com to discuss your concerns. We aim to resolve all issues promptly and fairly within 7 business days of receiving your complaint.
+                  If you are dissatisfied with our refund decision or have any concerns regarding payments or refunds, please contact us directly at support@intruitia.in to discuss your concerns. We aim to resolve all issues promptly and fairly within 7 business days of receiving your complaint.
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-4">
                   For disputes related to refunds for payments processed through Razorpay:
@@ -290,7 +290,7 @@ const RefundPolicy = () => {
                 <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 mb-4">
                   <p className="font-semibold text-slate-900 mb-1">Intruitia</p>
                   <p className="text-slate-600">Owner: Majji Pradeep Kumar</p>
-                  <p className="text-slate-600">Email: pradeepmajji853@gmail.com</p>
+                  <p className="text-slate-600">Email: support@intruitia.in</p>
                   <p className="text-slate-600">Phone: +91 8184889557</p>
                   <p className="text-slate-600">Address: Flat No. 2-90/9/2/1, Jeevan Jyothi Nagar, Suraram Colony, Hyderabad, Telangana 500055, India</p>
                 </div>
@@ -304,7 +304,7 @@ const RefundPolicy = () => {
                 <div className="bg-slate-50 p-6 rounded-lg border border-slate-200">
                   <p className="font-semibold text-slate-900 mb-1">Grievance Officer</p>
                   <p className="text-slate-600">Name: Majji Pradeep Kumar</p>
-                  <p className="text-slate-600">Email: pradeepmajji853@gmail.com</p>
+                  <p className="text-slate-600">Email: support@intruitia.in</p>
                   <p className="text-slate-600">Phone: +91 8184889557</p>
                   <p className="text-slate-600">Address: Flat No. 2-90/9/2/1, Jeevan Jyothi Nagar, Suraram Colony, Hyderabad, Telangana 500055, India</p>
                   <p className="text-slate-600 mt-2">The Grievance Officer will acknowledge your complaint within 24 hours and resolve it within 7 business days from the date of receipt.</p>

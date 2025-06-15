@@ -47,7 +47,7 @@ const Footer = () => {
                 <Youtube className="w-5 h-5" />
               </a>
               <a
-                href="mailto:hello@startuplab.com"
+                href="mailto:support@intruitia.in"
                 className="bg-slate-800 p-3 rounded-lg hover:bg-blue-600 transition-colors"
                 aria-label="Email"
               >
@@ -88,7 +88,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact</h4>
             <div className="space-y-3 text-slate-400">
-              <p>pradeepmajji853@gmail.com</p>
+              <p>support@intruitia.in</p>
               <p>+91 8184889557</p>
               <p>Suraram, Hyderabad 500055</p>
               <p>Telangana, India</p>

@@ -1,0 +1,429 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dark theme gradients -->
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="50%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    
+    <linearGradient id="primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+    
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#0891b2"/>
+    </linearGradient>
+
+    <linearGradient id="neural" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+
+    <linearGradient id="adobe" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff0000"/>
+      <stop offset="100%" style="stop-color:#cc0000"/>
+    </linearGradient>
+
+    <linearGradient id="davinci" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#233a54"/>
+      <stop offset="100%" style="stop-color:#1a2b3d"/>
+    </linearGradient>
+
+    <linearGradient id="finalcut" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#5b21b6"/>
+    </linearGradient>
+
+    <!-- Filters and effects -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="softBlur"/>
+      <feMerge> 
+        <feMergeNode in="softBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Animated patterns -->
+    <pattern id="circuitPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="#3b82f6" opacity="0.2"/>
+      <circle cx="5" cy="5" r="0.5" fill="#06b6d4" opacity="0.3"/>
+      <circle cx="35" cy="15" r="0.5" fill="#8b5cf6" opacity="0.3"/>
+    </pattern>
+
+    <!-- Animations -->
+    <style>
+      .pulse {
+        animation: pulse 2s ease-in-out infinite;
+      }
+      
+      .float {
+        animation: float 3s ease-in-out infinite;
+      }
+      
+      .dataFlow {
+        animation: dataFlow 4s linear infinite;
+      }
+      
+      .rotate {
+        animation: rotate 8s linear infinite;
+      }
+      
+      .sparkle {
+        animation: sparkle 2s ease-in-out infinite;
+      }
+
+      .fadeInOut {
+        animation: fadeInOut 3s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.05); }
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      
+      @keyframes dataFlow {
+        0% { stroke-dashoffset: 40; opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { stroke-dashoffset: 0; opacity: 0; }
+      }
+      
+      @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @keyframes sparkle {
+        0%, 100% { opacity: 0; transform: scale(0); }
+        50% { opacity: 1; transform: scale(1); }
+      }
+
+      @keyframes fadeInOut {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1200" height="800" fill="url(#darkBg)"/>
+  
+  <!-- Subtle pattern overlay -->
+  <rect width="1200" height="800" fill="url(#circuitPattern)" opacity="0.3"/>
+
+  <!-- Main title -->
+  <text x="600" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white">
+    AI Model Training Pipeline
+  </text>
+  
+  <text x="600" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">
+    Fed by millions of expert-edited videos from industry-standard software
+  </text>
+
+  <!-- Popular Editing Software Section -->
+  <g id="software-section">
+    <!-- Section background -->
+    <rect x="50" y="120" width="500" height="300" rx="20" fill="#1e293b" stroke="#334155" stroke-width="2" opacity="0.8"/>
+    
+    <text x="300" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      Expert Video Sources
+    </text>
+
+    <!-- Adobe After Effects -->
+    <g transform="translate(100, 180)" class="float">
+      <rect width="80" height="60" rx="8" fill="url(#adobe)" opacity="0.9"/>
+      <text x="40" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Ae</text>
+      <text x="40" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">After Effects</text>
+      <text x="40" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">2M+ Videos</text>
+    </g>
+
+    <!-- Adobe Premiere Pro -->
+    <g transform="translate(200, 180)" class="float" style="animation-delay: 0.5s">
+      <rect width="80" height="60" rx="8" fill="url(#adobe)" opacity="0.9"/>
+      <text x="40" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Pr</text>
+      <text x="40" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Premiere Pro</text>
+      <text x="40" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">1.5M+ Videos</text>
+    </g>
+
+    <!-- DaVinci Resolve -->
+    <g transform="translate(300, 180)" class="float" style="animation-delay: 1s">
+      <rect width="80" height="60" rx="8" fill="url(#davinci)" opacity="0.9"/>
+      <text x="40" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">DR</text>
+      <text x="40" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">DaVinci</text>
+      <text x="40" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">800K+ Videos</text>
+    </g>
+
+    <!-- Final Cut Pro -->
+    <g transform="translate(400, 180)" class="float" style="animation-delay: 1.5s">
+      <rect width="80" height="60" rx="8" fill="url(#finalcut)" opacity="0.9"/>
+      <text x="40" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">FC</text>
+      <text x="40" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Final Cut</text>
+      <text x="40" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">600K+ Videos</text>
+    </g>
+
+    <!-- Avid Media Composer -->
+    <g transform="translate(150, 280)" class="float" style="animation-delay: 2s">
+      <rect width="80" height="60" rx="8" fill="#2563eb" opacity="0.9"/>
+      <text x="40" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">MC</text>
+      <text x="40" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Avid</text>
+      <text x="40" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">400K+ Videos</text>
+    </g>
+
+    <!-- Cinema 4D -->
+    <g transform="translate(250, 280)" class="float" style="animation-delay: 2.5s">
+      <rect width="80" height="60" rx="8" fill="#f59e0b" opacity="0.9"/>
+      <text x="40" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">C4D</text>
+      <text x="40" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Cinema 4D</text>
+      <text x="40" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">300K+ Videos</text>
+    </g>
+
+    <!-- Blender -->
+    <g transform="translate(350, 280)" class="float" style="animation-delay: 3s">
+      <rect width="80" height="60" rx="8" fill="#ea580c" opacity="0.9"/>
+      <text x="40" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">BL</text>
+      <text x="40" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Blender</text>
+      <text x="40" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">250K+ Videos</text>
+    </g>
+
+    <!-- Total count -->
+    <text x="300" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#06b6d4">
+      5.85M+ Expert Videos Analyzed
+    </text>
+  </g>
+
+  <!-- Data Flow Arrows -->
+  <g id="data-flow">
+    <!-- Multiple flowing lines -->
+    <path d="M560,270 Q600,270 600,270 L640,270" stroke="url(#primary)" stroke-width="3" fill="none" stroke-dasharray="10,5" class="dataFlow"/>
+    <path d="M560,290 Q600,290 600,290 L640,290" stroke="url(#accent)" stroke-width="2" fill="none" stroke-dasharray="8,4" class="dataFlow" style="animation-delay: 1s"/>
+    <path d="M560,250 Q600,250 600,250 L640,250" stroke="url(#neural)" stroke-width="2" fill="none" stroke-dasharray="6,3" class="dataFlow" style="animation-delay: 2s"/>
+    
+    <!-- Arrow markers -->
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="url(#primary)"/>
+      </marker>
+    </defs>
+  </g>
+
+  <!-- AI Neural Network -->
+  <g id="neural-network" transform="translate(650, 180)">
+    <!-- Main container -->
+    <rect width="300" height="240" rx="20" fill="#1e293b" stroke="#334155" stroke-width="2" opacity="0.9"/>
+    
+    <text x="150" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      AI Training Engine
+    </text>
+
+    <!-- Neural network visualization -->
+    <g transform="translate(150, 120)">
+      <!-- Central processing unit -->
+      <circle r="30" fill="url(#neural)" class="pulse" filter="url(#glow)"/>
+      
+      <!-- Input neurons (left) -->
+      <g class="sparkle">
+        <circle cx="-80" cy="-40" r="8" fill="url(#primary)"/>
+        <circle cx="-80" cy="-15" r="8" fill="url(#primary)"/>
+        <circle cx="-80" cy="10" r="8" fill="url(#primary)"/>
+        <circle cx="-80" cy="35" r="8" fill="url(#primary)"/>
+      </g>
+      
+      <!-- Output neurons (right) -->
+      <g class="sparkle" style="animation-delay: 1s">
+        <circle cx="80" cy="-30" r="8" fill="url(#accent)"/>
+        <circle cx="80" cy="0" r="8" fill="url(#accent)"/>
+        <circle cx="80" cy="30" r="8" fill="url(#accent)"/>
+      </g>
+      
+      <!-- Hidden layer -->
+      <g class="sparkle" style="animation-delay: 0.5s">
+        <circle cx="-40" cy="-25" r="6" fill="#8b5cf6"/>
+        <circle cx="-40" cy="0" r="6" fill="#8b5cf6"/>
+        <circle cx="-40" cy="25" r="6" fill="#8b5cf6"/>
+        
+        <circle cx="40" cy="-25" r="6" fill="#f59e0b"/>
+        <circle cx="40" cy="0" r="6" fill="#f59e0b"/>
+        <circle cx="40" cy="25" r="6" fill="#f59e0b"/>
+      </g>
+      
+      <!-- Connections -->
+      <g stroke="#3b82f6" stroke-width="1.5" opacity="0.6" class="pulse">
+        <!-- Input to hidden -->
+        <line x1="-72" y1="-40" x2="-46" y2="-25"/>
+        <line x1="-72" y1="-15" x2="-46" y2="0"/>
+        <line x1="-72" y1="10" x2="-46" y2="25"/>
+        <line x1="-72" y1="35" x2="-46" y2="25"/>
+        
+        <!-- Hidden to center -->
+        <line x1="-34" y1="-25" x2="-25" y2="-10"/>
+        <line x1="-34" y1="0" x2="-25" y2="0"/>
+        <line x1="-34" y1="25" x2="-25" y2="10"/>
+        
+        <!-- Center to hidden -->
+        <line x1="25" y1="-10" x2="34" y2="-25"/>
+        <line x1="25" y1="0" x2="34" y2="0"/>
+        <line x1="25" y1="10" x2="34" y2="25"/>
+        
+        <!-- Hidden to output -->
+        <line x1="46" y1="-25" x2="72" y2="-30"/>
+        <line x1="46" y1="0" x2="72" y2="0"/>
+        <line x1="46" y1="25" x2="72" y2="30"/>
+      </g>
+      
+      <!-- Processing indicators -->
+      <g class="fadeInOut">
+        <text x="0" y="-50" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#06b6d4">Processing...</text>
+        <text x="0" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#22c55e">Learning Patterns</text>
+      </g>
+    </g>
+
+    <!-- Training progress -->
+    <g transform="translate(50, 200)">
+      <rect width="200" height="8" rx="4" fill="#374151"/>
+      <rect width="160" height="8" rx="4" fill="url(#primary)" class="pulse"/>
+      <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">
+        Training Progress: 80%
+      </text>
+    </g>
+  </g>
+
+  <!-- Output Section -->
+  <g id="output-section" transform="translate(1000, 180)">
+    <rect width="150" height="240" rx="20" fill="#1e293b" stroke="#334155" stroke-width="2" opacity="0.9"/>
+    
+    <text x="75" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      AI Output
+    </text>
+
+    <!-- Learned techniques -->
+    <g transform="translate(20, 50)">
+      <g class="float">
+        <rect width="110" height="25" rx="12" fill="url(#primary)" opacity="0.8"/>
+        <text x="55" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Smart Cuts</text>
+      </g>
+      
+      <g class="float" style="animation-delay: 0.3s" transform="translate(0, 35)">
+        <rect width="110" height="25" rx="12" fill="url(#accent)" opacity="0.8"/>
+        <text x="55" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Color Grading</text>
+      </g>
+      
+      <g class="float" style="animation-delay: 0.6s" transform="translate(0, 70)">
+        <rect width="110" height="25" rx="12" fill="url(#neural)" opacity="0.8"/>
+        <text x="55" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Motion Graphics</text>
+      </g>
+      
+      <g class="float" style="animation-delay: 0.9s" transform="translate(0, 105)">
+        <rect width="110" height="25" rx="12" fill="#8b5cf6" opacity="0.8"/>
+        <text x="55" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Audio Sync</text>
+      </g>
+      
+      <g class="float" style="animation-delay: 1.2s" transform="translate(0, 140)">
+        <rect width="110" height="25" rx="12" fill="#22c55e" opacity="0.8"/>
+        <text x="55" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Trend Analysis</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Training Statistics -->
+  <g id="stats" transform="translate(50, 480)">
+    <rect width="1100" height="250" rx="20" fill="#1e293b" stroke="#334155" stroke-width="2" opacity="0.8"/>
+    
+    <text x="550" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">
+      Training Dataset Insights
+    </text>
+
+    <!-- Statistics grid -->
+    <g transform="translate(100, 70)">
+      <!-- Video Hours -->
+      <g class="float">
+        <circle cx="50" cy="50" r="40" fill="url(#primary)" opacity="0.2"/>
+        <circle cx="50" cy="50" r="30" fill="url(#primary)" opacity="0.4"/>
+        <text x="50" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">2.5M</text>
+        <text x="50" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Hours</text>
+        <text x="50" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Video Content</text>
+      </g>
+
+      <!-- Editing Techniques -->
+      <g class="float" style="animation-delay: 0.5s" transform="translate(200, 0)">
+        <circle cx="50" cy="50" r="40" fill="url(#accent)" opacity="0.2"/>
+        <circle cx="50" cy="50" r="30" fill="url(#accent)" opacity="0.4"/>
+        <text x="50" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">50K+</text>
+        <text x="50" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Techniques</text>
+        <text x="50" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Editing Patterns</text>
+      </g>
+
+      <!-- Styles Learned -->
+      <g class="float" style="animation-delay: 1s" transform="translate(400, 0)">
+        <circle cx="50" cy="50" r="40" fill="url(#neural)" opacity="0.2"/>
+        <circle cx="50" cy="50" r="30" fill="url(#neural)" opacity="0.4"/>
+        <text x="50" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">200+</text>
+        <text x="50" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Styles</text>
+        <text x="50" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Video Styles</text>
+      </g>
+
+      <!-- Genres -->
+      <g class="float" style="animation-delay: 1.5s" transform="translate(600, 0)">
+        <circle cx="50" cy="50" r="40" fill="#8b5cf6" opacity="0.2"/>
+        <circle cx="50" cy="50" r="30" fill="#8b5cf6" opacity="0.4"/>
+        <text x="50" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">100+</text>
+        <text x="50" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Genres</text>
+        <text x="50" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Content Types</text>
+      </g>
+
+      <!-- Expert Editors -->
+      <g class="float" style="animation-delay: 2s" transform="translate(800, 0)">
+        <circle cx="50" cy="50" r="40" fill="#22c55e" opacity="0.2"/>
+        <circle cx="50" cy="50" r="30" fill="#22c55e" opacity="0.4"/>
+        <text x="50" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">15K+</text>
+        <text x="50" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Editors</text>
+        <text x="50" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Expert Contributors</text>
+      </g>
+    </g>
+
+    <!-- Bottom description -->
+    <text x="550" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">
+      Our AI learns from the world's best video editors across all major professional platforms
+    </text>
+    
+    <text x="550" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">
+      Continuously updated with new techniques and trending styles
+    </text>
+  </g>
+
+  <!-- Floating data particles -->
+  <g id="floating-particles" opacity="0.4">
+    <g class="sparkle">
+      <circle cx="150" cy="150" r="2" fill="#3b82f6"/>
+      <circle cx="800" cy="200" r="1.5" fill="#06b6d4"/>
+      <circle cx="450" cy="100" r="1" fill="#8b5cf6"/>
+    </g>
+    
+    <g class="sparkle" style="animation-delay: 1s">
+      <circle cx="200" cy="400" r="1.5" fill="#f59e0b"/>
+      <circle cx="900" cy="350" r="2" fill="#22c55e"/>
+      <circle cx="350" cy="500" r="1" fill="#ec4899"/>
+    </g>
+    
+    <g class="sparkle" style="animation-delay: 2s">
+      <circle cx="750" cy="100" r="1" fill="#3b82f6"/>
+      <circle cx="100" cy="600" r="1.5" fill="#06b6d4"/>
+      <circle cx="1000" cy="450" r="2" fill="#8b5cf6"/>
+    </g>
+  </g>
+</svg>

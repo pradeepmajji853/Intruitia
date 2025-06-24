@@ -23,23 +23,26 @@ const IntruitiaLogo: React.FC<IntruitiaLogoProps> = ({
   };
 
   const getLogoSrc = () => {
-    // Use the same JPEG logo for all variants
-    return "/intruitia.jpeg";
+    // Use custom SVG logos that match the website theme
+    if (variant === 'icon') {
+      return "/images/intruitia-icon-custom.svg";
+    } else {
+      return "/images/intruitia-logo-custom.svg";
+    }
   };
 
-  // Return optimized dark theme logo
+  // Return optimized custom SVG logo
   return (
     <div className={`${getSizeClasses()} ${className}`}>
       <img 
         src={getLogoSrc()}
         alt="Intruitia Logo" 
-        className="w-full h-full object-contain filter drop-shadow-lg"
-        style={{ 
-          filter: 'drop-shadow(0 4px 12px rgba(139, 92, 246, 0.3))'
-        }}
+        className="w-full h-full object-contain"
         onError={(e) => {
           // Fallback error handling
           console.error('Logo failed to load:', e);
+          // Fallback to the old logo if custom logos fail
+          e.currentTarget.src = "/fin images/logo.png";
         }}
       />
     </div>

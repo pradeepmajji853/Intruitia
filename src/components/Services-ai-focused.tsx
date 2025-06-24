@@ -41,7 +41,7 @@ const Services = () => {
       ],
       color: "bg-gradient-to-r from-blue-600 to-cyan-600",
       accentColor: "blue",
-      imageUrl: "/images/ai-video-editor-hero.svg",
+      imageUrl: "/fin images/ai video editor.jpg",
       badge: "Coming Soon"
     },
     {
@@ -56,7 +56,7 @@ const Services = () => {
       ],
       color: "bg-gradient-to-r from-violet-600 to-fuchsia-600",
       accentColor: "violet",
-      imageUrl: "/images/mobile-content-creation.svg"
+      imageUrl: "/fin images/contwent generation.png"
     },
     {
       icon: BarChart,
@@ -70,7 +70,7 @@ const Services = () => {
       ],
       color: "bg-gradient-to-r from-cyan-600 to-blue-600",
       accentColor: "cyan",
-      imageUrl: "/images/ai-dashboard.svg"
+      imageUrl: "/fin images/seo.jpg"
     },
     {
       icon: Rocket,
@@ -84,7 +84,7 @@ const Services = () => {
       ],
       color: "bg-gradient-to-r from-rose-600 to-orange-600",
       accentColor: "rose",
-      imageUrl: "/images/ai-workflow-simple.svg"
+      imageUrl: "/fin images/marketing automation.jpg"
     }
   ];
 

@@ -30,7 +30,7 @@ const Portfolio = () => {
       title: 'AI Video Editing Platform',
       category: 'AI/ML',
       description: 'Revolutionary AI-powered video editing platform that automatically transforms raw footage into professional, meme, funny, and cinematic styles.',
-      image: '/images/ai-video-editor-hero.svg',
+      image: '/fin images/ai video editor.jpg',
       tags: ['AI Video Editing', 'Machine Learning', 'React', 'Python'],
       duration: 'Long-term',
       features: ['Automated editing', 'Style transformation', 'Trend analysis']
@@ -39,7 +39,7 @@ const Portfolio = () => {
       title: 'AI Content Generation Suite',
       category: 'AI/ML',  
       description: 'Comprehensive AI-powered content creation platform with automated writing, hashtag generation, and social media optimization.',
-      image: '/images/mobile-content-creation.svg',
+      image: '/fin images/contwent generation.png',
       tags: ['AI Content', 'NLP', 'React', 'OpenAI'],
       duration: 'Medium-term', 
       features: ['Content generation', 'SEO optimization', 'Multi-platform support']
@@ -48,7 +48,7 @@ const Portfolio = () => {
       title: 'AI Analytics Dashboard',
       category: 'AI/ML',
       description: 'Advanced sentiment analysis and trend prediction platform with real-time content performance insights and audience behavior tracking.',
-      image: '/images/ai-dashboard.svg',
+      image: '/fin images/seo.jpg',
       tags: ['AI Analytics', 'Sentiment Analysis', 'Data Visualization', 'Python'],
       duration: 'Medium-term',
       features: ['Real-time analytics', 'Predictive insights', 'Audience tracking']
@@ -57,7 +57,7 @@ const Portfolio = () => {
       title: 'AI Workflow Automation',
       category: 'AI/ML',
       description: 'Intelligent workflow automation system that streamlines content creation, editing, and publishing processes using advanced AI algorithms.',
-      image: '/images/ai-workflow-simple.svg',
+      image: '/fin images/marketing automation.jpg',
       tags: ['AI Automation', 'Workflow', 'Content Management', 'API'],
       duration: 'Short-term',
       features: ['Automated workflows', 'Smart processing', 'Integration ready']
@@ -72,13 +72,22 @@ const Portfolio = () => {
       features: ['Neural processing', 'Multi-modal content', 'Real-time generation']
     },
     {
-      title: 'AI Software Integration Suite',
+      title: 'Social Media Caption Generator',
       category: 'AI/ML',
-      description: 'Comprehensive integration platform that connects AI tools with popular editing software like Adobe Creative Suite, DaVinci Resolve, and more.',
-      image: '/images/editing-software-suite.svg',
-      tags: ['AI Integration', 'Adobe CC', 'DaVinci Resolve', 'API'],
+      description: 'AI-powered social media caption generator that creates engaging, platform-specific content with trending hashtags and optimized engagement.',
+      image: '/fin images/social media captions.jpg',
+      tags: ['Social Media', 'AI Content', 'Hashtags', 'Engagement'],
+      duration: 'Short-term',
+      features: ['Platform optimization', 'Hashtag generation', 'Engagement tracking']
+    },
+    {
+      title: 'AI Ad Copy Generator',
+      category: 'AI/ML',
+      description: 'Advanced AI system for creating high-converting advertisement copy across multiple platforms with A/B testing and performance optimization.',
+      image: '/fin images/ai ad copy generator.jpg',
+      tags: ['Ad Copy', 'Conversion Optimization', 'A/B Testing', 'Marketing'],
       duration: 'Medium-term',
-      features: ['Software compatibility', 'Seamless integration', 'Professional tools']
+      features: ['High conversion rates', 'Multi-platform support', 'Performance analytics']
     }
   ];
 

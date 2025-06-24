@@ -30,7 +30,7 @@ const AIToolsShowcase = () => {
       path: "/ai-video-editor",
       description: "Automatically edit video clips based on trending social media themes like professional, meme, funny, and cinematic styles.",
       features: ["AI-powered editing", "Trend analysis", "Auto music sync", "Quick conversions"],
-      screenshot: "/video-editor-screenshot.webp",
+      screenshot: "/fin images/ai video editor.jpg",
       color: "bg-blue-500",
       badge: "Coming Soon"
     },
@@ -40,7 +40,7 @@ const AIToolsShowcase = () => {
       path: "/content-generator",
       description: "Create compelling, SEO-optimized content for blogs, websites, and marketing materials with AI that adapts to your brand voice.",
       features: ["Custom tone adjustment", "Multiple content lengths", "SEO optimization", "Instant generation"],
-      screenshot: "/content-generator-screenshot.svg",
+      screenshot: "/fin images/contwent generation.png",
       color: "bg-violet-500"
     },
     {
@@ -49,7 +49,7 @@ const AIToolsShowcase = () => {
       path: "/hashtag-generator",
       description: "Generate trending, relevant hashtags for any social platform to maximize your content's reach and engagement.",
       features: ["Platform-specific tags", "Trend analysis", "Engagement optimization", "Niche targeting"],
-      screenshot: "/hashtag-generator-screenshot.svg",
+      screenshot: "/fin images/hashtag generator.jpeg",
       color: "bg-green-500"
     },
     {
@@ -58,7 +58,7 @@ const AIToolsShowcase = () => {
       path: "/social-media-caption",
       description: "Craft engaging captions that drive likes, comments, and shares across all major social media platforms.",
       features: ["Platform-tailored content", "Tone customization", "Call-to-action options", "Emoji integration"],
-      screenshot: "/social-caption-screenshot.svg",
+      screenshot: "/fin images/social media captions.jpg",
       color: "bg-fuchsia-500"
     },
     {
@@ -67,7 +67,7 @@ const AIToolsShowcase = () => {
       path: "/ad-copy-generator",
       description: "Create high-converting advertisement copy that drives sales and maximizes your marketing ROI across all platforms.",
       features: ["Conversion-focused copy", "Platform optimization", "A/B test variations", "Goal-driven content"],
-      screenshot: "/images/ai-tools-demo.svg",
+      screenshot: "/fin images/ai ad copy generator.jpg",
       color: "bg-orange-500"
     },
     {
@@ -76,7 +76,7 @@ const AIToolsShowcase = () => {
       path: "/seo-meta-generator",
       description: "Generate comprehensive SEO meta tags, titles, and descriptions to boost your search engine rankings.",
       features: ["Complete meta package", "Keyword optimization", "HTML-ready code", "Search-friendly content"],
-      screenshot: "/images/ai-workflow-simple.svg",
+      screenshot: "/fin images/seo.jpg",
       color: "bg-blue-600"
     }
   ];
@@ -216,9 +216,9 @@ const AIToolsShowcase = () => {
           
           <div className="p-8 rounded-2xl bg-slate-800/50 border border-slate-700 shadow-lg">
             <img 
-              src="/images/content-creation-studio.svg" 
+              src="/fin images/ChatGPT Image Jun 24, 2025, 02_06_17 PM.png" 
               alt="AI-powered content creation suite" 
-              className="w-full h-auto max-w-4xl mx-auto"
+              className="w-full h-auto max-w-4xl mx-auto rounded-lg"
             />
           </div>
         </motion.div>

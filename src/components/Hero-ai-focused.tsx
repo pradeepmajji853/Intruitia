@@ -178,7 +178,7 @@ const Hero = () => {
                 {/* Main AI hero image */}
                 <div className="relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8 border border-white/10 shadow-2xl">
                   <img 
-                    src="/images/content-creation-studio.svg" 
+                    src="/fin images/ai video editor.jpg" 
                     alt="AI Content Creation Studio - Professional video editing workspace with AI-powered tools"
                     className="w-full h-auto max-w-lg mx-auto filter drop-shadow-xl"
                     style={{ minHeight: '300px' }}

@@ -99,7 +99,7 @@ const Services = () => {
       ],
       color: "bg-gradient-to-r from-violet-600 to-fuchsia-600",
       accentColor: "violet",
-      imageUrl: "/images/mobile-content-creation.svg"
+      imageUrl: "/fin images/contwent generation.png"
     },
     {
       icon: BarChart,
@@ -113,7 +113,7 @@ const Services = () => {
       ],
       color: "bg-gradient-to-r from-cyan-600 to-blue-600",
       accentColor: "cyan",
-      imageUrl: "/images/ai-dashboard.svg"
+      imageUrl: "/fin images/seo.jpg"
     },
     {
       icon: Rocket,
@@ -127,7 +127,7 @@ const Services = () => {
       ],
       color: "bg-gradient-to-r from-rose-600 to-orange-600",
       accentColor: "rose",
-      imageUrl: "/images/ai-workflow-simple.svg"
+      imageUrl: "/fin images/marketing automation.jpg"
     }
   ];    const ServiceCard = ({ service, index }: { service: typeof services[0], index: number }) => {
       return (

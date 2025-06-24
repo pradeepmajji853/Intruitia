@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { Shield, Lock, FileText, CreditCard } from 'lucide-react';
+import { Shield, Lock, CreditCard } from 'lucide-react';
 import Footer from './Footer-ai';
 import Navbar from './Navbar-ai';
 
@@ -252,23 +252,6 @@ const PrivacyPolicy = () => {
                 <p className="text-slate-600 leading-relaxed">
                   We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. The updated version will be indicated by an updated "Last Updated" date at the top of this policy.
                 </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
-                  <FileText className="w-6 h-6 mr-2 text-blue-600" />
-                  Contact Us & Grievance Officer
-                </h2>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  If you have any questions about this Privacy Policy or our data practices, please contact us:
-                </p>
-                <div className="bg-slate-50 p-6 rounded-lg border border-slate-200">
-                  <p className="font-semibold text-slate-900 mb-1">Intruitia</p>
-                  <p className="text-slate-600">Grievance Officer: Majji Pradeep Kumar</p>
-                  <p className="text-slate-600">Email: support@intruitia.in</p>
-                  <p className="text-slate-600">Phone: +91 8184889557 (Monday - Friday, 9:00 - 18:00)</p>
-                  <p className="text-slate-600">Address: Flat No. 2-90/9/2/1, Jeevan Jyothi Nagar, Suraram Colony, Hyderabad, Telangana 500055, India</p>
-                </div>
               </div>
             </div>
           </div>

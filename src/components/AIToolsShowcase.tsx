@@ -223,26 +223,7 @@ const AIToolsShowcase = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="mt-24 text-center"
-        >
-          <div className="p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
-            <h3 className="text-2xl font-bold mb-4 text-white">Join us on our journey!</h3>
-            <p className="mb-8 max-w-2xl mx-auto text-gray-300">
-              We're building the future of AI-powered content creation. Be among the first to experience our innovative tools.
-            </p>
-            <Link
-              to="/ai-video-editor"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-medium rounded-full shadow-lg hover:shadow-blue-500/25 transition-all duration-300 inline-flex items-center justify-center"
-            >
-              Try AI Video Editor
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
-        </motion.div>
+
       </div>
     </div>
   );

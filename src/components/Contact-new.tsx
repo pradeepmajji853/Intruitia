@@ -58,7 +58,7 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'hello@intruitia.com',
+      value: 'support@intruitia.in',
       description: 'We respond within 24 hours'
     },
     {

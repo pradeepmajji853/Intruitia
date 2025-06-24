@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { FileText, Scale, AlertTriangle, CreditCard, Shield } from 'lucide-react';
+import { FileText, Scale, AlertTriangle, CreditCard } from 'lucide-react';
 import Footer from './Footer-ai';
 import Navbar from './Navbar-ai';
 
@@ -226,23 +226,6 @@ const TermsAndConditions = () => {
                 <p className="text-slate-600 leading-relaxed">
                   We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
                 </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
-                  <FileText className="w-6 h-6 mr-2 text-blue-600" />
-                  Contact Us
-                </h2>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  If you have any questions about these Terms, please contact us:
-                </p>
-                <div className="bg-slate-50 p-6 rounded-lg border border-slate-200">
-                  <p className="font-semibold text-slate-900 mb-1">Intruitia</p>
-                  <p className="text-slate-600">Owner: Majji Pradeep Kumar</p>
-                  <p className="text-slate-600">Email: support@intruitia.in</p>
-                  <p className="text-slate-600">Phone: +91 8184889557</p>
-                  <p className="text-slate-600">Address: Flat No. 2-90/9/2/1, Jeevan Jyothi Nagar, Suraram Colony, Hyderabad, Telangana 500055, India</p>
-                </div>
               </div>
 
               <div>

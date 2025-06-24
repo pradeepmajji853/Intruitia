@@ -181,10 +181,6 @@ const AboutUs = () => {
                       <span className="text-slate-800 dark:text-slate-200 transition-colors duration-300">support@intruitia.in</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-slate-600 dark:text-slate-400 font-semibold min-w-32 transition-colors duration-300">Phone:</span>
-                      <span className="text-slate-800 dark:text-slate-200 transition-colors duration-300">+91 8184889557</span>
-                    </li>
-                    <li className="flex items-start">
                       <span className="text-slate-600 dark:text-slate-400 font-semibold min-w-32 transition-colors duration-300">Working Hours:</span>
                       <span className="text-slate-800 dark:text-slate-200 transition-colors duration-300">Monday to Friday, 9:00 AM - 6:00 PM IST</span>
                     </li>

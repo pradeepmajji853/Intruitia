@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { RefreshCw, FileText } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
 import Footer from './Footer-ai';
 import Navbar from './Navbar-ai';
 
@@ -65,8 +65,7 @@ const RefundPolicy = () => {
           <div className={`bg-white rounded-xl shadow-sm border border-slate-200 p-8 mb-8 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
-                  <FileText className="w-6 h-6 mr-2 text-blue-600" />
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">
                   Introduction
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -277,38 +276,6 @@ const RefundPolicy = () => {
                 <p className="text-slate-600 leading-relaxed">
                   In case of any material changes to this policy, especially those affecting UPI payments or other digital payment methods, we will notify users through email or prominently display a notice on our website at least 30 days before the changes take effect, as required by applicable regulations.
                 </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
-                  <FileText className="w-6 h-6 mr-2 text-blue-600" />
-                  Contact Us
-                </h2>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  If you have any questions about this Refund Policy, please contact us:
-                </p>
-                <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 mb-4">
-                  <p className="font-semibold text-slate-900 mb-1">Intruitia</p>
-                  <p className="text-slate-600">Owner: Majji Pradeep Kumar</p>
-                  <p className="text-slate-600">Email: support@intruitia.in</p>
-                  <p className="text-slate-600">Phone: +91 8184889557</p>
-                  <p className="text-slate-600">Address: Flat No. 2-90/9/2/1, Jeevan Jyothi Nagar, Suraram Colony, Hyderabad, Telangana 500055, India</p>
-                </div>
-                
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">
-                  Grievance Officer
-                </h3>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  In accordance with the Information Technology Act, 2000 and the rules made thereunder, the name and contact details of the Grievance Officer for addressing payment-related issues are provided below:
-                </p>
-                <div className="bg-slate-50 p-6 rounded-lg border border-slate-200">
-                  <p className="font-semibold text-slate-900 mb-1">Grievance Officer</p>
-                  <p className="text-slate-600">Name: Majji Pradeep Kumar</p>
-                  <p className="text-slate-600">Email: support@intruitia.in</p>
-                  <p className="text-slate-600">Phone: +91 8184889557</p>
-                  <p className="text-slate-600">Address: Flat No. 2-90/9/2/1, Jeevan Jyothi Nagar, Suraram Colony, Hyderabad, Telangana 500055, India</p>
-                  <p className="text-slate-600 mt-2">The Grievance Officer will acknowledge your complaint within 24 hours and resolve it within 7 business days from the date of receipt.</p>
-                </div>
               </div>
             </div>
           </div>

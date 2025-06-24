@@ -40,13 +40,10 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center group">
             <IntruitiaLogo 
-              size="medium" 
-              variant="icon" 
+              size="large" 
+              variant="full" 
               className="group-hover:scale-105 transition-all duration-300 group-hover:shadow-xl"
             />
-            <span className="ml-3 text-2xl font-black bg-gradient-to-r from-slate-100 to-slate-300 bg-clip-text text-transparent">
-              Intruitia
-            </span>
           </div>
 
           {/* Desktop Navigation */}

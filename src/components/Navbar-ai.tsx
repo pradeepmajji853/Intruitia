@@ -53,13 +53,10 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center group">
             <IntruitiaLogo 
-              size="medium" 
-              variant="icon" 
+              size="large" 
+              variant="full" 
               className="group-hover:scale-105 transition-all duration-300 group-hover:shadow-xl" 
             />
-            <span className="ml-3 text-2xl font-black bg-gradient-to-r from-indigo-800 to-purple-700 bg-clip-text text-transparent">
-              Intruitia
-            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -125,12 +122,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <button className="px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
-              Book a Consultation
-            </button>
-          </div>
+
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -200,10 +192,6 @@ const Navbar = () => {
               SEO Meta Generator
             </Link>
           </div>
-          
-          <button className="w-full px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-            Book a Consultation
-          </button>
         </div>
       </div>
     </nav>

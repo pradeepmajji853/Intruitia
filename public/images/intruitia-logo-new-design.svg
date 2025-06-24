@@ -1,0 +1,36 @@
+<svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hexagonal logo icon with line pattern -->
+  <g>
+    <!-- Outer hexagon -->
+    <path d="M50 50 L80 32 L110 32 L140 50 L140 80 L110 98 L80 98 L50 80 Z" fill="none" stroke="white" stroke-width="2"/>
+    
+    <!-- Diagonal lines pattern inside hexagon -->
+    <g clipPath="url(#hexClip)">
+      <path d="M55 35 L135 35" stroke="white" stroke-width="1"/>
+      <path d="M55 40 L135 40" stroke="white" stroke-width="1"/>
+      <path d="M55 45 L135 45" stroke="white" stroke-width="1"/>
+      <path d="M55 50 L135 50" stroke="white" stroke-width="1"/>
+      <path d="M55 55 L135 55" stroke="white" stroke-width="1"/>
+      <path d="M55 60 L135 60" stroke="white" stroke-width="1"/>
+      <path d="M55 65 L135 65" stroke="white" stroke-width="1"/>
+      <path d="M55 70 L135 70" stroke="white" stroke-width="1"/>
+      <path d="M55 75 L135 75" stroke="white" stroke-width="1"/>
+      <path d="M55 80 L135 80" stroke="white" stroke-width="1"/>
+      <path d="M55 85 L135 85" stroke="white" stroke-width="1"/>
+      <path d="M55 90 L135 90" stroke="white" stroke-width="1"/>
+      <path d="M55 95 L135 95" stroke="white" stroke-width="1"/>
+    </g>
+    
+    <!-- Clip path for hexagon -->
+    <defs>
+      <clipPath id="hexClip">
+        <path d="M50 50 L80 32 L110 32 L140 50 L140 80 L110 98 L80 98 L50 80 Z"/>
+      </clipPath>
+    </defs>
+  </g>
+  
+  <!-- Intruitia text -->
+  <text x="180" y="90" fill="white" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="400" letter-spacing="-0.02em">
+    Intruitia
+  </text>
+</svg>

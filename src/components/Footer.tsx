@@ -18,11 +18,10 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center mb-4">
               <IntruitiaLogo 
-                size="small" 
-                variant="icon" 
+                size="medium" 
+                variant="full" 
                 className="mr-2"
               />
-              <span className="ml-2 text-xl font-bold">Intruitia</span>
             </div>
             <p className="text-slate-400 mb-6 leading-relaxed">
               A fresh startup dedicated to empowering entrepreneurs with innovative web solutions and creative content.
@@ -92,7 +91,6 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6">Contact</h4>
             <div className="space-y-3 text-slate-400">
               <p>support@intruitia.in</p>
-              <p>+91 8184889557</p>
               <p>Suraram, Hyderabad 500055</p>
               <p>Telangana, India</p>
             </div>

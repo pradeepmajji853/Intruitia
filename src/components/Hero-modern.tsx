@@ -1,18 +1,31 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowRight, Brain, Sparkles, BarChart, Video } from 'lucide-react';
+import { ArrowRight, Brain, Sparkles, Video, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import EarlyAccessPopup from './EarlyAccessPopup';
+
+import { useState, useEffect, useRef } from 'react';
+import { ArrowRight, Brain, Sparkles, Video, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import EarlyAccessPopup from './EarlyAccessPopup';
 
 const Hero = () => {
   const [isInView, setIsInView] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     setIsInView(true);
     
+    // Show popup after 8 seconds
+    const popupTimer = setTimeout(() => {
+      setShowPopup(true);
+    }, 8000);
+    
     // Animate text typing effect
-    const text = "TRANSFORM VIDEOS WITH AI";
-    const typingSpeed = 35; // milliseconds per character
+    const text = "AI-POWERED CONTENT CREATION";
+    const typingSpeed = 50; // milliseconds per character
     
     let currentCharIndex = 0;
     const typingInterval = setInterval(() => {
@@ -24,11 +37,25 @@ const Hero = () => {
       }
     }, typingSpeed);
     
-    return () => clearInterval(typingInterval);
+    return () => {
+      clearInterval(typingInterval);
+      clearTimeout(popupTimer);
+    };
   }, []);
   
   const [animatedText, setAnimatedText] = useState('');
   
+  const handleSolutionsClick = () => {
+    const solutionsSection = document.getElementById('solutions');
+    if (solutionsSection) {
+      solutionsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleEarlyAccessClick = () => {
+    setShowPopup(true);
+  };
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { opacity: 1, y: 0 }
@@ -119,7 +146,7 @@ const Hero = () => {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             
-            <button className="px-8 py-4 border border-violet-500/30 text-white font-medium rounded-full hover:bg-violet-500/20 transition-all duration-300 shadow-sm hover:shadow-md">
+            <button onClick={handleSolutionsClick} className="px-8 py-4 border border-violet-500/30 text-white font-medium rounded-full hover:bg-violet-500/20 transition-all duration-300 shadow-sm hover:shadow-md">
               View Solutions
             </button>
           </motion.div>

@@ -9,11 +9,10 @@ const Footer = () => {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
             <IntruitiaLogo 
-              size="small" 
-              variant="icon" 
+              size="medium" 
+              variant="full" 
               className="mr-2"
             />
-            <span className="ml-2 text-xl font-bold">Intruitia</span>
           </div>
           <p className="text-indigo-200 max-w-md mx-auto">
             AI-driven content creation solutions for modern businesses.

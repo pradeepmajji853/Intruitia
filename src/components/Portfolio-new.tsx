@@ -29,52 +29,52 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      category: 'Web Development',
-      description: 'Modern e-commerce platform built with React and Node.js, featuring secure payment processing, inventory management, and responsive design.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      client: 'TechStore Inc.',
+      title: 'AI Video Editor Platform',
+      category: 'AI Solutions',
+      description: 'Revolutionary AI-powered video editing platform that automatically transforms raw footage into professional content with trending themes and styles.',
+      image: '/images/ai-video-editor-hero.svg',
+      tags: ['AI Video Editing', 'React', 'Python', 'Machine Learning'],
+      client: 'Content Creators',
       year: '2024',
-      duration: '3 months',
-      results: '+150% sales growth'
+      duration: '6 months',
+      results: '+300% editing efficiency'
     },
     {
-      title: 'SaaS Dashboard',
-      category: 'Web Development',  
-      description: 'Comprehensive analytics dashboard for SaaS companies with real-time data visualization, user management, and advanced reporting features.',
-      image: 'https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['TypeScript', 'Next.js', 'PostgreSQL', 'Chart.js'],
-      client: 'DataViz Pro',
+      title: 'AI Content Generation Suite',
+      category: 'AI Solutions',  
+      description: 'Comprehensive AI-powered content creation platform with automated writing, hashtag generation, social media captions, and SEO optimization.',
+      image: '/images/mobile-content-creation.svg',
+      tags: ['AI Content', 'OpenAI', 'React', 'Node.js'],
+      client: 'Digital Marketers',
       year: '2024',
       duration: '4 months', 
-      results: '40% efficiency increase'
+      results: '+250% content output'
     },
     {
-      title: 'Brand Identity System',
-      category: 'Content Creation',
-      description: 'Complete brand identity development including logo design, style guide, marketing materials, and digital asset creation for startup launch.',
-      image: 'https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['Branding', 'Logo Design', 'Style Guide', 'Marketing'],
-      client: 'GreenTech Innovations',
+      title: 'AI Analytics Dashboard',
+      category: 'AI Solutions',
+      description: 'Advanced AI-powered analytics platform with sentiment analysis, trend prediction, and real-time content performance insights.',
+      image: '/images/ai-dashboard.svg',
+      tags: ['AI Analytics', 'Sentiment Analysis', 'Data Visualization', 'Python'],
+      client: 'Marketing Agencies',
       year: '2024',
-      duration: '2 months',
-      results: '300% brand recognition'
+      duration: '3 months',
+      results: '+400% insight accuracy'
     },
     {
-      title: 'Video Marketing Campaign',
-      category: 'Content Creation',
-      description: 'Multi-platform video marketing campaign including promotional videos, social media content, and animated explainer videos.',
-      image: 'https://images.pexels.com/photos/267389/pexels-photo-267389.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['Video Production', 'Animation', 'Social Media', 'Marketing'],
-      client: 'Startup Labs',
+      title: 'AI Workflow Automation',
+      category: 'AI Solutions',
+      description: 'Intelligent workflow automation system that streamlines content creation, editing, and publishing processes using advanced AI algorithms.',
+      image: '/images/ai-workflow-simple.svg',
+      tags: ['AI Automation', 'Workflow', 'Content Management', 'API Integration'],
+      client: 'Content Teams',
       year: '2024',
-      duration: '6 weeks',
-      results: '500% engagement boost'
+      duration: '5 months',
+      results: '+500% productivity boost'
     }
   ];
 
-  const categories = ['All', 'Web Development', 'Content Creation'];
+  const categories = ['All', 'AI Solutions'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle, Clock, Users } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle, Clock, Users } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -82,12 +82,6 @@ const Contact = () => {
       title: 'Email',
       value: 'support@intruitia.in',
       description: 'We respond within 24 hours'
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: 'Phone',
-      value: '+91 8184889557',
-      description: 'Mon-Fri, 9:00 AM - 6:00 PM IST'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -212,7 +206,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                      placeholder="+91 8184889557"
+                      placeholder="Your phone number"
                     />
                   </div>
                 </div>

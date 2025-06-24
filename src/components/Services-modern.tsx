@@ -1,10 +1,70 @@
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Brain, BarChart, Layers, Rocket, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 
 const Services = () => {
   const servicesRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(servicesRef, { once: false, amount: 0.1 });
+  const [servicesState, setServicesState] = useState([
+    {
+      icon: Brain,
+      title: "AI Content Generation",
+      description: "Create hyper-personalized content at scale that resonates with your target audience across all digital touchpoints.",
+      features: [
+        "Brand voice preservation",
+        "Multi-channel optimization",
+        "Automated content variations",
+        "A/B testing integration"
+      ],
+      color: "bg-gradient-to-r from-violet-600 to-fuchsia-600",
+      accentColor: "violet",
+      imageUrl: "/images/mobile-content-creation.svg",
+      showMore: false
+    },
+    {
+      icon: BarChart,
+      title: "Sentiment Analysis & Adaptation",
+      description: "Leverage real-time data to understand audience sentiment and dynamically adjust your messaging for maximum impact.",
+      features: [
+        "Real-time sentiment tracking",
+        "Adaptive content strategy",
+        "Competitive intelligence",
+        "Engagement optimization"
+      ],
+      color: "bg-gradient-to-r from-cyan-600 to-blue-600",
+      accentColor: "cyan",
+      imageUrl: "/images/ai-dashboard.svg",
+      showMore: false
+    },
+    {
+      icon: Rocket,
+      title: "AI Marketing Automation",
+      description: "Deploy sophisticated marketing campaigns with AI-driven personalization and optimization at every touchpoint.",
+      features: [
+        "Behavioral-based targeting",
+        "Conversion path optimization",
+        "Performance analytics",
+        "Automated campaign adjustments"
+      ],
+      color: "bg-gradient-to-r from-rose-600 to-orange-600",
+      accentColor: "rose",
+      imageUrl: "/images/ai-workflow-simple.svg",
+      showMore: false
+    }
+  ]);
+
+  const handleLearnMoreClick = (index: number) => {
+    const newServicesState = [...servicesState];
+    newServicesState[index].showMore = !newServicesState[index].showMore;
+    setServicesState(newServicesState);
+  };
+
+  const handleScheduleDemoClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
@@ -67,7 +127,7 @@ const Services = () => {
       ],
       color: "bg-gradient-to-r from-rose-600 to-orange-600",
       accentColor: "rose",
-      imageUrl: "/images/team-collaboration.svg"
+      imageUrl: "/images/ai-workflow-simple.svg"
     }
   ];    const ServiceCard = ({ service, index }: { service: typeof services[0], index: number }) => {
       return (
@@ -95,15 +155,27 @@ const Services = () => {
             ))}
           </ul>
           
-          <button className={`group inline-flex items-center px-6 py-3 rounded-full 
+          <button onClick={() => handleLearnMoreClick(index)} className={`group inline-flex items-center px-6 py-3 rounded-full 
             text-gray-900 dark:text-white 
             bg-${service.accentColor}-500/10 dark:bg-${service.accentColor}-500/20 
             hover:bg-${service.accentColor}-500/20 dark:hover:bg-${service.accentColor}-500/30 
             border border-${service.accentColor}-500/30 dark:border-${service.accentColor}-500/40 
             transition-all duration-300 shadow-sm hover:shadow-md`}>
-            Learn more
+            {servicesState[index].showMore ? 'Show Less' : 'Learn More'}
             <ArrowRight className={`ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform text-${service.accentColor}-600 dark:text-${service.accentColor}-400`} />
           </button>
+
+          {servicesState[index].showMore && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="mt-8 p-6 rounded-xl bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50"
+            >
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Detailed Features</h4>
+              <p className="text-gray-700 dark:text-gray-300">More detailed information about the service can be shown here. This could include case studies, technical specifications, or client testimonials.</p>
+            </motion.div>
+          )}
         </div>
         
         <div className="lg:w-1/2 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 transform hover:scale-105">
@@ -164,7 +236,7 @@ const Services = () => {
             <p className="text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto transition-colors duration-300">
               Our AI-powered solutions adapt to your business needs and scale with your growth.
             </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-medium rounded-full shadow-lg hover:shadow-violet-500/25 transition-all duration-300 flex items-center justify-center mx-auto transform hover:scale-[1.02]">
+            <button onClick={handleScheduleDemoClick} className="px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-medium rounded-full shadow-lg hover:shadow-violet-500/25 transition-all duration-300 flex items-center justify-center mx-auto transform hover:scale-[1.02]">
               Schedule a Demo
               <ArrowRight className="ml-2 w-5 h-5" />
             </button>

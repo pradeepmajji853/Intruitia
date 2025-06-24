@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar-modern';
-import Footer from './Footer-modern';
+import Navbar from './Navbar-ai-focused';
+import Footer from './Footer-ai-focused';
 
 interface PageWrapperProps {
   children: React.ReactNode;

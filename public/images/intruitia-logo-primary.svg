@@ -1,0 +1,38 @@
+<svg width="600" height="150" viewBox="0 0 600 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hexagonal logo icon with diagonal line pattern -->
+  <g transform="translate(20, 25)">
+    <!-- Hexagon shape -->
+    <path d="M20 25 L40 12.5 L70 12.5 L90 25 L90 50 L70 62.5 L40 62.5 L20 50 Z" 
+          fill="white" stroke="none"/>
+    
+    <!-- Diagonal lines pattern - creating the striped effect -->
+    <g mask="url(#hexMask)">
+      <!-- Black diagonal lines to create the striped pattern -->
+      <defs>
+        <pattern id="diagonalLines" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+          <rect width="4" height="4" fill="white"/>
+          <rect width="2" height="4" fill="black"/>
+        </pattern>
+      </defs>
+      <rect x="15" y="10" width="80" height="55" fill="url(#diagonalLines)"/>
+    </g>
+    
+    <!-- Mask for hexagon -->
+    <defs>
+      <mask id="hexMask">
+        <rect x="0" y="0" width="110" height="75" fill="black"/>
+        <path d="M20 25 L40 12.5 L70 12.5 L90 25 L90 50 L70 62.5 L40 62.5 L20 50 Z" 
+              fill="white"/>
+      </mask>
+    </defs>
+  </g>
+  
+  <!-- Intruitia text with proper spacing and typography -->
+  <text x="140" y="85" fill="white" 
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" 
+        font-size="42" 
+        font-weight="400" 
+        letter-spacing="-0.01em">
+    Intruitia
+  </text>
+</svg>

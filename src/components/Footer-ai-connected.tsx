@@ -9,12 +9,7 @@ const Footer = () => {
   const [subscribeStatus, setSubscribeStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -125,11 +120,10 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center mb-4">
               <IntruitiaLogo 
-                size="small" 
-                variant="icon" 
+                size="medium" 
+                variant="full" 
                 className="mr-2"
               />
-              <span className="ml-2 text-xl font-bold">Intruitia</span>
             </div>
             <p className="text-indigo-200 mb-6 leading-relaxed">
               Revolutionizing digital marketing with AI-driven, hyper-personalized content ecosystems that adapt, engage, and convert.
@@ -157,7 +151,7 @@ const Footer = () => {
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="mailto:pradeepmajji853@gmail.com"
+                href="mailto:support@intruitia.in"
                 className="bg-indigo-800 p-3 rounded-lg hover:bg-indigo-700 transition-colors"
                 aria-label="Email"
               >
@@ -192,8 +186,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact</h4>
             <div className="space-y-3 text-indigo-200">
-              <p>pradeepmajji853@gmail.com</p>
-              <p>+91 8184889557</p>
+              <p>support@intruitia.in</p>
               <p>Suraram, Hyderabad 500055</p>
               <p>Telangana, India</p>
             </div>

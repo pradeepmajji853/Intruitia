@@ -1,0 +1,136 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Dark Theme Gradient -->
+  <circle cx="16" cy="16" r="16" fill="url(#darkGradient)"/>
+  
+  <!-- Glowing Ring Effect -->
+  <circle cx="16" cy="16" r="13" fill="none" stroke="url(#glowGradient)" stroke-width="0.4" opacity="0.7"/>
+  
+  <!-- Simplified Neural Network Pattern -->
+  <g fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.2">
+    <!-- Central Node -->
+    <circle cx="16" cy="16" r="1.8" fill="url(#centerGlow)" stroke="rgba(139, 92, 246, 0.8)" stroke-width="0.6"/>
+    
+    <!-- Connection Lines -->
+    <line x1="9" y1="10" x2="16" y2="16" stroke="url(#connectionGradient1)"/>
+    <line x1="23" y1="10" x2="16" y2="16" stroke="url(#connectionGradient2)"/>
+    <line x1="9" y1="22" x2="16" y2="16" stroke="url(#connectionGradient3)"/>
+    <line x1="23" y1="22" x2="16" y2="16" stroke="url(#connectionGradient4)"/>
+    <line x1="7" y1="16" x2="16" y2="16" stroke="url(#connectionGradient5)"/>
+    <line x1="25" y1="16" x2="16" y2="16" stroke="url(#connectionGradient6)"/>
+    
+    <!-- Outer Nodes -->
+    <circle cx="9" cy="10" r="1.2" fill="url(#nodeGlow1)"/>
+    <circle cx="23" cy="10" r="1.2" fill="url(#nodeGlow2)"/>
+    <circle cx="9" cy="22" r="1.2" fill="url(#nodeGlow3)"/>
+    <circle cx="23" cy="22" r="1.2" fill="url(#nodeGlow4)"/>
+    <circle cx="7" cy="16" r="1.2" fill="url(#nodeGlow5)"/>
+    <circle cx="25" cy="16" r="1.2" fill="url(#nodeGlow6)"/>
+  </g>
+  
+  <!-- Compact "I" -->
+  <g fill="url(#letterGradient)">
+    <rect x="14.5" y="7" width="3" height="1.5" rx="0.75"/>
+    <rect x="14.5" y="10" width="3" height="10" rx="1.5"/>
+    <rect x="14.5" y="22.5" width="3" height="1.5" rx="0.75"/>
+  </g>
+  
+  <!-- Data Flow Particles -->
+  <g opacity="0.8">
+    <circle cx="12" cy="9" r="0.5" fill="#8b5cf6">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="20" cy="12" r="0.4" fill="#06b6d4">
+      <animate attributeName="opacity" values="1;0.8;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="11" cy="20" r="0.5" fill="#6366f1">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="21" cy="23" r="0.3" fill="#8b5cf6">
+      <animate attributeName="opacity" values="1;0.8;1" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <!-- Main dark theme background gradient -->
+    <radialGradient id="darkGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#312e81;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0e0e1a;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Glow ring gradient -->
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#6366f1;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- Center node glow -->
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <!-- Letter "I" gradient -->
+    <linearGradient id="letterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f1f5f9;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- Connection gradients -->
+    <linearGradient id="connectionGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="connectionGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="connectionGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="connectionGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="connectionGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="connectionGradient6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- Node glow gradients -->
+    <radialGradient id="nodeGlow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.7" />
+    </radialGradient>
+    <radialGradient id="nodeGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.7" />
+    </radialGradient>
+    <radialGradient id="nodeGlow3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.7" />
+    </radialGradient>
+    <radialGradient id="nodeGlow4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.7" />
+    </radialGradient>
+    <radialGradient id="nodeGlow5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.7" />
+    </radialGradient>
+    <radialGradient id="nodeGlow6" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.7" />
+    </radialGradient>
+  </defs>
+</svg>

@@ -1,0 +1,63 @@
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="400" height="120" fill="#3a3a3a" rx="8"/>
+  
+  <!-- Metallic C Symbol -->
+  <g transform="translate(20, 25)">
+    <!-- Outer C shape with metallic gradient -->
+    <path d="M35 5 C50 5, 60 15, 60 30 L60 40 C60 55, 50 65, 35 65 C20 65, 10 55, 10 40 L10 30 C10 15, 20 5, 35 5 Z" 
+          fill="none" 
+          stroke="url(#metallicGradient)" 
+          stroke-width="4"/>
+    
+    <!-- Inner flowing design -->
+    <path d="M15 30 C15 20, 23 12, 35 12 C47 12, 55 20, 55 30 L55 40 C55 50, 47 58, 35 58" 
+          fill="none" 
+          stroke="url(#metallicGradient)" 
+          stroke-width="3" 
+          stroke-linecap="round"/>
+    
+    <!-- Additional metallic accent -->
+    <path d="M35 15 C42 15, 48 21, 48 30 L48 35" 
+          fill="none" 
+          stroke="url(#accentGradient)" 
+          stroke-width="2" 
+          stroke-linecap="round"/>
+  </g>
+  
+  <!-- "Intruitia" text -->
+  <text x="110" y="45" 
+        fill="url(#textGradient)" 
+        font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="32" 
+        font-weight="300" 
+        letter-spacing="1px">Intruitia</text>
+  
+  <!-- Subtle tagline or accent -->
+  <circle cx="340" cy="35" r="4" fill="url(#accentGradient)" opacity="0.8"/>
+  <circle cx="360" cy="35" r="4" fill="url(#accentGradient)" opacity="0.6"/>
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <!-- Main metallic gradient for the C -->
+    <linearGradient id="metallicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e5e7eb;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#f9fafb;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#d1d5db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9ca3af;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Accent gradient -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d1d5db;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f9fafb;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e5e7eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d1d5db;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

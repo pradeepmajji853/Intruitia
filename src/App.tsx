@@ -1,18 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-import Hero from './components/Hero-modern';
-import Services from './components/Services-modern';
+import Hero from './components/Hero-ai-focused';
+import Services from './components/Services-ai-focused';
 import AboutUs from './components/AboutUs-ai';
-import Contact from './components/Contact-modern';
 import AIToolsShowcase from './components/AIToolsShowcase';
-import AIVideoEditor from './components/AIVideoEditor';
 import PageWrapper from './components/PageWrapper';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsAndConditions from './components/TermsAndConditions';
 import RefundPolicy from './components/RefundPolicy';
 import CancellationPolicy from './components/CancellationPolicy';
+import AboutUsPage from './components/AboutUsPage';
 import Pricing from './components/Pricing';
-import PaymentDemo from './components/PaymentDemo';
 
 // Lazy load AI tools for better performance
 const ContentGenerator = lazy(() => import('./components/ContentGenerator'));
@@ -20,6 +18,7 @@ const HashtagGenerator = lazy(() => import('./components/HashtagGenerator'));
 const SocialMediaCaption = lazy(() => import('./components/SocialMediaCaption'));
 const AdCopyGenerator = lazy(() => import('./components/AdCopyGenerator'));
 const SEOMetaGenerator = lazy(() => import('./components/SEOMetaGenerator'));
+const AIVideoEditor = lazy(() => import('./components/AIVideoEditor'));
 
 // Loading component for AI tools
 const AIToolLoader = () => (
@@ -42,7 +41,6 @@ function HomePage() {
       <Services />
       <AIToolsShowcase />
       <AboutUs />
-      <Contact />
     </PageWrapper>
   );
 }
@@ -62,6 +60,11 @@ function App() {
             <TermsAndConditions />
           </PageWrapper>
         } />
+        <Route path="/pricing" element={
+          <PageWrapper>
+            <Pricing />
+          </PageWrapper>
+        } />
         <Route path="/refund-policy" element={
           <PageWrapper>
             <RefundPolicy />
@@ -74,17 +77,7 @@ function App() {
         } />
         <Route path="/about-us" element={
           <PageWrapper>
-            <AboutUs />
-          </PageWrapper>
-        } />
-        <Route path="/pricing" element={
-          <PageWrapper>
-            <Pricing />
-          </PageWrapper>
-        } />
-        <Route path="/payment" element={
-          <PageWrapper>
-            <PaymentDemo />
+            <AboutUsPage />
           </PageWrapper>
         } />
         
@@ -126,9 +119,14 @@ function App() {
         } />
         <Route path="/ai-video-editor" element={
           <PageWrapper>
-            <AIVideoEditor />
+            <Suspense fallback={<AIToolLoader />}>
+              <AIVideoEditor />
+            </Suspense>
           </PageWrapper>
         } />
+        
+        {/* Redirect unknown routes to homepage */}
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </Router>
   );

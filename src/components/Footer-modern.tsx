@@ -59,15 +59,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 mb-12">
           <div>
-            <div className="flex items-center space-x-3 mb-6">
+            <div className="flex items-center mb-6">
               <IntruitiaLogo 
                 size="medium" 
-                variant="icon" 
+                variant="full" 
                 className="shadow-lg"
               />
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">
-                Intruitia
-              </span>
             </div>
             
             <p className="text-gray-400 mb-8 max-w-md">

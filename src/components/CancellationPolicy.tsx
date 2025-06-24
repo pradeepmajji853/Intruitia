@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { XCircle, FileText, Clock, AlertTriangle } from 'lucide-react';
+import { XCircle, Clock, AlertTriangle } from 'lucide-react';
 import Footer from './Footer-ai';
 import Navbar from './Navbar-ai';
 
@@ -65,8 +65,7 @@ const CancellationPolicy = () => {
           <div className={`bg-white rounded-xl shadow-sm border border-slate-200 p-8 mb-8 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
-                  <FileText className="w-6 h-6 mr-2 text-blue-600" />
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">
                   Introduction
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -222,23 +221,6 @@ const CancellationPolicy = () => {
                 <p className="text-slate-600 leading-relaxed">
                   In case of any material changes to this policy, especially those affecting UPI payments or other digital payment methods, we will notify users through email or prominently display a notice on our website at least 30 days before the changes take effect, as required by applicable regulations.
                 </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
-                  <FileText className="w-6 h-6 mr-2 text-blue-600" />
-                  Contact Us
-                </h2>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  If you have any questions about this Cancellation Policy, please contact us:
-                </p>
-                <div className="bg-slate-50 p-6 rounded-lg border border-slate-200">
-                  <p className="font-semibold text-slate-900 mb-1">Intruitia</p>
-                  <p className="text-slate-600">Owner: Majji Pradeep Kumar</p>
-                  <p className="text-slate-600">Email: support@intruitia.in</p>
-                  <p className="text-slate-600">Phone: +91 8184889557</p>
-                  <p className="text-slate-600">Address: Flat No. 2-90/9/2/1, Jeevan Jyothi Nagar, Suraram Colony, Hyderabad, Telangana 500055, India</p>
-                </div>
               </div>
             </div>
           </div>

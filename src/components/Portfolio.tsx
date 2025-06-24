@@ -27,64 +27,62 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: 'FinTech Dashboard Platform',
-      category: 'Web Development',
-      description: 'Advanced financial analytics dashboard with real-time data, portfolio management, and AI-powered insights.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-      tags: ['React', 'TypeScript', 'D3.js', 'WebSocket'],
-      duration: 'Short-term',
-      features: ['User-friendly interface', 'Real-time updates', 'Customizable widgets']
-    },
-    {
-      title: 'E-Commerce Marketplace',
-      category: 'Web Development',  
-      description: 'Multi-vendor marketplace platform with advanced search, payment processing, inventory management, and vendor analytics dashboard.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
-      tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
-      duration: 'Medium-term', 
-      features: ['Secure payments', 'Multi-vendor support', 'Mobile responsive']
-    },
-    {
-      title: 'Healthcare Management System',
-      category: 'Web Development',
-      description: 'Comprehensive healthcare platform with patient records, appointment scheduling, telemedicine integration, and compliance management.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80',
-      tags: ['React', 'Express', 'MongoDB', 'HIPAA'],
-      duration: 'Medium-term',
-      features: ['Secure data handling', 'Compliance-focused', 'Intuitive scheduling']
-    },
-    {
-      title: 'AI Content Management Platform',
+      title: 'AI Video Editing Platform',
       category: 'AI/ML',
-      description: 'AI-powered content creation and management platform with automated writing, SEO optimization, and multi-channel publishing capabilities.',
-      image: 'https://images.unsplash.com/photo-1677442136019-162d119a5639?auto=format&fit=crop&w=800&q=80',
-      tags: ['Python', 'TensorFlow', 'React', 'OpenAI'],
+      description: 'Revolutionary AI-powered video editing platform that automatically transforms raw footage into professional, meme, funny, and cinematic styles.',
+      image: '/images/ai-video-editor-hero.svg',
+      tags: ['AI Video Editing', 'Machine Learning', 'React', 'Python'],
+      duration: 'Long-term',
+      features: ['Automated editing', 'Style transformation', 'Trend analysis']
+    },
+    {
+      title: 'AI Content Generation Suite',
+      category: 'AI/ML',  
+      description: 'Comprehensive AI-powered content creation platform with automated writing, hashtag generation, and social media optimization.',
+      image: '/images/mobile-content-creation.svg',
+      tags: ['AI Content', 'NLP', 'React', 'OpenAI'],
+      duration: 'Medium-term', 
+      features: ['Content generation', 'SEO optimization', 'Multi-platform support']
+    },
+    {
+      title: 'AI Analytics Dashboard',
+      category: 'AI/ML',
+      description: 'Advanced sentiment analysis and trend prediction platform with real-time content performance insights and audience behavior tracking.',
+      image: '/images/ai-dashboard.svg',
+      tags: ['AI Analytics', 'Sentiment Analysis', 'Data Visualization', 'Python'],
+      duration: 'Medium-term',
+      features: ['Real-time analytics', 'Predictive insights', 'Audience tracking']
+    },
+    {
+      title: 'AI Workflow Automation',
+      category: 'AI/ML',
+      description: 'Intelligent workflow automation system that streamlines content creation, editing, and publishing processes using advanced AI algorithms.',
+      image: '/images/ai-workflow-simple.svg',
+      tags: ['AI Automation', 'Workflow', 'Content Management', 'API'],
       duration: 'Short-term',
-      features: ['Automated content generation', 'SEO optimization', 'Multi-channel publishing']
+      features: ['Automated workflows', 'Smart processing', 'Integration ready']
     },
     {
-      title: 'Real Estate Investment Platform',
-      category: 'FinTech',
-      description: 'Investment platform for real estate with property analytics, investment tracking, and automated portfolio management.',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
-      tags: ['Vue.js', 'Laravel', 'MySQL', 'Blockchain'],
-      duration: 'Medium-term',
-      features: ['Investment tracking', 'Analytics dashboard', 'Secure transactions']
+      title: 'Neural Network Content Studio',
+      category: 'AI/ML',
+      description: 'Advanced neural network-powered content creation studio with deep learning capabilities for video, text, and image generation.',
+      image: '/images/ai-neural-network.svg',
+      tags: ['Neural Networks', 'Deep Learning', 'Content Studio', 'AI'],
+      duration: 'Long-term',
+      features: ['Neural processing', 'Multi-modal content', 'Real-time generation']
     },
     {
-      title: 'Supply Chain Analytics',
-      category: 'Data Analytics',
-      description: 'Advanced supply chain optimization platform with predictive analytics, inventory forecasting, and real-time logistics tracking.',
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
-      tags: ['Python', 'Apache Spark', 'React', 'AWS'],
-      client: 'LogiFlow Systems',
-      year: '2024',
+      title: 'AI Software Integration Suite',
+      category: 'AI/ML',
+      description: 'Comprehensive integration platform that connects AI tools with popular editing software like Adobe Creative Suite, DaVinci Resolve, and more.',
+      image: '/images/editing-software-suite.svg',
+      tags: ['AI Integration', 'Adobe CC', 'DaVinci Resolve', 'API'],
       duration: 'Medium-term',
-      features: ['Supply chain optimization', 'Predictive analytics', 'Real-time tracking']
+      features: ['Software compatibility', 'Seamless integration', 'Professional tools']
     }
   ];
 
-  const categories = ['All', 'Web Development', 'AI/ML', 'FinTech', 'Data Analytics'];
+  const categories = ['All', 'AI/ML'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 

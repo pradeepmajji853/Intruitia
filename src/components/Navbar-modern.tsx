@@ -84,15 +84,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" className="flex items-center group">
             <IntruitiaLogo 
-              size="medium" 
-              variant="icon" 
+              size="large" 
+              variant="full" 
               className="group-hover:scale-105 transition-transform duration-300 group-hover:shadow-violet-500/20" 
             />
-            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">
-              Intruitia
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
